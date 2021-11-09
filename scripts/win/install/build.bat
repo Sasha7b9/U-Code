@@ -13,10 +13,10 @@ goto HINT
 
 :BUILD
 @echo on
-MSBuild.exe ../../generated/Urho3D/%1/Urho3D.sln /p:Configuration=%configuration% /t:build -clp:ErrorsOnly;WarningsOnly -nologo -m
+MSBuild.exe ../../../generated/Urho3D/%1/Urho3D.sln /p:Configuration=%configuration% /t:build -clp:ErrorsOnly;WarningsOnly -nologo -m
 rem cd ../..
 rem copy generated\Urho3D\%1\bin\*.dll out\%1 /Y
-cd scripts/win/install/urho
+rem cd scripts/win/install/urho
 @echo off
 goto EXIT
 
