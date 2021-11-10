@@ -24,5 +24,5 @@ startTime = datetime.now();
 
 os.system(command)
 
-print("\n Total lead time ", command, ": ", datetime.now() - startTime, "\n")
+print("\n Total lead time \" ", command, "\" : ", datetime.now() - startTime, "\n")
       
