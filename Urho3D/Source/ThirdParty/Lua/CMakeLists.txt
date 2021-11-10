@@ -33,6 +33,10 @@ if (READLINE_FOUND)
     list (APPEND LIBS ${READLINE_LIBRARIES})
 endif ()
 
+if (MSVC)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W0")
+endif()
+
 # Setup target
 setup_library ()
 

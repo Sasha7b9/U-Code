@@ -41,8 +41,8 @@ if (MINGW)
 endif ()
 
 if (MSVC)
-#    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj")
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W0")
 endif()
 
 # Setup RPATH settings
