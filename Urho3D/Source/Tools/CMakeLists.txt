@@ -36,6 +36,20 @@ if (URHO3D_ANGELSCRIPT OR URHO3D_LUA)
     add_subdirectory (Urho3DPlayer)
 endif ()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+define_property(
+    TARGET
+    PROPERTY FOLDER
+    INHERITED
+    BRIEF_DOCS "Set the folder name."
+    FULL_DOCS "Use to organize targets in an IDE."
+)
+
+function(add_subdirectory_with_folder _folder_name _folder)
+    add_subdirectory(${_folder} ${ARGN})
+    set_property(DIRECTORY "${_folder}" PROPERTY FOLDER "${_folder_name}")
+endfunction()
+
 # Build host-tools using host compiler toolchain
 if (CMAKE_CROSSCOMPILING)
     check_native_compiler_exist ()
@@ -74,19 +88,19 @@ endif ()
 
 if (URHO3D_TOOLS)
     # Urho3D tools
-    add_subdirectory (AssetImporter)
-    add_subdirectory (OgreImporter)
-    add_subdirectory (PackageTool)
-    add_subdirectory (RampGenerator)
-    add_subdirectory (SpritePacker)
+    add_subdirectory_with_folder ("Tools" AssetImporter)
+    add_subdirectory_with_folder ("Tools" OgreImporter)
+    add_subdirectory_with_folder ("Tools" PackageTool)
+    add_subdirectory_with_folder ("Tools" RampGenerator)
+    add_subdirectory_with_folder ("Tools" SpritePacker)
     if (URHO3D_ANGELSCRIPT)
-        add_subdirectory (ScriptCompiler)
+        add_subdirectory_with_folder ("Tools" ScriptCompiler)
     endif ()
 elseif (NOT CMAKE_CROSSCOMPILING AND URHO3D_PACKAGING)
     # PackageTool target is required but we are not cross-compiling, so build it as per normal
-    add_subdirectory (PackageTool)
+    add_subdirectory_with_folder ("Tools" PackageTool)
 endif ()
 
 if (NOT CMAKE_CROSSCOMPILING AND URHO3D_GENERATEBINDINGS)
-    add_subdirectory (BindingGenerator)
+    add_subdirectory_with_folder ("Tools" BindingGenerator)
 endif ()
