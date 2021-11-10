@@ -103,13 +103,10 @@ define_property(
     FULL_DOCS "Use to organize targets in an IDE."
 )
 
-function(add_subdirectory_with_folder _folder_name _folder _binary_folder)
-    add_subdirectory(${_folder} ${ARGN})
+function(add_superdirectory_with_folder _folder_name _folder _binary_folder)
+    add_subdirectory(${_folder} ${_binary_folder})
     set_property(DIRECTORY "${_folder}" PROPERTY FOLDER "${_folder_name}")
 endfunction()
 
-add_subdirectory(../_Projects/Project_HelloWorld Project_HelloWorld)
-set_property(DIRECTORY ../_Projects/Project_HelloWorld PROPERTY FOLDER "Projects")
-
-#add_subdirectory_with_folder("Projects" ../_Projects/Project_HelloWorld Project_HelloWorld)
+add_superdirectory_with_folder("Projects" ../_Projects/Project_HelloWorld Project_HelloWorld)
 
