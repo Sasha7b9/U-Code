@@ -1,1 +1,4 @@
 generated/
+Demo/out/debug/*.dll
+Demo/out/debug/*.exe
+Demo/out/release/
