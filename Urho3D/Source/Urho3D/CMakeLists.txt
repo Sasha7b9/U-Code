@@ -98,6 +98,11 @@ if (MSVC)
     add_compile_options(/wd5219)
     add_compile_options(/wd5220)
     
+    if(CMAKE_BUILD_TYPE STREQUAL Release)
+        add_compile_options(/wd4710)
+        add_compile_options(/wd4711)
+    endif()
+    
 elseif (MINGW)
     if (URHO3D_64BIT)
         set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wa,-mbig-obj")

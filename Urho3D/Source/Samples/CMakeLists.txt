@@ -69,6 +69,12 @@ if (MSVC)
     add_compile_options(/wd5039)
     add_compile_options(/wd5045)
     add_compile_options(/wd5219)
+    
+    if(CMAKE_BUILD_TYPE STREQUAL Release)
+        add_compile_options(/wd4701)
+        add_compile_options(/wd4710)
+        add_compile_options(/wd4711)
+    endif()
 
 endif()
 
