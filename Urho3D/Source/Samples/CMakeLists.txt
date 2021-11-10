@@ -84,14 +84,29 @@ set (COMMON_SAMPLE_H_FILES "${CMAKE_CURRENT_SOURCE_DIR}/Sample.h" "${CMAKE_CURRE
 # Define dependency libs
 set (INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR})
 
+
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+define_property(
+    TARGET
+    PROPERTY FOLDER
+    INHERITED
+    BRIEF_DOCS "Set the folder name."
+    FULL_DOCS "Use to organize targets in an IDE."
+)
+
+function(add_subdirectory_with_folder _folder_name _folder)
+    add_subdirectory(${_folder} ${ARGN})
+    set_property(DIRECTORY "${_folder}" PROPERTY FOLDER "${_folder_name}")
+endfunction()
+
 # Macro for adding sample subdirectory
 macro (add_sample_subdirectory SOURCE_DIR)
     if (DEFINED ENV{included_sample})
         if (DEFINED ENV{INCLUDED_SAMPLE_${SOURCE_DIR}})
-            add_subdirectory (${SOURCE_DIR} ${ARGN})
+            add_subdirectory_with_folder ("Samples", ${SOURCE_DIR})
         endif ()
     elseif (NOT DEFINED ENV{EXCLUDED_SAMPLE_${SOURCE_DIR}})
-        add_subdirectory (${SOURCE_DIR} ${ARGN})
+        add_subdirectory_with_folder ("Samples" ${SOURCE_DIR})
     endif ()
 endmacro ()
 
