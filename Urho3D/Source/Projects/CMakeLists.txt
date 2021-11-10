@@ -109,4 +109,5 @@ function(add_superdirectory_with_folder _folder_name _folder _binary_folder)
 endfunction()
 
 add_superdirectory_with_folder("Projects" ../../../_Projects/Project_HelloWorld Project_HelloWorld)
+add_superdirectory_with_folder("Projects" ../../../Demo/src Demo_src)
 
