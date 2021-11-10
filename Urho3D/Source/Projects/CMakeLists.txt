@@ -109,6 +109,7 @@ function(add_subdirectory_with_folder _folder_name _folder _binary_folder)
 endfunction()
 
 add_subdirectory(../_Projects/Project_HelloWorld Project_HelloWorld)
+set_property(DIRECTORY ../_Projects/Project_HelloWorld PROPERTY FOLDER "Projects")
 
 #add_subdirectory_with_folder("Projects" ../_Projects/Project_HelloWorld Project_HelloWorld)
 
