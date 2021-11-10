@@ -86,21 +86,11 @@ set (INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Macro for adding sample subdirectory
 macro (add_sample_subdirectory SOURCE_DIR)
-    if (DEFINED ENV{included_sample})
-        if (DEFINED ENV{INCLUDED_SAMPLE_${SOURCE_DIR}})
-            add_subdirectory (${SOURCE_DIR} ${ARGN})
-        endif ()
-    elseif (NOT DEFINED ENV{EXCLUDED_SAMPLE_${SOURCE_DIR}})
-        add_subdirectory (${SOURCE_DIR} ${ARGN})
-    endif ()
+    add_subdirectory (${SOURCE_DIR} ${ARGN})
 endmacro ()
 
 # Add samples
 file (GLOB_RECURSE DIRS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} CMakeLists.txt)
 list (SORT DIRS)
-foreach (DIR ${DIRS})
-    get_filename_component (DIR ${DIR} PATH)
-    if (DIR)
-        add_sample_subdirectory (${DIR})
-    endif ()
-endforeach ()
+
+add_subdirectory(Project_HelloWorld)
