@@ -36,7 +36,7 @@ endif ()
 
 # For AngelScript big files
 if (MSVC)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj /W2")
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj /Wall")
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /Wall")
     
     # W1

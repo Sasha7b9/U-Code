@@ -31,6 +31,47 @@ project (Urho3D-Samples)
 find_package (Urho3D REQUIRED)
 include_directories (${URHO3D_INCLUDE_DIRS})
 
+if (MSVC)
+
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj /Wall")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /Wall")
+    
+    # W2
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4305)
+    
+    # W3
+    add_compile_options(/wd4018)
+    
+    # W4
+    add_compile_options(/wd4100)
+    add_compile_options(/wd4189)
+    add_compile_options(/wd4456)
+    
+    # Wall
+    add_compile_options(/wd4062)
+    add_compile_options(/wd4242)
+    add_compile_options(/wd4263)
+    add_compile_options(/wd4264)
+    add_compile_options(/wd4266)
+    add_compile_options(/wd4365)
+    add_compile_options(/wd4464)
+    add_compile_options(/wd4514)
+    add_compile_options(/wd4582)
+    add_compile_options(/wd4583)
+    add_compile_options(/wd4623)
+    add_compile_options(/wd4625)
+    add_compile_options(/wd4626)
+    add_compile_options(/wd4668)
+    add_compile_options(/wd4820)
+    add_compile_options(/wd5026)
+    add_compile_options(/wd5027)
+    add_compile_options(/wd5039)
+    add_compile_options(/wd5045)
+    add_compile_options(/wd5219)
+
+endif()
+
 # Include common to all samples
 set (COMMON_SAMPLE_H_FILES "${CMAKE_CURRENT_SOURCE_DIR}/Sample.h" "${CMAKE_CURRENT_SOURCE_DIR}/Sample.inl")
 
