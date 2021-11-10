@@ -40,6 +40,11 @@ if (MINGW)
     check_struct_has_member (RTL_OSVERSIONINFOW dwOSVersionInfoSize minwindef.h\;winnt.h HAVE_RTL_OSVERSIONINFOW)
 endif ()
 
+if (MSVC)
+#    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
+endif()
+
 # Setup RPATH settings
 if (URHO3D_LIB_TYPE STREQUAL SHARED AND NOT WIN32 AND NOT ANDROID AND NOT IOS AND NOT TVOS AND NOT WEB)
     # Add RPATH entries when building
@@ -154,6 +159,3 @@ endif ()
 if (URHO3D_EXTRAS)
     add_subdirectory (Extras)
 endif ()
-
-
-add_subdirectory(Projects)

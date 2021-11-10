@@ -37,7 +37,7 @@ endif ()
 # For AngelScript big files
 if (MSVC)
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /W0")
 elseif (MINGW)
     if (URHO3D_64BIT)
         set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wa,-mbig-obj")
