@@ -25,7 +25,7 @@ endif()
 
 set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${SUB_DIR})
 
-link_directories(../../Urho3D/generated/${SUB_DIR}/lib)
+link_directories(../../generated/Urho3D/${SUB_DIR}/lib)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -41,6 +41,10 @@ else()
     endif()
 
 endif()
+
+
+include(TacticsVictoryCommon.cmake)
+
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 define_property(
