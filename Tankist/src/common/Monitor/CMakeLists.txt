@@ -1,12 +1,7 @@
 project (Monitor)
 
-include_directories(.
-                    )
-
-if(WIN32)
-
+if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
-
 endif()
 
 
@@ -20,8 +15,8 @@ include(../../RuntimeLibrary.cmake)
 
 include(../../LinkLibraries.cmake)
 
-if(WIN32)
-    include(../../CopyToDirEXE.cmake)
+if(MSVC)
+#    include(../../CopyToDirEXE.cmake)
     include(../../SetWorkingDirectory.cmake)
 endif()
 

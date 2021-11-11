@@ -19,8 +19,8 @@ include(../../RuntimeLibrary.cmake)
 
 include(../../LinkLibraries.cmake)
 
-if(WIN32)
-    include(../../CopyToDirEXE.cmake)
+if(MSVC)
+#    include(../../CopyToDirEXE.cmake)
     include(../../SetWorkingDirectory.cmake)
 endif()
 

@@ -1,12 +1,8 @@
 project (DataBase)
 
-include_directories(.
-                    )
 
-if(WIN32)
-
+if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
-
 endif()
 
 file(GLOB SRC   *.cpp *.h)
@@ -19,8 +15,8 @@ include(../../RuntimeLibrary.cmake)      # Исключаем зависимос
 
 include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки
 
-if(WIN32)
-    include(../../CopyToDirEXE.cmake)
+if(MSVC)
+ #   include(../../CopyToDirEXE.cmake)
     include(../../SetWorkingDirectory.cmake)
 endif()
 
