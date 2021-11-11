@@ -42,6 +42,7 @@ if (MSVC)
     # W1
     add_compile_options(/wd4312)
     add_compile_options(/wd4805)
+    add_compile_options(/wd5243)
     
     # W2
     add_compile_options(/wd4099)
@@ -63,6 +64,7 @@ if (MSVC)
     add_compile_options(/wd4389)
     add_compile_options(/wd4456)
     add_compile_options(/wd4457)
+    add_compile_options(/wd4458)
     add_compile_options(/wd4505)
     add_compile_options(/wd4701)
     add_compile_options(/wd4702)
