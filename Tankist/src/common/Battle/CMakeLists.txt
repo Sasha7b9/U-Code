@@ -13,7 +13,6 @@ include_directories(.
 
 add_definitions(-DURHO3D_LOGGING -DSERVER)
 
-
 if(WIN32)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Yustdafx.h /FIstdafx.h")
@@ -81,7 +80,7 @@ else()
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 
-include(../../CopyToDirEXE.cmake)
+#include(../../CopyToDirEXE.cmake)
 include(../../SetWorkingDirectory.cmake)
 
 include(../../Install.cmake)
