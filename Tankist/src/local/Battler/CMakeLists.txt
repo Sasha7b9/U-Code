@@ -75,7 +75,7 @@ else()
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 
-copy_exe()
+#copy_exe()
 
 set_working_directory()
 

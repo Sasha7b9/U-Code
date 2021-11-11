@@ -1,4 +1,7 @@
-generated/
+generated/Urho3D/
+
 Demo/out/debug/*.dll
 Demo/out/debug/*.exe
 Demo/out/release/
+
+Tankist/generated/

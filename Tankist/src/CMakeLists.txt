@@ -24,11 +24,11 @@ endif()
 
 set(OUT_DIR $ENV{PROJECT_TANKIST_DIR}\\out\\${SUB_DIR})
 
-if(WIN32)
+if(MSVC)
     link_directories($ENV{PROJECT_TANKIST_DIR}/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE}
                      ../../generated/Urho3D/${SUB_DIR}/lib
                      ThirdParty/bass
-                     ThirdParty/opus/generated/Release)
+                     ../../Tankist/generated/opus/Release)
 else()
     link_directories(../generated/${SUB_DIR}/ThirdParty/bin
                      ../../Urho3D/generated/${SUB_DIR}/lib
@@ -38,7 +38,7 @@ else()
 endif()
 
 
-if(WIN32)
+if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall /std:c++17")
 else()
     add_definitions(-m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing -fmax-errors=1 -Wall)
