@@ -12,7 +12,7 @@ add_executable(${PROJECT_NAME} ${SRC})
 
 include(../../RuntimeLibrary.cmake)      # Исключаем зависимости от динамических библиотек VS времени выполнения релизной версии
 
-include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки
+link_third_party()
 
 if(MSVC)
  #   include(../../CopyToDirEXE.cmake)

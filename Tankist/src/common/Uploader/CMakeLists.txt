@@ -69,7 +69,7 @@ if(MSVC)
     include(../../SetWorkingDirectory.cmake)
 endif()
 
-include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки
+link_third_party()
 install_files()
 
 if(MSVC)

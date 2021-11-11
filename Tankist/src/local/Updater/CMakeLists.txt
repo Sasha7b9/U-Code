@@ -51,7 +51,7 @@ set_source_files_properties(stdafx.cpp
 
 add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
-include(../../LinkLibraries.cmake)          # Линкуем необходимые библиотеки
+link_third_party()
 
 include(../../RuntimeLibrary.cmake)      # Удаление зависимостей от динамических библиотек VS времени выполнения
 

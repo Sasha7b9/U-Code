@@ -71,5 +71,5 @@ include(../../RuntimeLibrary.cmake)
 copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
-include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки
+link_third_party()
 install_files()

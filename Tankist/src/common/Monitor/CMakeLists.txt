@@ -13,7 +13,7 @@ add_executable(${PROJECT_NAME} ${SRC})
 
 include(../../RuntimeLibrary.cmake)
 
-include(../../LinkLibraries.cmake)
+link_third_party()
 
 if(MSVC)
 #    include(../../CopyToDirEXE.cmake)
