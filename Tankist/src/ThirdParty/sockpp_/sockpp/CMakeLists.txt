@@ -14,7 +14,9 @@ file(GLOB SOURCES src/*)
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-include(../../../RuntimeLibrary.cmake)
+include(../../../TankistCommon.cmake)
+
+runtime_library()
 
 add_definitions(-DCOMPILE_LIBRARY)
 

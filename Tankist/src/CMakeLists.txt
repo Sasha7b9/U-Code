@@ -25,10 +25,10 @@ endif()
 set(OUT_DIR $ENV{PROJECT_TANKIST_DIR}\\out\\${SUB_DIR})
 
 if(MSVC)
-    link_directories($ENV{PROJECT_TANKIST_DIR}/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE}
-                     ../../generated/Urho3D/${SUB_DIR}/lib
+    link_directories(../../generated/Urho3D/${SUB_DIR}/lib
                      ThirdParty/bass
-                     ../../Tankist/generated/opus/Release)
+                     ../../Tankist/generated/opus/Release
+                     ../../Tankist/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
 else()
     link_directories(../generated/${SUB_DIR}/ThirdParty/bin
                      ../../Urho3D/generated/${SUB_DIR}/lib

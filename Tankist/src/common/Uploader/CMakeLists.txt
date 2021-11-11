@@ -66,7 +66,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${U
 
 if(MSVC)
     runtime_library()
-    copy_exe()
+#    copy_exe()
     set_working_directory()
 endif()
 

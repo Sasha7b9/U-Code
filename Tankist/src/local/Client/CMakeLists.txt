@@ -50,7 +50,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${FILESYSTEM} ${NETWORK} ${UTILS})
 
 runtime_library()
 
-copy_exe()
+#copy_exe()
 
 set_working_directory()
 

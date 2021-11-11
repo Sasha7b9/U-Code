@@ -56,7 +56,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${INTERFACE} ${NETWORK} ${U
 
 runtime_library()
 
-copy_exe()
+#copy_exe()
 
 set_working_directory()
 
