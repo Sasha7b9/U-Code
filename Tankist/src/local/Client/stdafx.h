@@ -1,7 +1,13 @@
 // (c) Aleksandr Shevchenko e-mail : Sasha7b9@tut.by
 #pragma once
 
-#define __restrict //-V2573
+//#define __restrict //-V2573
+
+
+#ifdef WIN32
+#pragma warning(push, 0)
+#pragma warning(disable: 5039)
+#endif
 
 
 // C++
@@ -18,6 +24,7 @@
 
 #ifdef WIN32
     #pragma warning(push, 0)
+    #pragma warning(disable: 5039)
 #endif
 
     #undef Bool

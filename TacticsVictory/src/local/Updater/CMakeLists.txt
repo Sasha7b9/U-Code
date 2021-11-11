@@ -54,6 +54,7 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "updater")
 include(../../RuntimeLibrary.cmake)
 
 copy_exe()
+
 include(../../SetWorkingDirectory.cmake)
 
 if(MSVC)

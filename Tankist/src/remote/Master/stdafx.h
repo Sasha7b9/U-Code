@@ -1,6 +1,12 @@
 #pragma once
 
 
+#ifdef WIN32
+#pragma warning(push, 0)
+#pragma warning(disable: 5039)
+#endif 
+
+
 // C++
 
 #include <cstdarg>
@@ -14,14 +20,10 @@
 
 // Third party
 
-#ifdef WIN32
-    #pragma warning(push, 0)
-#endif 
-
-    #undef Bool
-    #include <rapidjson/document.h>
-    #include <sockpp/tcp_acceptor.h>
-    #include <sockpp/tcp_connector.h>
+#undef Bool
+#include <rapidjson/document.h>
+#include <sockpp/tcp_acceptor.h>
+#include <sockpp/tcp_connector.h>
 
 #ifdef WIN32
     #pragma warning(pop)

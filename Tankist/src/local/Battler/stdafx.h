@@ -1,8 +1,13 @@
 // (c) Aleksandr Shevchenko e-mail : Sasha7b9@tut.by
 #pragma once
 
+
+#define WIN32_LEAN_AND_MEAN     // warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+
+
 #ifdef WIN32
 #pragma warning(push, 0)
+#pragma warning(disable: 5039)
 #endif
 
 #include <Bullet/src/BulletDynamics/ConstraintSolver/btSliderConstraint.h>

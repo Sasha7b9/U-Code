@@ -1,4 +1,7 @@
-﻿#ifdef WIN32
+﻿#define __STDC_WANT_SECURE_LIB__ 1          // warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro
+
+
+#ifdef WIN32
 #pragma warning(push, 0)
 #endif
 #include <iostream>

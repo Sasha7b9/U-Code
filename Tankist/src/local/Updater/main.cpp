@@ -3,7 +3,6 @@
 #include "globals.h"
 #include "FileSystem/_ConfigurationFile.h"
 #include "Utils/_Log.h"
-#include <iostream>
 
 
 int main(int, char *[]) //-V2504

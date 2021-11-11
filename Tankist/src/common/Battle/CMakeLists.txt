@@ -33,6 +33,7 @@ if(MSVC)
 #    add_compile_options(/wd4996)    # 
     add_compile_options(/wd5026)    # 'xxx': move constructor was implicitly defined as deleted
     add_compile_options(/wd5027)    # 'xxx': move assignment operator was implicitly defined as deleted
+    add_compile_options(/wd5039)
     add_compile_options(/wd5045)    # Compiler will insert Spectre mitigation for memory load if /Qspectre switch
                                     # specified
 #    add_compile_options(/wd5220)    # 'xxx:yyy': a non-static data member with a volatile qualified type no longer

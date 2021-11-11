@@ -2,6 +2,7 @@
 
 #ifdef WIN32
 #pragma warning(push, 0)
+#pragma warning(disable: 5039)
 #include <shlobj_core.h>
 #pragma warning(pop)
 #endif

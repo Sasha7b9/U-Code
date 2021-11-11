@@ -13,3 +13,14 @@ macro(copy_exe)
     endif()
 
 endmacro()
+
+
+macro(install_files_to_dir)
+    if(MSVC)
+        install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/../out/${SUB_DIR}")
+    else()
+        set(INSTALL_RPATH ".")
+        install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/../../../out/${SUB_DIR}")
+        set(INSTALL_RPATH ".")
+    endif()
+endmacro()

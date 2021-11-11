@@ -86,4 +86,4 @@ else()
 
 endif()
 
-include(../../Install.cmake)
+install_files_to_dir()

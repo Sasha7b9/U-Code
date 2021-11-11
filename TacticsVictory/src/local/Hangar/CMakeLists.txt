@@ -131,5 +131,7 @@ endif()
 target_link_libraries(${PROJECT_NAME} victory)
 
 include(../../SetWorkingDirectory.cmake)
-include(../../Install.cmake)
+
+install_files_to_dir()
+
 copy_exe()

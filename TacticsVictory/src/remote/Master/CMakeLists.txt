@@ -84,5 +84,5 @@ target_link_libraries(${PROJECT_NAME} victory)
 
 copy_exe()
 
-include(../../Install.cmake)
+install_files_to_dir()
 

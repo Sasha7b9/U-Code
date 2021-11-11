@@ -22,8 +22,10 @@ add_compile_options(/wd4820)    # 'xxx': 'n' bytes padding added after base clas
 add_compile_options(/wd4996)    # 
 add_compile_options(/wd5026)    # 'xxx': move constructor was implicitly defined as deleted
 add_compile_options(/wd5027)    # 'xxx': move assignment operator was implicitly defined as deleted
+add_compile_options(/wd5039)
 add_compile_options(/wd5045)    # Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-add_compile_options(/wd5220)    # 'xxx:yyy': a non-static data member with a volatile qualified type no longer implies that compiler generated copy/move constructors and copy/move assignment operators are not trivial
+add_compile_options(/wd5220)    # 'xxx:yyy': a non-static data member with a volatile qualified type no longer implies that 
+                                # compiler generated copy/move constructors and copy/move assignment operators are not trivial
 add_compile_options(/we26812)   # Prefer 'enum class' over 'enum' (Enum.3)
 
 file(GLOB SRC         ../../common_files/_defines.h
