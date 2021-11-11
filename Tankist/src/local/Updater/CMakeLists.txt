@@ -1,4 +1,4 @@
-project (Updater)
+project (TTUpdater)
 
 include_directories(.
                     ../../common_files

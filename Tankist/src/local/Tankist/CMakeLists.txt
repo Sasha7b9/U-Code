@@ -1,4 +1,4 @@
-project (Tankist)
+project (TTTankist)
 
 include_directories(.
                     ../../common_files
@@ -50,7 +50,7 @@ set_source_files_properties(stdafx.cpp
     COMPILE_FLAGS "/Ycstdafx.h"
 )
 
-add_executable(Tankist ${SRC} ${FILE_SYSTEM} ${INTERFACE} ${NETWORK} ${UTILS})
+add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${INTERFACE} ${NETWORK} ${UTILS})
 
 runtime_library()
 

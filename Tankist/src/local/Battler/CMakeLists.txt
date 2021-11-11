@@ -1,4 +1,4 @@
-project (Battler)
+project (TTBattler)
 
 include_directories(.
                     ../../common_files

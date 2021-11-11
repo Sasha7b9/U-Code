@@ -1,4 +1,4 @@
-project (Hangar)
+project (TTHangar)
 
 include_directories(.
                     ../../common_files

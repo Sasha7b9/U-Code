@@ -1,4 +1,4 @@
-project (Uploader)
+project (TTUploader)
 
 include_directories(.
                     ../../common_files

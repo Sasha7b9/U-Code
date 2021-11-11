@@ -1,4 +1,4 @@
-project (Master)
+project (TTMaster)
 
 include_directories(.
                     ../../common_files

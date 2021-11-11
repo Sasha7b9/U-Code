@@ -13,6 +13,9 @@ project (VictoryU3D)
 
 set (TARGET_NAME VictoryU3D)
 
+find_package (Urho3D REQUIRED)
+include_directories (${URHO3D_INCLUDE_DIRS})
+
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
     set(SUB_DIR debug)
     add_definitions(-DDEBUG)
@@ -55,23 +58,23 @@ endfunction()
 
 
 #if(WIN32)
-    add_subdirectory_with_folder("local" local/Battler)
-    add_subdirectory_with_folder("local" local/Client)
-    add_subdirectory_with_folder("local" local/Editor)
-    add_subdirectory_with_folder("local" local/Hangar)
-    add_subdirectory_with_folder("local" local/Updater)
+    add_subdirectory_with_folder("TacticsVictory/local" local/Battler)
+    add_subdirectory_with_folder("TacticsVictory/local" local/Client)
+    add_subdirectory_with_folder("TacticsVictory/local" local/Editor)
+    add_subdirectory_with_folder("TacticsVictory/local" local/Hangar)
+    add_subdirectory_with_folder("TacticsVictory/local" local/Updater)
 
-    add_subdirectory_with_folder("common" common/Battle)
-    add_subdirectory_with_folder("common" common/Controller)
-    add_subdirectory_with_folder("common" common/Monitor)
-    add_subdirectory_with_folder("common" common/Uploader)
+    add_subdirectory_with_folder("TacticsVictory/common" common/Battle)
+    add_subdirectory_with_folder("TacticsVictory/common" common/Controller)
+    add_subdirectory_with_folder("TacticsVictory/common" common/Monitor)
+    add_subdirectory_with_folder("TacticsVictory/common" common/Uploader)
 
-    add_subdirectory_with_folder("remote" remote/DataBase)
+    add_subdirectory_with_folder("TacticsVictory/remote" remote/DataBase)
 #endif()
 
-add_subdirectory_with_folder("common" common/LivingRoom)
-add_subdirectory_with_folder("remote" remote/Master)
+add_subdirectory_with_folder("TacticsVictory/common" common/LivingRoom)
+add_subdirectory_with_folder("TacticsVictory/remote" remote/Master)
 
-add_subdirectory_with_folder("libs" libs/victory)
+add_subdirectory_with_folder("TacticsVictory/libs" libs/victory)
 
 # add_subdirectory_with_folder("experimental" experimental/test_libevent)

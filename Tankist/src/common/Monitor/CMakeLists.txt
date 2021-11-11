@@ -1,4 +1,4 @@
-project (Monitor)
+project (TTMonitor)
 
 if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")

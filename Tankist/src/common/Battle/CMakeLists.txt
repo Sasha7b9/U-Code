@@ -1,4 +1,4 @@
-project (Battle)
+project (TTBattle)
 
 include_directories(.
                     ../../common_files

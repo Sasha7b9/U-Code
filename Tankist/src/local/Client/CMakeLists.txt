@@ -1,4 +1,4 @@
-project (Client)
+project (TTClient)
 
 include_directories(.
                     ../../common_files
