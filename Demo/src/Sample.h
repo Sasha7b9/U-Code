@@ -82,13 +82,13 @@ protected:
     /// Camera scene node.
     SharedPtr<Node> cameraNode_;
     /// Camera yaw angle.
-    float yaw_;
+    float yaw_ = 0.0f;
     /// Camera pitch angle.
-    float pitch_;
+    float pitch_ = 0.0f;
     /// Flag to indicate whether touch input has been enabled.
-    bool touchEnabled_;
+    bool touchEnabled_ = false;
     /// Mouse mode option to use in the sample.
-    MouseMode useMouseMode_;
+    MouseMode useMouseMode_ = MM_ABSOLUTE;
 
 private:
     /// Create logo.
@@ -111,11 +111,11 @@ private:
     void HandleTouchBegin(StringHash eventType, VariantMap& eventData);
 
     /// Screen joystick index for navigational controls (mobile platforms only).
-    unsigned screenJoystickIndex_;
+    unsigned screenJoystickIndex_ = M_MAX_UNSIGNED;
     /// Screen joystick index for settings (mobile platforms only).
-    unsigned screenJoystickSettingsIndex_;
+    unsigned screenJoystickSettingsIndex_ = M_MAX_UNSIGNED;
     /// Pause flag.
-    bool paused_;
+    bool paused_ = false;
 };
 
 #include "Sample.inl"

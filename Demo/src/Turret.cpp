@@ -426,6 +426,7 @@ void Turret::UpdateLights()
     nodeBeacon_->SetEnabled(beaconEnabled_);
     nodeLightL_->SetEnabled(gunsEnabled_);
     nodeLightR_->SetEnabled(gunsEnabled_);
+
     if (gunsEnabled_)
     {
         nodeLightL_->GetComponent<Light>()->SetColor(Color(Random(1.0f), 0.0f, 0.0f));

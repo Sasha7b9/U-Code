@@ -124,9 +124,9 @@ ZoneGrass::ZoneGrass(Node *node_, const Vector3& position, float size, float ste
         Node *nodeZone = zones[positions[numBlock++]];
 
         Node* objectNode = nodeZone->CreateChild("Grass");
-        Vector3 position(Random(minX, minX + size), 0.0f, Random(minZ, minZ + size));
-        position.y_ = gTerrain->GetHeight(position + nodeZone->GetPosition()) + 0.5f * scale;
-        objectNode->SetPosition(position);
+        Vector3 _position(Random(minX, minX + size), 0.0f, Random(minZ, minZ + size));
+        _position.y_ = gTerrain->GetHeight(_position + nodeZone->GetPosition()) + 0.5f * scale;
+        objectNode->SetPosition(_position);
         objectNode->SetRotation(Quaternion(Random(-180.0f, 180.0f), Vector3::UP) * Quaternion(90.0f, Vector3::LEFT));
         objectNode->SetScale(scale);
         nodeZone->GetComponent<StaticModelGroup>()->AddInstanceNode(objectNode);
@@ -146,9 +146,9 @@ Node* ZoneGrass::CreateHalfZone(Node *node)
 
     for(int i = 0; i < numHalf; i++)
     {
-        SharedPtr<Node> node = nodes[Random((int)size--)];
-        nodes.Remove(node);
-        nodeHalf->AddChild(node);
+        SharedPtr<Node> _node = nodes[Random((int)size--)];
+        nodes.Remove(_node);
+        nodeHalf->AddChild(_node);
     }
 
     Vector<SharedPtr<Node>> nodesAfter = nodeHalf->GetChildren();

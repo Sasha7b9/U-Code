@@ -14,7 +14,11 @@ endif()
 
 include_directories(../../Demo/generated/U-Urho/${TYPE_BUILD}/include
                     ../../Demo/generated/U-Urho/${TYPE_BUILD}/include/Urho3D/ThirdParty)
-link_directories(../../Demo/generated/U-Urho/${TYPE_BUILD}/lib)
+link_directories(../../generated/Urho3D/${TYPE_BUILD}/lib)
+
+if(MSVC)
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
+endif()
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS  /STACK:100000000")
 
