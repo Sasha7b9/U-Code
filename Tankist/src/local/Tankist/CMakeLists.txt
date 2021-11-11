@@ -54,7 +54,7 @@ add_executable(Tankist ${SRC} ${FILE_SYSTEM} ${INTERFACE} ${NETWORK} ${UTILS})
 
 include(../../RuntimeLibrary.cmake)
 
-include(../../CopyToDirEXE.cmake)
+copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
 include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки

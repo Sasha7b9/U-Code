@@ -13,3 +13,23 @@ macro(install_files)
         endif()
     endif()
 endmacro()
+
+
+macro(copy_dll)
+    if(WIN32)
+        add_custom_command(
+            TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND copy "$(OutputPath)${PROJECT_NAME}.dll" ${OUT_DIR} /Y
+        )
+    endif()
+endmacro()
+
+
+macro(copy_exe)
+    if(WIN32)
+        add_custom_command(
+            TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${OUT_DIR} /Y
+        )
+    endif()
+endmacro()

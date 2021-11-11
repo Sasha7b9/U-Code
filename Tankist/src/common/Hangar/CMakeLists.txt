@@ -68,7 +68,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
 include(../../RuntimeLibrary.cmake)
 
-include(../../CopyToDirEXE.cmake)
+copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
 include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки

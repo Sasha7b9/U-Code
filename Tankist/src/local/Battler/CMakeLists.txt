@@ -75,7 +75,7 @@ else()
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 
-include(../../CopyToDirEXE.cmake)
+copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
 install_files()
