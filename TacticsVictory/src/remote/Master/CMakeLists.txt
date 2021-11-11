@@ -13,7 +13,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_STATIC_DEFINE -DEVENT__HAVE_SA_FAMILY_T -DHAVE_CONFIG_H -DTINYTEST_LOCAL)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHs")
 
@@ -62,7 +62,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 set_target_properties(${PROJECT_NAME}                                 PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS} PROPERTIES UNITY_GROUP "master")
 
-if(WIN32)
+if(MSVC)
 
     include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
                                              # выполнени€ релизной версии
@@ -82,6 +82,7 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-include(../../CopyToDirEXE.cmake)
+copy_exe()
+
 include(../../Install.cmake)
 

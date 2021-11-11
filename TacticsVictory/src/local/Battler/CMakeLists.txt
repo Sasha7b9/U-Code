@@ -10,7 +10,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_LOGGING -DLOG_U3D -DU3D -DGRAPHICS -DUSE_MOUSE)
 
-if(WIN32)
+if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS  /STACK:100000000")
     
     add_compile_options(/wd4625)    # 'derived class' : copy constructor was implicitly defined as deleted because a
@@ -168,7 +168,7 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "battler")
 
 include(../../RuntimeLibrary.cmake)
 
-if(WIN32)
+if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
         target_link_libraries(${PROJECT_NAME} Urho3D_d)
     else()
@@ -182,4 +182,4 @@ target_link_libraries(${PROJECT_NAME} victory)
 
 include(../../SetWorkingDirectory.cmake)
 include(../../Install.cmake)
-include(../../CopyToDirEXE.cmake)
+copy_exe()

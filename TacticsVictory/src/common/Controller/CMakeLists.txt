@@ -14,7 +14,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_STATIC_DEFINE)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
 
@@ -69,8 +69,8 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "controller")
 
 include(../../RuntimeLibrary.cmake)
 
-if(WIN32)
-    include(../../CopyToDirEXE.cmake)
+if(MSVC)
+    copy_exe()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

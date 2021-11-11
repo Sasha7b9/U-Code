@@ -13,7 +13,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_STATIC_DEFINE -DEVENT__HAVE_SA_FAMILY_T -DHAVE_CONFIG_H -DTINYTEST_LOCAL -DU3D -DGRAPHICS)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHs")
 
@@ -73,7 +73,7 @@ add_library(${PROJECT_NAME} ${FILES_UNITY} ${LIBEVENT})
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
 
-if(WIN32)
+if(MSVC)
 
     include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
                                              # выполнени¤ релизной версии

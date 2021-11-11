@@ -12,7 +12,7 @@ include_directories(.
                     ../../../../Urho3D/generated/${SUB_DIR}/include
                     ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
 
@@ -53,10 +53,10 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "updater")
 
 include(../../RuntimeLibrary.cmake)
 
-include(../../CopyToDirEXE.cmake)
+copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
-if(WIN32)
+if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
         target_link_libraries(${PROJECT_NAME} Urho3D_d) 
     else()

@@ -14,7 +14,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_STATIC_DEFINE)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHs")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
@@ -66,9 +66,9 @@ set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_COMMAND_ARGUMENTS "
 
 include(../../RuntimeLibrary.cmake)
 
-if(WIN32)
+if(MSVC)
 
-    include(../../CopyToDirEXE.cmake)
+    copy_exe()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

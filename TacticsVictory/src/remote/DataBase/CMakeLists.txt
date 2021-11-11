@@ -10,7 +10,7 @@ include_directories(.
                     ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty
                     ../../../../Urho3D/Source/ThirdParty)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHs")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
@@ -58,7 +58,7 @@ set_source_files_properties(${SOCKPP_SOURCES} PROPERTIES HEADER_FILE_ONLY TRUE)
 
 file(GLOB FILES_UNITY ${SRC} ${FILESYSTEM} ${UTILS})
 
-if(WIN32)
+if(MSVC)
     link_directories(../../../generated/${SUB_DIR}/ThirdParty/sqlite/${CMAKE_BUILD_TYPE})
 else()
     link_directories(../../../generated/${SUB_DIR}/ThirdParty/sqlite)
@@ -69,12 +69,12 @@ add_executable( ${PROJECT_NAME} ${FILES_UNITY})
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "database")
 
-if(WIN32)
+if(MSVC)
 
     include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
                                              # выполнени€ релизной версии
 
-    include(../../CopyToDirEXE.cmake)
+    copy_exe()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
