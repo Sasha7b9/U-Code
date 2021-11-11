@@ -53,9 +53,10 @@ add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${U
 
 link_third_party()
 
-include(../../RuntimeLibrary.cmake)      # Удаление зависимостей от динамических библиотек VS времени выполнения
+runtime_library()
 
 copy_exe()
+
 include(../../SetWorkingDirectory.cmake) # Устанавливаем рабочий каталог для VS
 
 install_files_to_dir()

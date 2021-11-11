@@ -48,7 +48,7 @@ set_source_files_properties(stdafx.cpp
 
 add_executable(${PROJECT_NAME} ${SRC} ${FILESYSTEM} ${NETWORK} ${UTILS})
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 copy_exe()
 include(../../SetWorkingDirectory.cmake)

@@ -62,7 +62,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${GUI} ${INPUT} ${NETWORK} ${NETWORK_GAMES
 
 target_link_libraries(${PROJECT_NAME} opus)
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(WIN32)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

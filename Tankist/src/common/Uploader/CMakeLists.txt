@@ -64,7 +64,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
 if(MSVC)
-    include(../../RuntimeLibrary.cmake)      # Исключаем зависимости от динамических библиотек VS времени выполнения релизной версии
+    runtime_library()
     copy_exe()
     include(../../SetWorkingDirectory.cmake)
 endif()

@@ -11,7 +11,7 @@ source_group(src        FILES ${SRC})
 
 add_executable(${PROJECT_NAME} ${SRC})
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 link_third_party()
 

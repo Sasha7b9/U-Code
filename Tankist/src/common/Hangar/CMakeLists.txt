@@ -66,7 +66,7 @@ endif()
 
 add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 copy_exe()
 include(../../SetWorkingDirectory.cmake)

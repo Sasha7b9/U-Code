@@ -16,7 +16,7 @@ endmacro()
 
 
 macro(copy_dll)
-    if(WIN32)
+    if(MSVC)
         add_custom_command(
             TARGET ${PROJECT_NAME} POST_BUILD
             COMMAND copy "$(OutputPath)${PROJECT_NAME}.dll" ${OUT_DIR} /Y
@@ -26,7 +26,7 @@ endmacro()
 
 
 macro(copy_exe)
-    if(WIN32)
+    if(MSVC)
         add_custom_command(
             TARGET ${PROJECT_NAME} POST_BUILD
             COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${OUT_DIR} /Y
@@ -40,7 +40,7 @@ macro(link_third_party)
     
         target_link_libraries(${PROJECT_NAME} sockpp)
         
-        if(WIN32)
+        if(MSVC)
             target_link_libraries(${PROJECT_NAME} ws2_32)
         endif()
     
@@ -65,5 +65,18 @@ macro(link_third_party)
             LINKER_LANGUAGE CXX
         )
     
+    endif()
+endmacro()
+
+
+macro(runtime_library)
+    if(MSVC)
+        if(${CMAKE_BUILD_TYPE} STREQUAL Release)        # Для релизной версии
+            set_property(TARGET ${PROJECT_NAME} PROPERTY
+                MSVC_RUNTIME_LIBRARY "MultiThreaded")   # Устанавливаем статическую линковку рантайм-библиотек
+        elseif(${CMAKE_BUILD_TYPE} STREQUAL Debug)
+            set_property(TARGET ${PROJECT_NAME} PROPERTY
+                MSVC_RUNTIME_LIBRARY "MultiThreadedDebugDLL")
+        endif()
     endif()
 endmacro()

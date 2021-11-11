@@ -67,7 +67,7 @@ source_group(Utils               FILES ${UTILS})
 
 add_executable(${PROJECT_NAME} ${SRC} ${NETWORK} ${NETWORK_GAMESERVER} ${SCENE} ${SCENE_OBJECTS} ${UTILS})
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
