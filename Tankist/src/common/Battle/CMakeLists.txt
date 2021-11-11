@@ -13,7 +13,7 @@ include_directories(.
 
 add_definitions(-DURHO3D_LOGGING -DSERVER)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Yustdafx.h /FIstdafx.h")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS")
@@ -69,7 +69,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${NETWORK} ${NETWORK_GAMESERVER} ${SCENE} 
 
 include(../../RuntimeLibrary.cmake)
 
-if(WIN32)
+if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
         target_link_libraries(${PROJECT_NAME} Urho3D_d)
     else()
@@ -83,4 +83,4 @@ endif()
 #include(../../CopyToDirEXE.cmake)
 include(../../SetWorkingDirectory.cmake)
 
-include(../../Install.cmake)
+install_files()

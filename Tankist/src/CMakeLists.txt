@@ -44,6 +44,8 @@ else()
     add_definitions(-m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing -fmax-errors=1 -Wall)
 endif()
 
+include(TankistCommon.cmake)
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 define_property(
     TARGET

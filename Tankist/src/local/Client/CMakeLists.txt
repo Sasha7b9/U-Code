@@ -54,4 +54,4 @@ include(../../CopyToDirEXE.cmake)
 include(../../SetWorkingDirectory.cmake)
 
 include(../../LinkLibraries.cmake)        # Подключаем дополнительные библиотеки
-include(../../Install.cmake)
+install_files()

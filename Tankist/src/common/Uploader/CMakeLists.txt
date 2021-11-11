@@ -7,7 +7,7 @@ include_directories(.
 
 set(USE_SOCKPP 1)
 
-if(WIN32)
+if(MSVC)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Yustdafx.h /FIstdafx.h")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
@@ -54,7 +54,7 @@ source_group(FileSystem FILES ${FILE_SYSTEM})
 source_group(Network    FILES ${NETWORK})
 source_group(Utils      FILES ${UTILS})
 
-if(WIN32)
+if(MSVC)
     set_source_files_properties(stdafx.cpp
         PROPERTIES
         COMPILE_FLAGS "/Ycstdafx.h"
@@ -63,16 +63,16 @@ endif()
 
 add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
-if(WIN32)
+if(MSVC)
     include(../../RuntimeLibrary.cmake)      # Исключаем зависимости от динамических библиотек VS времени выполнения релизной версии
     include(../../CopyToDirEXE.cmake)
     include(../../SetWorkingDirectory.cmake)
 endif()
 
 include(../../LinkLibraries.cmake)          # Подключаем дополнительные библиотеки
-include(../../Install.cmake)
+install_files()
 
-if(WIN32)
+if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:10000000")
 else()
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=10000000")

@@ -1,12 +1,7 @@
 project (Configurator)
 
-include_directories(.
-                    )
-
 if(WIN32)
-
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
-
 endif()
 
 file(GLOB SRC   *.cpp *.h)
@@ -24,4 +19,4 @@ if(MSVC)
     include(../../SetWorkingDirectory.cmake)
 endif()
 
-include(../../Install.cmake)
+install_files()
