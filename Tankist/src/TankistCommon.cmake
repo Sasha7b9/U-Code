@@ -1,4 +1,4 @@
-macro(install_files)
+macro(install_files_to_dir)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
         if(MSVC)
             install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/../out/debug")

@@ -70,7 +70,7 @@ if(MSVC)
 endif()
 
 link_third_party()
-install_files()
+install_files_to_dir()
 
 if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:10000000")

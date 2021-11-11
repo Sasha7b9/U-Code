@@ -58,7 +58,7 @@ include(../../RuntimeLibrary.cmake)      # Удаление зависимост
 copy_exe()
 include(../../SetWorkingDirectory.cmake) # Устанавливаем рабочий каталог для VS
 
-install_files()
+install_files_to_dir()
 
 if(MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:10000000")

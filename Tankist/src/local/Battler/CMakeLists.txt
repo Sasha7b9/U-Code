@@ -78,4 +78,4 @@ endif()
 copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
-install_files()
+install_files_to_dir()

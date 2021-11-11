@@ -58,4 +58,4 @@ copy_exe()
 include(../../SetWorkingDirectory.cmake)
 
 link_third_party()
-install_files()
+install_files_to_dir()

@@ -20,4 +20,4 @@ if(MSVC)
     include(../../SetWorkingDirectory.cmake)
 endif()
 
-install_files()
+install_files_to_dir()

@@ -83,4 +83,4 @@ endif()
 #include(../../CopyToDirEXE.cmake)
 include(../../SetWorkingDirectory.cmake)
 
-install_files()
+install_files_to_dir()
