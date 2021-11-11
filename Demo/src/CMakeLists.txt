@@ -1,24 +1,22 @@
-cmake_minimum_required(VERSION 3.0)
-
 project (Demo)
 
 set(CMAKE_UNITY_BUILD ON)
 
 set(CMAKE_CXX_STANDARD 17)
 
-if(${CMAKE_BUILD_TYPE} STREQUAL Release)
-    set(TYPE_BUILD release)
-elseif(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-    set(TYPE_BUILD debug)
+if(CMAKE_BUILD_TYPE STREQUAL Debug)
+    set(_BUILD_TYPE_ debug)
 endif()
 
-include_directories(../../Demo/generated/U-Urho/${TYPE_BUILD}/include
-                    ../../Demo/generated/U-Urho/${TYPE_BUILD}/include/Urho3D/ThirdParty)
-link_directories(../../generated/Urho3D/${TYPE_BUILD}/lib)
-
-if(MSVC)
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
+if(CMAKE_BUILD_TYPE STREQUAL Release)
+    set(_BUILD_TYPE_ release)
 endif()
+
+include_directories(../../Demo/generated/U-Urho/${_BUILD_TYPE_}/include
+                    ../../Demo/generated/U-Urho/${_BUILD_TYPE_}/include/Urho3D/ThirdParty)
+link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
+
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS  /STACK:100000000")
 
@@ -30,12 +28,11 @@ file(GLOB FILES_UNITY ${SRC} )
 
 add_executable(${PROJECT_NAME} ${FILES_UNITY})
 
-if(WIN32)
-    if(${CMAKE_BUILD_TYPE} STREQUAL Release)
-        target_link_libraries(${PROJECT_NAME} Urho3D)
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D_d)
-    endif()
-else()
+# Указывакем, что Demo должна компилироваться после Urho3D. Для ускорения сборки иногда можно закомментировать эту строчку
+add_dependencies(${PROJECT_NAME} Urho3D)
+
+if(${CMAKE_BUILD_TYPE} STREQUAL Release)
     target_link_libraries(${PROJECT_NAME} Urho3D)
+else()
+    target_link_libraries(${PROJECT_NAME} Urho3D_d)
 endif()
