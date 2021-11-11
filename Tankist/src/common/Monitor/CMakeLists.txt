@@ -16,8 +16,7 @@ runtime_library()
 link_third_party()
 
 if(MSVC)
-#    include(../../CopyToDirEXE.cmake)
-    include(../../SetWorkingDirectory.cmake)
+    set_working_directory()
 endif()
 
 install_files_to_dir()

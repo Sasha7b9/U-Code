@@ -80,7 +80,6 @@ else()
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 
-#include(../../CopyToDirEXE.cmake)
-include(../../SetWorkingDirectory.cmake)
+set_working_directory()
 
 install_files_to_dir()

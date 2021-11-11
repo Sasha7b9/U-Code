@@ -57,7 +57,7 @@ runtime_library()
 
 copy_exe()
 
-include(../../SetWorkingDirectory.cmake) # Устанавливаем рабочий каталог для VS
+set_working_directory()
 
 install_files_to_dir()
 

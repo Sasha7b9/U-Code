@@ -55,7 +55,9 @@ add_executable(Tankist ${SRC} ${FILE_SYSTEM} ${INTERFACE} ${NETWORK} ${UTILS})
 runtime_library()
 
 copy_exe()
-include(../../SetWorkingDirectory.cmake)
+
+set_working_directory()
 
 link_third_party()
+
 install_files_to_dir()

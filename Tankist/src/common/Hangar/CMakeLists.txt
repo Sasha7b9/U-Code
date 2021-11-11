@@ -69,7 +69,9 @@ add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 runtime_library()
 
 copy_exe()
-include(../../SetWorkingDirectory.cmake)
+
+set_working_directory()
 
 link_third_party()
+
 install_files_to_dir()

@@ -80,3 +80,12 @@ macro(runtime_library)
         endif()
     endif()
 endmacro()
+
+
+macro(set_working_directory)
+    if(MSVC)
+        set_target_properties(
+            ${PROJECT_NAME} PROPERTIES
+            VS_DEBUGGER_WORKING_DIRECTORY ${OUT_DIR})
+    endif()
+endmacro()

@@ -66,7 +66,7 @@ add_executable(${PROJECT_NAME} ${SRC} ${CONTAINER} ${FILE_SYSTEM} ${NETWORK} ${U
 if(MSVC)
     runtime_library()
     copy_exe()
-    include(../../SetWorkingDirectory.cmake)
+    set_working_directory()
 endif()
 
 link_third_party()

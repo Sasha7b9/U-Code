@@ -76,6 +76,7 @@ else()
 endif()
 
 copy_exe()
-include(../../SetWorkingDirectory.cmake)
+
+set_working_directory()
 
 install_files_to_dir()
