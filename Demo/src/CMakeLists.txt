@@ -12,8 +12,6 @@ if(CMAKE_BUILD_TYPE STREQUAL Release)
     set(_BUILD_TYPE_ release)
 endif()
 
-include_directories(../../Demo/generated/U-Urho/${_BUILD_TYPE_}/include
-                    ../../Demo/generated/U-Urho/${_BUILD_TYPE_}/include/Urho3D/ThirdParty)
 link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
