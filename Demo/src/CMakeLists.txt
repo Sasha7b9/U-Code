@@ -4,6 +4,9 @@ set(CMAKE_UNITY_BUILD ON)
 
 set(CMAKE_CXX_STANDARD 17)
 
+find_package (Urho3D REQUIRED)
+include_directories (${URHO3D_INCLUDE_DIRS})
+
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(_BUILD_TYPE_ debug)
 endif()
@@ -14,7 +17,7 @@ endif()
 
 link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS  /STACK:100000000")
 
