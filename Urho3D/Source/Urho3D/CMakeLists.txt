@@ -105,6 +105,9 @@ if (MSVC)
         add_compile_options(/wd4711)
     endif()
     
+else if(UNIX)
+     add_definitions(-Wno-int-to-pointer-cast)
+    
 elseif (MINGW)
     if (URHO3D_64BIT)
         set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wa,-mbig-obj")
