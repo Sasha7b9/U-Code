@@ -106,7 +106,9 @@ if (MSVC)
     endif()
     
 elseif(UNIX)
-     add_definitions(-Wno-int-to-pointer-cast)
+     add_definitions(-Wno-int-to-pointer-cast
+                     -Wno-format-overflow
+                     )
     
 elseif (MINGW)
     if (URHO3D_64BIT)
