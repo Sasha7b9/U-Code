@@ -105,7 +105,7 @@ if (MSVC)
         add_compile_options(/wd4711)
     endif()
     
-else if(UNIX)
+elseif(UNIX)
      add_definitions(-Wno-int-to-pointer-cast)
     
 elseif (MINGW)
