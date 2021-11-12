@@ -102,6 +102,11 @@ Object::~Object()
     context_->RemoveEventSender(this);
 }
 
+StringHash ObjectFactory::GetType() const
+{
+    return typeInfo_->GetType();
+}
+
 void Object::OnEvent(Object* sender, StringHash eventType, VariantMap& eventData)
 {
     if (blockEvents_)
