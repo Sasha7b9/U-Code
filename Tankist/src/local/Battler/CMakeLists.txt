@@ -60,6 +60,8 @@ source_group(Utils               FILES ${UTILS})
 add_executable(${PROJECT_NAME} ${SRC} ${GUI} ${INPUT} ${NETWORK} ${NETWORK_GAMESERVER} ${SCENE} ${SCENE_CAMERAS}
     ${SCENE_OBJECTS} ${UTILS})
 
+add_dependencies(${PROJECT_NAME} Urho3D)
+
 target_link_libraries(${PROJECT_NAME} opus)
 
 runtime_library()

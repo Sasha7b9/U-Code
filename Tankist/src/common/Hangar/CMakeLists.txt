@@ -67,6 +67,8 @@ endif()
 
 add_executable(${PROJECT_NAME} ${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS})
 
+add_dependencies(${PROJECT_NAME} Urho3D)
+
 runtime_library()
 
 #copy_exe()

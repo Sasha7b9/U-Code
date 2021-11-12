@@ -68,6 +68,8 @@ source_group(Utils               FILES ${UTILS})
 
 add_executable(${PROJECT_NAME} ${SRC} ${NETWORK} ${NETWORK_GAMESERVER} ${SCENE} ${SCENE_OBJECTS} ${UTILS})
 
+add_dependencies(${PROJECT_NAME} Urho3D)
+
 runtime_library()
 
 if(MSVC)
