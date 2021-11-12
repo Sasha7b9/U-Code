@@ -182,6 +182,6 @@ function(add_superdirectory_with_folder _folder_name _folder _binary_folder)
 endfunction()
 
 
-add_subdirectory(../../Demo/src           Demo_src)
-add_subdirectory(../../Tankist/src/       Tankist_src)
-add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
+#add_subdirectory(../../Demo/src           Demo_src)
+#add_subdirectory(../../Tankist/src/       Tankist_src)
+#add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
