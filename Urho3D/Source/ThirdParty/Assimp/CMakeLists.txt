@@ -52,6 +52,9 @@ OPTION( ASSIMP_NO_EXPORT
 
 if (WIN32)
   ADD_DEFINITIONS( -DWIN32_LEAN_AND_MEAN )
+elseif(UNIX)
+     add_definitions(-Wno-addrss-of-packed-member
+     )
 endif()
 
 # Define here the needed parameters
