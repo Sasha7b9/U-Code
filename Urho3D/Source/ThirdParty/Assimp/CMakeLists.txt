@@ -53,8 +53,8 @@ OPTION( ASSIMP_NO_EXPORT
 if (WIN32)
   ADD_DEFINITIONS( -DWIN32_LEAN_AND_MEAN )
 elseif(UNIX)
+     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration")
      add_definitions(-Wno-address-of-packed-member
-                     -Wno-implicit-function-declaration
      )
 endif()
 
