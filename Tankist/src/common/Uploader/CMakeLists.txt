@@ -29,6 +29,7 @@ if(MSVC)
 
 else()
 
+    add_definitions(-std=c++17)
     add_definitions(-Wno-cpp        # the 'xxx' header is deprecated and well be removed
     )
 

@@ -26,8 +26,9 @@ if(MSVC)
 
 else()
 
-   add_definitions(-Wno-cpp
-   )
+    add_definitions(-std=c++17)
+    add_definitions(-Wno-cpp
+    )
 
 endif()
 
