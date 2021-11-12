@@ -109,6 +109,7 @@ elseif(UNIX)
      add_definitions(-Wno-int-to-pointer-cast
                      -Wno-format-overflow
                      -Wno-deprecated-declarations
+                     -Wno-invalid-pch
                      )
     
 elseif (MINGW)
