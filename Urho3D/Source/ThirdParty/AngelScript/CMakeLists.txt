@@ -23,7 +23,9 @@
 # Define target name
 set (TARGET_NAME AngelScript)
 
-
+if(UNIX)
+    add_definitions(-Wno-invalid-pch)
+endif()
 
 # Define preprocessor macros
 if (CLANG_PRE_STANDARD)
