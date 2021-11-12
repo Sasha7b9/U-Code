@@ -52,11 +52,7 @@ public:
     }
 
     /// Copy-construct from another bounding box.
-    BoundingBox(const BoundingBox& box) noexcept :
-        min_(box.min_),
-        max_(box.max_)
-    {
-    }
+    BoundingBox(const BoundingBox& box) noexcept;
 
     /// Construct from a rect, with the Z dimension left zero.
     explicit BoundingBox(const Rect& rect) noexcept :
@@ -73,11 +69,7 @@ public:
     }
 
     /// Construct from minimum and maximum floats (all dimensions same).
-    BoundingBox(float min, float max) noexcept :
-        min_(Vector3(min, min, min)),
-        max_(Vector3(max, max, max))
-    {
-    }
+    BoundingBox(float min, float max) noexcept;
 
 #ifdef URHO3D_SSE
     /// @nobind

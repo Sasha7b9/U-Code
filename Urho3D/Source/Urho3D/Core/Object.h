@@ -256,15 +256,10 @@ class URHO3D_API EventHandler : public LinkedListNode
 {
 public:
     /// Construct with specified receiver and userdata.
-    explicit EventHandler(Object* receiver, void* userData = nullptr) :
-        receiver_(receiver),
-        sender_(nullptr),
-        userData_(userData)
-    {
-    }
+    explicit EventHandler(Object* receiver, void* userData = nullptr);
 
     /// Destruct.
-    virtual ~EventHandler() = default;
+    virtual ~EventHandler();
 
     /// Set sender and event type.
     void SetSenderAndEventType(Object* sender, StringHash eventType)

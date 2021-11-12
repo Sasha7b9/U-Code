@@ -34,6 +34,15 @@
 namespace Urho3D
 {
 
+EventHandler::EventHandler(Object* receiver, void* userData) :
+    receiver_(receiver),
+    sender_(nullptr),
+    userData_(userData)
+{
+}
+
+EventHandler::~EventHandler() = default;
+
 TypeInfo::TypeInfo(const char* typeName, const TypeInfo* baseTypeInfo) :
     type_(typeName),
     typeName_(typeName),

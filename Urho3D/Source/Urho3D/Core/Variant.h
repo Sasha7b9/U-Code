@@ -326,7 +326,7 @@ class URHO3D_API Variant
 {
 public:
     /// Construct empty.
-    Variant() = default;
+    Variant();
 
     /// Construct from integer.
     Variant(int value)                  // NOLINT(google-explicit-constructor)
@@ -546,10 +546,7 @@ public:
     }
 
     /// Copy-construct from another variant.
-    Variant(const Variant& value)
-    {
-        *this = value;
-    }
+    Variant(const Variant& value);
 
     /// Destruct.
     ~Variant()

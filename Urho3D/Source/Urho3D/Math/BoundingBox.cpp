@@ -30,6 +30,18 @@
 namespace Urho3D
 {
 
+BoundingBox::BoundingBox(const BoundingBox& box) noexcept :
+    min_(box.min_),
+    max_(box.max_)
+{
+}
+
+BoundingBox::BoundingBox(float min, float max) noexcept :
+    min_(Vector3(min, min, min)),
+    max_(Vector3(max, max, max))
+{
+}
+
 void BoundingBox::Define(const Vector3* vertices, unsigned count)
 {
     Clear();

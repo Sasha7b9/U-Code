@@ -70,6 +70,8 @@ file(GLOB FILES_UNITY ${SRC} ${CORE} ${FILESYSTEM} ${INPUT} ${NETWORK} ${UTILS} 
 
 add_library(${PROJECT_NAME} ${FILES_UNITY} ${LIBEVENT})
 
+add_dependencies(${PROJECT_NAME} Urho3D)
+
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
 

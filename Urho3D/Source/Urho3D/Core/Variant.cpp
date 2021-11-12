@@ -74,6 +74,14 @@ static const char* typeNames[] =
 
 static_assert(sizeof(typeNames) / sizeof(const char*) == (size_t)MAX_VAR_TYPES + 1, "Variant type name array is out-of-date");
 
+/// Construct empty.
+Variant::Variant() = default;
+
+Variant::Variant(const Variant& value)
+{
+    *this = value;
+}
+
 Variant& Variant::operator =(const Variant& rhs)
 {
     // Handle custom types separately
