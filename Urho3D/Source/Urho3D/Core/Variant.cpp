@@ -82,6 +82,11 @@ Variant::Variant(const Variant& value)
     *this = value;
 }
 
+Variant::~Variant()
+{
+    SetType(VAR_NONE);
+}
+
 Variant& Variant::operator =(const Variant& rhs)
 {
     // Handle custom types separately
@@ -852,6 +857,18 @@ template <> const PODVector<unsigned char>& Variant::Get<const PODVector<unsigne
 template <> void* Variant::Get<void*>() const
 {
     return GetVoidPtr();
+}
+
+int Variant::GetInt() const
+{
+    if (type_ == VAR_INT)
+        return value_.int_;
+    else if (type_ == VAR_FLOAT)
+        return static_cast<int>(value_.float_);
+    else if (type_ == VAR_DOUBLE)
+        return static_cast<int>(value_.double_);
+    else
+        return 0;
 }
 
 template <> RefCounted* Variant::Get<RefCounted*>() const

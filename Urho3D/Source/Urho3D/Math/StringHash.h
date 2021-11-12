@@ -72,7 +72,7 @@ public:
     }
 
     /// Test for equality with another hash.
-    bool operator ==(const StringHash& rhs) const { return value_ == rhs.value_; }
+    bool operator ==(const StringHash& rhs) const;
 
     /// Test for inequality with another hash.
     bool operator !=(const StringHash& rhs) const { return value_ != rhs.value_; }
@@ -97,7 +97,7 @@ public:
     String Reverse() const;
 
     /// Return hash value for HashSet & HashMap.
-    unsigned ToHash() const { return value_; }
+    unsigned ToHash() const;
 
     /// Calculate hash value from a C string.
     static unsigned Calculate(const char* str, unsigned hash = 0);

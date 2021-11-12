@@ -43,6 +43,12 @@ EventHandler::EventHandler(Object* receiver, void* userData) :
 
 EventHandler::~EventHandler() = default;
 
+/// Return type.
+StringHash TypeInfo::GetType() const
+{
+    return type_;
+}
+
 TypeInfo::TypeInfo(const char* typeName, const TypeInfo* baseTypeInfo) :
     type_(typeName),
     typeName_(typeName),
@@ -423,6 +429,17 @@ VariantMap& Object::GetEventDataMap() const
 const Variant& Object::GetGlobalVar(StringHash key) const
 {
     return context_->GetGlobalVar(key);
+}
+
+const TypeInfo* Object::GetTypeInfoStatic()
+{
+    return nullptr;
+}
+
+/// Return type name.
+const String& TypeInfo::GetTypeName() const
+{
+    return typeName_;
 }
 
 const VariantMap& Object::GetGlobalVars() const

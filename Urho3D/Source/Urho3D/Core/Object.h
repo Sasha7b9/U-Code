@@ -52,9 +52,9 @@ public:
     template<typename T> bool IsTypeOf() const { return IsTypeOf(T::GetTypeInfoStatic()); }
 
     /// Return type.
-    StringHash GetType() const { return type_; }
+    StringHash GetType() const;
     /// Return type name.
-    const String& GetTypeName() const { return typeName_;}
+    const String& GetTypeName() const;
     /// Return base type info.
     const TypeInfo* GetBaseTypeInfo() const { return baseTypeInfo_; }
 
@@ -102,7 +102,7 @@ public:
     virtual void OnEvent(Object* sender, StringHash eventType, VariantMap& eventData);
 
     /// Return type info static.
-    static const TypeInfo* GetTypeInfoStatic() { return nullptr; }
+    static const TypeInfo* GetTypeInfoStatic();
     /// Check current instance is type of specified type.
     bool IsInstanceOf(StringHash type) const;
     /// Check current instance is type of specified type.
@@ -224,7 +224,7 @@ public:
     const TypeInfo* GetTypeInfo() const { return typeInfo_; }
 
     /// Return type hash of objects created by this factory.
-    StringHash GetType() const { return typeInfo_->GetType(); }
+    StringHash GetType() const;
 
     /// Return type name of objects created by this factory.
     const String& GetTypeName() const { return typeInfo_->GetTypeName(); }

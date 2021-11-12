@@ -549,10 +549,7 @@ public:
     Variant(const Variant& value);
 
     /// Destruct.
-    ~Variant()
-    {
-        SetType(VAR_NONE);
-    }
+    ~Variant();
 
     /// Reset to empty.
     void Clear()
@@ -1082,17 +1079,7 @@ public:
     template <class T> void SetCustom(const T& value) { SetCustomVariantValue(MakeCustomValue<T>(value)); }
 
     /// Return int or zero on type mismatch. Floats and doubles are converted.
-    int GetInt() const
-    {
-        if (type_ == VAR_INT)
-            return value_.int_;
-        else if (type_ == VAR_FLOAT)
-            return static_cast<int>(value_.float_);
-        else if (type_ == VAR_DOUBLE)
-            return static_cast<int>(value_.double_);
-        else
-            return 0;
-    }
+    int GetInt() const;
 
     /// Return 64 bit int or zero on type mismatch. Floats and doubles are converted.
     long long GetInt64() const

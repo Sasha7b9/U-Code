@@ -124,10 +124,10 @@ public:
     }
 
     /// Return number of elements.
-    unsigned Size() const { return ptrs_ ? (reinterpret_cast<unsigned*>(ptrs_))[0] : 0; }
+    unsigned Size() const;
 
     /// Return number of buckets.
-    unsigned NumBuckets() const { return ptrs_ ? (reinterpret_cast<unsigned*>(ptrs_))[1] : 0; }
+    unsigned NumBuckets() const;
 
     /// Return whether has no elements.
     bool Empty() const { return Size() == 0; }
@@ -140,10 +140,10 @@ protected:
     void ResetPtrs();
 
     /// Set new size.
-    void SetSize(unsigned size) { if (ptrs_) (reinterpret_cast<unsigned*>(ptrs_))[0] = size; }
+    void SetSize(unsigned size);
 
     /// Return bucket head pointers.
-    HashNodeBase** Ptrs() const { return ptrs_ ? ptrs_ + 2 : nullptr; }
+    HashNodeBase** Ptrs() const;
 
     /// List head node pointer.
     HashNodeBase* head_;

@@ -52,6 +52,11 @@ static StringHashRegister& GetGlobalStringHashRegister()
 
 const StringHash StringHash::ZERO;
 
+bool StringHash::operator ==(const StringHash& rhs) const
+{
+    return value_ == rhs.value_;
+}
+
 StringHash::StringHash(const char* str) noexcept :
     value_(Calculate(str))
 {
@@ -95,6 +100,11 @@ String StringHash::ToString() const
     char tempBuffer[CONVERSION_BUFFER_LENGTH];
     sprintf(tempBuffer, "%08X", value_);
     return String(tempBuffer);
+}
+
+unsigned StringHash::ToHash() const
+{
+    return value_;
 }
 
 String StringHash::Reverse() const

@@ -27,6 +27,26 @@
 namespace Urho3D
 {
 
+unsigned HashBase::NumBuckets() const
+{
+    return ptrs_ ? (reinterpret_cast<unsigned*>(ptrs_))[1] : 0;
+}
+
+HashNodeBase** HashBase::Ptrs() const
+{
+    return ptrs_ ? ptrs_ + 2 : nullptr;
+}
+
+void HashBase::SetSize(unsigned size)
+{
+    if (ptrs_) (reinterpret_cast<unsigned*>(ptrs_))[0] = size;
+}
+
+unsigned HashBase::Size() const
+{
+    return ptrs_ ? (reinterpret_cast<unsigned*>(ptrs_))[0] : 0;
+}
+
 void HashBase::AllocateBuckets(unsigned size, unsigned numBuckets)
 {
     delete[] ptrs_;
