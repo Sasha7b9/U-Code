@@ -54,6 +54,7 @@ if (WIN32)
   ADD_DEFINITIONS( -DWIN32_LEAN_AND_MEAN )
 elseif(UNIX)
      add_definitions(-Wno-address-of-packed-member
+                     -Wno-implicit-function-declaration
      )
 endif()
 

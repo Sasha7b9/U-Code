@@ -44,7 +44,7 @@ if (MSVC)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W0")
 elseif(UNIX)
-    add_definitions(-fmax-errors=1 -Werror)
+    add_definitions(-fmax-errors=5 -Werror)
 endif()
 
 # Setup RPATH settings
