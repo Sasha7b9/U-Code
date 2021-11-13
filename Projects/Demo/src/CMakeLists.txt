@@ -13,7 +13,7 @@ if(CMAKE_BUILD_TYPE STREQUAL Release)
     set(_BUILD_TYPE_ release)
 endif()
 
-link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
+link_directories(../../../generated/Urho3D/${_BUILD_TYPE_}/lib)
 
 if(MSVC)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")

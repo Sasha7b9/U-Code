@@ -46,6 +46,10 @@
 
 # Modified by Lasse Oorni and Yao Wei Tjong for Urho3D
 
+if(MSVC)
+    add_compile_options(/wd4996)
+endif()
+
 SET( HEADER_PATH ../include/assimp )
 
 SET( COMPILER_HEADERS
