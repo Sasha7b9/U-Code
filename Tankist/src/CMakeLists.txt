@@ -30,10 +30,7 @@ if(MSVC)
                      ../../Tankist/generated/opus/Release
                      ../../Tankist/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
 else()
-    link_directories(../generated/${SUB_DIR}/ThirdParty/bin
-                     ../../Urho3D/generated/${SUB_DIR}/lib
-                     ThirdParty/opus/generated
-                     ../../Urho3D/generated/${SUB_DIR}/Source/ThirdParty/Bullet)
+    link_directories(../../generated/Tankist/ThirdParty/${SUB_DIR}/sockpp_/sockpp/)
     add_definitions(-g -Og)
 endif()
 
