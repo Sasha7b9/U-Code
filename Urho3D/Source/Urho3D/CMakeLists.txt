@@ -110,7 +110,7 @@ elseif(UNIX)
                      -Wno-format-overflow
                      -Wno-deprecated-declarations
                      -Wno-invalid-pch
-                     )
+                     -Wno-unused-result)
     
 elseif (MINGW)
     if (URHO3D_64BIT)

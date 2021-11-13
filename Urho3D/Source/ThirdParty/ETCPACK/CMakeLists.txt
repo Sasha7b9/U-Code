@@ -23,6 +23,10 @@
 # Define target name
 set (TARGET_NAME ETCPACK)
 
+if(UNIX)
+    add_definitions(-Wno-unused-result)
+endif()
+
 # Define source files
 set (SOURCE_FILES source/etcdec.cxx)
 

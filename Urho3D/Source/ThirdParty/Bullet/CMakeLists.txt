@@ -23,6 +23,10 @@
 # Define target name
 set (TARGET_NAME Bullet)
 
+if(UNIX)
+    add_definitions(-Wno-stringop-overflow)
+endif()
+
 # Define preprocessor macros
 if (BT_USE_DOUBLE_PRECISION)
     add_definitions (-DBT_USE_DOUBLE_PRECISION)
