@@ -18,6 +18,8 @@ public:
 
 private:
 
+    ServerS(const ServerS&) = delete;
+
     Vector<ConnectionT> connections;
 
     void HandlerMessage(StringHash, VariantMap &);
