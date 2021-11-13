@@ -17,25 +17,23 @@ include_directories (${URHO3D_INCLUDE_DIRS})
 
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
     set(SUB_DIR debug)
+    set(_BUILD_TYPE_ debug)
     add_definitions(-DDEBUG)
-elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
+elseif(CMAKE_BUILD_TYPE STREQUAL Release)
     set(SUB_DIR release)
+    set(_BUILD_TYPE_ release)
 endif()
 
 set(OUT_DIR $ENV{PROJECT_TANKIST_DIR}\\out\\${SUB_DIR})
 
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall /std:c++17")
-    link_directories(../../generated/Urho3D/${SUB_DIR}/lib
+    link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib
                      ThirdParty/bass
                      ../../Tankist/generated/opus/Release
-                     ../../Tankist/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
+                     ../../Tankist/generated/${_BUILD_TYPE_}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
 else()
-    if(${CMAKE_BUILD_TYPE} STREQUAL Release)
-        link_directories(../../generated/Tankist/ThirdParty/release/sockpp_/sockpp)
-    else()
-        link_directories(../../generated/Tankist/ThirdParty/debug/sockpp_/sockpp)
-    endif()
+    link_directories(../../generated/Tankist/ThirdParty/${_BUILD_TYPE_}/sockpp_/sockpp)
     add_definitions(-g -Og -m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing
                     -fmax-errors=1 -w)
 endif()
