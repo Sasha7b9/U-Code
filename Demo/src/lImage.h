@@ -32,11 +32,11 @@ public:
     void SetHotSpot(int x, int y);
 
 private:
-    lImage& operator=(const lImage&) {};
+    lImage& operator=(const lImage&) { return *this; }
 
     void Replace4Points(int x, int y, const Color &color);
     void Replace4PointsBound(int x, int y, const Color &color);
-    
+
     Color replacedColor;
     Color boundingColor;
     IntVector2 hotSpot;

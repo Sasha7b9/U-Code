@@ -26,7 +26,7 @@ public:
 
 private:
     lSprite(lSprite const&) : Sprite(nullptr) {};
-    lSprite operator=(lSprite const &) {};
+    lSprite &operator=(lSprite const &) = default;
 
     SharedPtr<lImage> image;
 };
