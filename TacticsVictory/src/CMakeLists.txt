@@ -18,11 +18,9 @@ include_directories (${URHO3D_INCLUDE_DIRS})
 
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
     set(_BUILD_TYPE_ debug)
-    set(SUB_DIR debug)
     add_definitions(-DDEBUG)
 elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
     set(_BUILD_TYPE_ release)
-    set(SUB_DIR release)
 endif()
 
 set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${_BUILD_TYPE_})

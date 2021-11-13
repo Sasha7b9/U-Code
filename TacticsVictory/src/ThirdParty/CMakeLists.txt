@@ -14,13 +14,13 @@ project (ThirdParty)
 set (TARGET_NAME ThirdParty)
 
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-    set(SUB_DIR debug)
+    set(_BUILD_TYPE_ debug)
     add_definitions(-DDEBUG)
 elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
-    set(SUB_DIR release)
+    set(_BUILD_TYPE_ release)
 endif()
 
-set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${SUB_DIR})
+set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${_BUILD_TYPE_})
 
 set(CMAKE_CXX_STANDARD 17)
 

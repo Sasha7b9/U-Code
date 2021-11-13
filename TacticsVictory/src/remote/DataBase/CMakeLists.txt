@@ -58,9 +58,9 @@ set_source_files_properties(${SOCKPP_SOURCES} PROPERTIES HEADER_FILE_ONLY TRUE)
 file(GLOB FILES_UNITY ${SRC} ${FILESYSTEM} ${UTILS})
 
 if(MSVC)
-    link_directories(../../../generated/${SUB_DIR}/ThirdParty/sqlite/${CMAKE_BUILD_TYPE})
+    link_directories(../../../generated/${_BUILD_TYPE_}/ThirdParty/sqlite/${CMAKE_BUILD_TYPE})
 else()
-    link_directories(../../../generated/${SUB_DIR}/ThirdParty/sqlite)
+    link_directories(../../../generated/${_BUILD_TYPE_}/ThirdParty/sqlite)
 endif()
 
 add_executable( ${PROJECT_NAME} ${FILES_UNITY})
