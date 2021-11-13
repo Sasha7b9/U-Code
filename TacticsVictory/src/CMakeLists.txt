@@ -17,15 +17,17 @@ find_package (Urho3D REQUIRED)
 include_directories (${URHO3D_INCLUDE_DIRS})
 
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
+    set(_BUILD_TYPE_ debug)
     set(SUB_DIR debug)
     add_definitions(-DDEBUG)
 elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
+    set(_BUILD_TYPE_ release)
     set(SUB_DIR release)
 endif()
 
-set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${SUB_DIR})
+set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${_BUILD_TYPE_})
 
-link_directories(../../generated/Urho3D/${SUB_DIR}/lib)
+link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
 
 if(WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
