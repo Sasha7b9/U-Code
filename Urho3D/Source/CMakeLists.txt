@@ -89,7 +89,7 @@ if (URHO3D_LIB_TYPE STREQUAL SHARED AND NOT WIN32 AND NOT ANDROID AND NOT IOS AN
 endif ()
 
 # Add targets
-foreach (TARGET LZ4 PugiXml rapidjson SDL StanHull STB)
+foreach (TARGET     STB)
     add_subdirectory (ThirdParty/${TARGET})
 endforeach ()
 
@@ -100,6 +100,26 @@ set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} ETCPACK)
 add_subdirectory_with_folder("ThirdParty" ThirdParty/FreeType)
 # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
 set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} FreeType)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/LZ4)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} LZ4)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/PugiXml)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} PugiXml)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/rapidjson)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} rapidjson)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/SDL)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} SDL)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/StanHull)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} StanHull)
 
 if (URHO3D_ANGELSCRIPT)
     add_subdirectory_with_folder("ThirdParty" ThirdParty/AngelScript)
