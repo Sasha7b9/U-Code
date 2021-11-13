@@ -27,8 +27,6 @@ set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${SUB_DIR})
 
 link_directories(../../generated/Urho3D/${SUB_DIR}/lib)
 
-set(CMAKE_CXX_STANDARD 17)
-
 if(WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 else()
