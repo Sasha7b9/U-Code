@@ -526,11 +526,6 @@ endif ()
 if (APPLE)
     set_property (TARGET ${TARGET_NAME} APPEND PROPERTY LINK_LIBRARIES -force_load)
 elseif (MSVC)
-
-    message("")
-    message("")
-    message("                                          THIRD_PARTY_LIBS")
-
     foreach (THIRD_PARTY_LIB ${STATIC_LIBRARY_TARGETS})
         if (NOT ${THIRD_PARTY_LIB} MATCHES boost|rapidjson|STB)  # Exclude header-only "fake" static libs
             # Must be specified for each library https://github.com/urho3d/Urho3D/issues/2760
