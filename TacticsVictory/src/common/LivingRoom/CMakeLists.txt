@@ -8,9 +8,7 @@ include_directories(.
                     ../../ThirdParty/sockpp/include
                     ../../ThirdParty/libevent/compat
                     ../../ThirdParty/libevent/include
-                    ../../ThirdParty/libevent/build/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty)
+                    ../../ThirdParty/libevent/build/include)
 
 add_definitions(-DURHO3D_STATIC_DEFINE)
 
