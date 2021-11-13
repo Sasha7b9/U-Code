@@ -8,3 +8,5 @@ Demo/out/debug/*.exe
 Demo/out/release/
 
 Tankist/generated/
+
+TacticsVictory/src/ThirdParty/libevent/build

@@ -186,4 +186,4 @@ endfunction()
 
 add_subdirectory(../../Demo/src           Demo_src)
 add_subdirectory(../../Tankist/src/       Tankist_src)
-#add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
+add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
