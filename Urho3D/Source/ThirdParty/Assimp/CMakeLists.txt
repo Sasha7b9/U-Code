@@ -55,6 +55,8 @@ if (WIN32)
 elseif(UNIX)
      set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration")
      add_definitions(-Wno-address-of-packed-member
+                     -Wno-stringop-overflow
+                     -Wno-format-truncation
      )
 endif()
 
