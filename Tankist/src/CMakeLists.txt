@@ -25,20 +25,19 @@ endif()
 set(OUT_DIR $ENV{PROJECT_TANKIST_DIR}\\out\\${SUB_DIR})
 
 if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall /std:c++17")
     link_directories(../../generated/Urho3D/${SUB_DIR}/lib
                      ThirdParty/bass
                      ../../Tankist/generated/opus/Release
                      ../../Tankist/generated/${SUB_DIR}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
 else()
-    link_directories(../../generated/Tankist/ThirdParty/${SUB_DIR}/sockpp_/sockpp/)
+    if(${CMAKE_BUILD_TYPE} STREQUAL Release)
+        link_directories(../../generated/Tankist/ThirdParty/release/sockpp_/sockpp)
+    else()
+        link_directories(../../generated/Tankist/ThirdParty/debug/sockpp_/sockpp)
+    endif()
     add_definitions(-g -Og)
-endif()
-
-
-if(MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall /std:c++17")
-else()
-    add_definitions(-m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing -fmax-errors=100000 -w)
+    add_definitions(-m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing -fmax-errors=1 -w)
 endif()
 
 include(TankistCommon.cmake)
