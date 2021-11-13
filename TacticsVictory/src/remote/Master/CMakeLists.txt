@@ -1,4 +1,4 @@
-project (Master)
+project (TVMaster)
 
 set(CMAKE_UNITY_BUILD ON)
 

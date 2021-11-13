@@ -26,7 +26,10 @@ cmake_minimum_required (VERSION 3.10.2)
 # Set project name
 project (Urho3D)
 
-#cmake_policy(SET CMP0127 NEW)
+if(${CMAKE_VERSION} VERSION_LESS "3.22.0")
+else()
+    cmake_policy(SET CMP0127 NEW)
+endif()
 
 # Set CMake modules search path
 set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)

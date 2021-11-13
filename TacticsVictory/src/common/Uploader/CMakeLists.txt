@@ -1,4 +1,4 @@
-project (Uploader)
+project (TVUploader)
 
 set(CMAKE_UNITY_BUILD ON)
 

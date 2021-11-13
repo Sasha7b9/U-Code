@@ -1,4 +1,4 @@
-project (Monitor)
+project (TVMonitor)
 
 set(CMAKE_UNITY_BUILD ON)
 

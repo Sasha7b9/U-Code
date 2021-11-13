@@ -1,4 +1,4 @@
-project (DataBase)
+project (TVDataBase)
 
 set(CMAKE_UNITY_BUILD ON)
 

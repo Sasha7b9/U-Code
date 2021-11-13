@@ -1,4 +1,4 @@
-project (Hangar)
+project (TVHangar)
 
 set(CMAKE_UNITY_BUILD ON)
 

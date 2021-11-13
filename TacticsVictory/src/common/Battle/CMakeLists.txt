@@ -1,4 +1,4 @@
-project (Battle)
+project (TVBattle)
 
 set(CMAKE_UNITY_BUILD ON)
 
