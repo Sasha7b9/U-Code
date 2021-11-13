@@ -47,6 +47,20 @@ elseif(UNIX)
     add_definitions(-fmax-errors=1 -Werror)
 endif()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+define_property(
+    TARGET
+    PROPERTY FOLDER
+    INHERITED
+    BRIEF_DOCS "Set the folder name."
+    FULL_DOCS "Use to organize targets in an IDE."
+)
+
+function(add_subdirectory_with_folder _folder_name _folder)
+    add_subdirectory(${_folder} ${ARGN})
+    set_property(DIRECTORY "${_folder}" PROPERTY FOLDER "${_folder_name}")
+endfunction()
+
 # Setup RPATH settings
 if (URHO3D_LIB_TYPE STREQUAL SHARED AND NOT WIN32 AND NOT ANDROID AND NOT IOS AND NOT TVOS AND NOT WEB)
     # Add RPATH entries when building
@@ -80,7 +94,10 @@ foreach (TARGET ETCPACK FreeType LZ4 PugiXml rapidjson SDL StanHull STB)
 endforeach ()
 
 if (URHO3D_ANGELSCRIPT)
-    add_subdirectory (ThirdParty/AngelScript)
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/AngelScript)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} AngelScript)
+
     if (WEB OR (ARM AND URHO3D_64BIT) OR URHO3D_FORCE_AS_MAX_PORTABILITY)
         add_subdirectory (ThirdParty/boost)
     endif ()
@@ -92,8 +109,13 @@ if (URHO3D_LUA)
 endif ()
 
 if (URHO3D_NETWORK)
-    add_subdirectory (ThirdParty/Civetweb)
-    add_subdirectory (ThirdParty/SLikeNet)
+    add_subdirectory_with_folder ("ThirdParty" ThirdParty/Civetweb)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} Civetweb)
+    
+    add_subdirectory_with_folder ("ThirdParty" ThirdParty/SLikeNet)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} SLikeNet)
 endif ()
 
 if (URHO3D_DATABASE_ODBC)
@@ -115,7 +137,10 @@ if (URHO3D_NAVIGATION)
 endif ()
 
 if (URHO3D_URHO2D)
-    add_subdirectory (ThirdParty/Box2D)
+    add_subdirectory_with_folder ("ThirdParty" ThirdParty/Box2D)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} Box2D)
+
     if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/spine)
         add_subdirectory (ThirdParty/spine)
         # Add definition for Spine
@@ -128,7 +153,10 @@ if (URHO3D_WEBP)
 endif ()
 
 if (URHO3D_PHYSICS)
-    add_subdirectory (ThirdParty/Bullet)
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/Bullet)
+    
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} Bullet)
 endif ()
 
 if (URHO3D_TRACY_PROFILING)
