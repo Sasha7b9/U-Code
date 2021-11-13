@@ -9,8 +9,8 @@ function ShowHint {
 
 
 function MakeProject {
-    rm -R -f ../../../generated/$1/ThirdParty
-    cmake ../../../src/ThirdParty/CMakeLists.txt -G "CodeBlocks - Unix Makefiles" -B../../../generated/$1/ThirdParty -DCMAKE_BUILD_TYPE=$2
+    rm -R -f ../../../../generated/Tankist/${PROJECT_NAME}/$1
+    cmake ../../../src/ThirdParty -G "CodeBlocks - Unix Makefiles" -B../../../../generated/Tankist/${PROJECT_NAME}/$1 -DCMAKE_BUILD_TYPE=$2
 }
 
 
@@ -33,9 +33,8 @@ function MakeProjects {
 
 function BuildProject {
     dir=$PWD
-    cd ../../../generated/$1/ThirdParty
-    make -j$(nproc)
-    make install
+    cd ../../../../generated/Tankist/${PROJECT_NAME}/$1
+    cmake --build . -- -j$(nproc)
     cd $dir
 }
 
@@ -60,13 +59,13 @@ function BuildProjects {
 
 set -e
 
-PROJECT_TANKIST_DIR=/home/sasha/TankistU3D
-
 # Tune parameters
 isMake=0                      # If 1, then run cmake
 isBuild=0                     # If 1, then run make
 isBuildDebug=0                # If 1, cmake/make for debug configuration
 isBuildRelease=0              # If 1, cmake/make for release configuration
+
+PROJECT_NAME=ThirdParty
 
 if [[ $# -ne 2 ]]
 then
