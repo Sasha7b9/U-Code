@@ -36,7 +36,7 @@ else()
     else()
         link_directories(../../generated/Tankist/ThirdParty/debug/sockpp_/sockpp)
     endif()
-    add_definitions(-g -Og add_definitions(-m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing
+    add_definitions(-g -Og -m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing
                     -fmax-errors=1 -w)
 endif()
 
