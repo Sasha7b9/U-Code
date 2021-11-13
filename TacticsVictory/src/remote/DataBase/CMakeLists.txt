@@ -5,7 +5,7 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files
                     ../../libs/victory
-                    ../../ThirdParty
+                    ../../../../Urho3D/Source/ThirdParty/SQLite/src/
                     ../../../../Urho3D/generated/${SUB_DIR}/include
                     ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty
                     ../../../../Urho3D/Source/ThirdParty)
