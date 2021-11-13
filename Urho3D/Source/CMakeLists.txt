@@ -160,10 +160,21 @@ if (URHO3D_IK)
 endif ()
 
 if (URHO3D_NAVIGATION)
-    add_subdirectory (ThirdParty/Detour)
-    add_subdirectory (ThirdParty/DetourCrowd)
-    add_subdirectory (ThirdParty/DetourTileCache)
-    add_subdirectory (ThirdParty/Recast)
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/Detour)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} Detour)
+
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/DetourCrowd)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} DetourCrowd)
+    
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/DetourTileCache)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} DetourTileCache)
+    
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/Recast)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} Recast)
 endif ()
 
 if (URHO3D_URHO2D)
@@ -195,12 +206,16 @@ endif ()
 
 if (NOT ANDROID AND NOT ARM AND NOT WEB)
     if (URHO3D_OPENGL)
-        add_subdirectory (ThirdParty/GLEW)
+        add_subdirectory_with_folder ("ThirdParty" ThirdParty/GLEW)
+        # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+        set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} GLEW)
     elseif (NOT URHO3D_D3D11)
         add_subdirectory (ThirdParty/MojoShader)
     endif ()
     if (NOT CMAKE_SYSTEM_NAME STREQUAL Linux)
-        add_subdirectory (ThirdParty/LibCpuId)
+        add_subdirectory_with_folder ("ThirdParty" ThirdParty/LibCpuId)
+        # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+        set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} LibCpuId)
     endif ()
 endif ()
 
