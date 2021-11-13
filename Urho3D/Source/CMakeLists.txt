@@ -89,9 +89,17 @@ if (URHO3D_LIB_TYPE STREQUAL SHARED AND NOT WIN32 AND NOT ANDROID AND NOT IOS AN
 endif ()
 
 # Add targets
-foreach (TARGET ETCPACK FreeType LZ4 PugiXml rapidjson SDL StanHull STB)
+foreach (TARGET LZ4 PugiXml rapidjson SDL StanHull STB)
     add_subdirectory (ThirdParty/${TARGET})
 endforeach ()
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/ETCPACK)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} ETCPACK)
+
+add_subdirectory_with_folder("ThirdParty" ThirdParty/FreeType)
+# \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} FreeType)
 
 if (URHO3D_ANGELSCRIPT)
     add_subdirectory_with_folder("ThirdParty" ThirdParty/AngelScript)
@@ -122,7 +130,9 @@ if (URHO3D_DATABASE_ODBC)
     add_subdirectory (ThirdParty/nanodbc)
 endif ()
 if (URHO3D_DATABASE_SQLITE)
-    add_subdirectory (ThirdParty/SQLite)
+    add_subdirectory_with_folder("ThirdParty" ThirdParty/SQLite)
+    # \todo Временаня затычка, чтобы держать библиотеки в отедльном каталоге.
+    set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} sqlite)
 endif ()
 
 if (URHO3D_IK)
