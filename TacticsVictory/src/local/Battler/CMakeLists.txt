@@ -5,8 +5,7 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files
                     ../../libs/victory
-                    ../../../../Urho3D/generated/${SUB_DIR}/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty)
+                    )
 
 add_definitions(-DURHO3D_LOGGING -DLOG_U3D -DU3D -DGRAPHICS -DUSE_MOUSE)
 

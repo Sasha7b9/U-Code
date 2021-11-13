@@ -9,8 +9,7 @@ include_directories(.
                     ../../ThirdParty/libevent/include
                     ../../ThirdParty/libevent/build/include
                     ../../ThirdParty/sockpp/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty)
+                    )
 
 add_definitions(-DURHO3D_LOGGING -DLOG_U3D -DU3D -DGRAPHICS)
 
