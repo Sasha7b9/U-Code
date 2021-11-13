@@ -27,14 +27,14 @@ endif()
 set(OUT_DIR $ENV{PROJECT_TANKIST_DIR}\\out\\${SUB_DIR})
 
 if(MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall /std:c++17")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
     link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib
                      ThirdParty/bass
                      ../../Tankist/generated/opus/Release
                      ../../Tankist/generated/${_BUILD_TYPE_}/ThirdParty/sockpp_/sockpp/${CMAKE_BUILD_TYPE})
 else()
     link_directories(../../generated/Tankist/ThirdParty/${_BUILD_TYPE_}/sockpp_/sockpp)
-    add_definitions(-g -Og -m64 -msse -msse2 -std=c++17 -pthread -ffast-math -fno-strict-aliasing
+    add_definitions(-g -Og -m64 -msse -msse2 -pthread -ffast-math -fno-strict-aliasing
                     -fmax-errors=1 -w)
 endif()
 
