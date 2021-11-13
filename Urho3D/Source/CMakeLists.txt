@@ -44,7 +44,7 @@ if (MSVC)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W0")
 elseif(UNIX)
-    add_definitions(-fmax-errors=5 -Werror)
+    add_definitions(-fmax-errors=1 -Werror)
 endif()
 
 # Setup RPATH settings
@@ -184,6 +184,6 @@ function(add_superdirectory_with_folder _folder_name _folder _binary_folder)
 endfunction()
 
 
-#add_subdirectory(../../Demo/src           Demo_src)
-#add_subdirectory(../../Tankist/src/       Tankist_src)
+add_subdirectory(../../Demo/src           Demo_src)
+add_subdirectory(../../Tankist/src/       Tankist_src)
 add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
