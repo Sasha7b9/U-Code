@@ -6,9 +6,8 @@ include_directories(.
                     ../../common_files
                     ../../libs/victory
                     ../../../../Urho3D/Source/ThirdParty/SQLite/src/
-                    ../../../../Urho3D/generated/${SUB_DIR}/include
-                    ../../../../Urho3D/generated/${SUB_DIR}/include/Urho3D/ThirdParty
-                    ../../../../Urho3D/Source/ThirdParty)
+                    ../../../../Urho3D/Source/ThirdParty
+                    )
 
 if(MSVC)
 
