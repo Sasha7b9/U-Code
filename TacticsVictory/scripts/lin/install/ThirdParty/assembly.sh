@@ -7,8 +7,8 @@ function ShowHint {
 
 
 function MakeProject {
-    rm -R -f ../../generated/$1/ThirdParty
-    cmake . -B../../generated/$1/ThirdParty -G "CodeBlocks - Unix Makefiles" -DCMAKE_BUILD_TYPE=$2
+    rm -R -f ../../../../../generated/ThirdParty/${PROJECT_NAME}/$1
+    cmake . -B../../../generated/ThirdParty/${PROJECT_NAME}/$1 -G "CodeBlocks - Unix Makefiles" -DCMAKE_BUILD_TYPE=$2
 }
 
 
@@ -30,10 +30,10 @@ function MakeProjects {
 
 
 function BuildProject {
-    cd ../../generated/$1/ThirdParty
-    make -j$(nproc)
-    make
-    cd ../../../src/ThirdParty
+    dir=$PWD
+    cd ../../../generated/ThirdParty/${PROJECT_NAME}/$1
+    cmake --build . -- -j$(nproc)
+    cd $dir
 }
 
 
@@ -71,8 +71,9 @@ isRelease=0
 echo $1
 
 dir=$PWD
+PROJECT_NAME=ThirdParty
 
-cd ../../../src/ThirdParty
+cd ../../../../src/ThirdParty
 
 case $1 in
 "make"  ) isMake=1  ;;
