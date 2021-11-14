@@ -19,7 +19,7 @@ macro(copy_exe)
     else()
         add_custom_command(
             TARGET ${PROJECT_NAME} POST_BUILD
-            COMMAND cp "$(OutputPath)${PROJECT_NAME}" ${_OUT_DIR_}
+            COMMAND cp "${CMAKE_BINARY_DIR}${PROJECT_NAME}" ${_OUT_DIR_}
         )
     endif()
 
