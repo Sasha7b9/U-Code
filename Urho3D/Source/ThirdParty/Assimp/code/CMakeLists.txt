@@ -47,6 +47,7 @@
 # Modified by Lasse Oorni and Yao Wei Tjong for Urho3D
 
 if(MSVC)
+    add_compile_options(/wd4700)
     add_compile_options(/wd4996)
 endif()
 

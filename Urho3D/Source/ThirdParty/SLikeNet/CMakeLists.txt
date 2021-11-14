@@ -13,7 +13,10 @@
 # Define target name
 set (TARGET_NAME SLikeNet)
 
-if(UNIX)
+if(MSVC)
+    add_compile_options(/wd4005)
+    add_compile_options(/wd4267)
+elseif(UNIX)
     add_definitions(-Wno-unused-result
                     -Wno-stringop-overflow)
 endif()

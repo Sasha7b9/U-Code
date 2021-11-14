@@ -23,6 +23,11 @@
 # Define target name
 set (TARGET_NAME Recast)
 
+if(MSVC)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4291)
+endif()
+
 # Define source files
 define_source_files (GLOB_CPP_PATTERNS Source/*.cpp GLOB_H_PATTERNS Include/*.h)
 

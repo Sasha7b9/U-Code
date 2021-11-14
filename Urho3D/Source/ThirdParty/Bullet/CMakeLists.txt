@@ -23,6 +23,13 @@
 # Define target name
 set (TARGET_NAME Bullet)
 
+if(MSVC)
+    add_compile_options(/wd4056)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4267)
+    add_compile_options(/wd4305)
+endif()
+
 if(UNIX)
     add_definitions(-Wno-stringop-overflow)
 endif()

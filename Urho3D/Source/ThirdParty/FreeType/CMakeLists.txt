@@ -23,6 +23,13 @@
 # Define target name
 set (TARGET_NAME FreeType)
 
+if(MSVC)
+    add_compile_options(/wd4018)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4267)
+    add_compile_options(/wd4312)
+endif()
+
 add_definitions (-DFT2_BUILD_LIBRARY)
 
 # Rename z_verbose and z_error symbols to prevent Clang duplicate symbol linker error (clash with Assimp) on debug build

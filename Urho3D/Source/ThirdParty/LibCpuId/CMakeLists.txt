@@ -23,6 +23,10 @@
 # Define target name
 set (TARGET_NAME LibCpuId)
 
+if(MSVC)
+    add_compile_options(/wd4244)
+endif()
+
 # Define preprocessor macros
 add_definitions (-DVERSION="0.4.0+")
 if (HAVE_STDINT_H)

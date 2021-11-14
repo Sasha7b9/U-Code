@@ -23,6 +23,10 @@
 # Define target name
 set (TARGET_NAME Civetweb)
 
+if(MSVC)
+    add_compile_options(/wd4005)
+endif()
+
 # Define preprocessor macros
 # Always disable Common Gateway Interface
 add_definitions(-DNO_CGI -DNO_FILES -DNO_CACHING)

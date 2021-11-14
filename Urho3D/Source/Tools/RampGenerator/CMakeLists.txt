@@ -23,6 +23,11 @@
 # Define target name
 set (TARGET_NAME RampGenerator)
 
+if(MSVC)
+    add_compile_options(/wd4018)
+    add_compile_options(/wd4244)
+endif()
+
 # Define preprocessor macros
 if (MINGW AND (CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 6.1.0 OR CMAKE_CXX_COMPILER_VERSION VERSION_EQUAL 6.1.0) AND URHO3D_LIB_TYPE STREQUAL STATIC)
     # Workaround the "multiple definition of" linking issue in STATIC build
