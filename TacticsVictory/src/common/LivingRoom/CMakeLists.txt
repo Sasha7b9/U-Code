@@ -64,15 +64,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_COMMAND_ARGUMENTS "
 
 runtime_library()
 
+link_urho3d()
+
 if(MSVC)
 
     include(../../SetWorkingDirectory.cmake)
-
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d)
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D)
-    endif()
 
     target_link_libraries(${PROJECT_NAME} ws2_32 iphlpapi bcrypt)
 

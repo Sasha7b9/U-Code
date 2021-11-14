@@ -62,21 +62,11 @@ set_target_properties(${PROJECT_NAME}                                 PROPERTIES
 set_source_files_properties(${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS} PROPERTIES UNITY_GROUP "master")
 
 if(MSVC)
-
     runtime_library()
     include(../../SetWorkingDirectory.cmake)
-
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d) 
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D)
-    endif()
-
-else()
-
-    target_link_libraries(${PROJECT_NAME} Urho3D)
-
 endif()
+
+link_urho3d()
 
 target_link_libraries(${PROJECT_NAME} victory)
 

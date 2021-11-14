@@ -74,19 +74,15 @@ if(MSVC)
 
     include(../../SetWorkingDirectory.cmake)
 
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d)
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D)
-    endif()
-
     target_link_libraries(${PROJECT_NAME} ws2_32 sqlite)
 
 else()
 
-    target_link_libraries(${PROJECT_NAME} Urho3D sqlite dl pthread)
+    target_link_libraries(${PROJECT_NAME} sqlite dl pthread)
 
 endif()
+
+link_urho3d()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
