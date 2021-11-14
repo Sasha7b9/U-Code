@@ -121,7 +121,7 @@ set_source_files_properties(${FILES_UNITY} PROPERTIES UNITY_GROUP "client")
 
 #set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_COMMAND_ARGUMENTS "127.0.0.1")
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

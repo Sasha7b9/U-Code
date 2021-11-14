@@ -63,8 +63,7 @@ set_source_files_properties(${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS} PROPERTIES
 
 if(MSVC)
 
-    include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
-                                             # выполнени€ релизной версии
+    runtime_library()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

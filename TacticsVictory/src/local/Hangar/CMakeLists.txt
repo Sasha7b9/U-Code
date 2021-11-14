@@ -113,7 +113,7 @@ add_executable( ${PROJECT_NAME}
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "hangar")
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)

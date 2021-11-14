@@ -76,8 +76,7 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
 
 if(MSVC)
 
-    include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
-                                             # выполнени¤ релизной версии
+    runtime_library()
     include(../../SetWorkingDirectory.cmake)
     target_link_libraries(${PROJECT_NAME} ws2_32 iphlpapi bcrypt)
 

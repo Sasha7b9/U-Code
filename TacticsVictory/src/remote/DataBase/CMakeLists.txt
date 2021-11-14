@@ -70,10 +70,8 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "database")
 
 if(MSVC)
 
-    include(../../RuntimeLibrary.cmake)      # »сключаем зависимости от динамических библиотек VS времени
-                                             # выполнени€ релизной версии
+    runtime_library()
 
-    copy_exe()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
@@ -92,4 +90,4 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-install_files_to_dir()
+copy_exe()

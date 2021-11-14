@@ -62,11 +62,10 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "livingroom")
 
 set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_COMMAND_ARGUMENTS "127.0.0.1")
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
 
-    copy_exe()
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
@@ -85,4 +84,4 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-install_files_to_dir()
+copy_exe()

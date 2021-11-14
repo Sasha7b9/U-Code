@@ -130,7 +130,7 @@ add_executable(${PROJECT_NAME} ${FILES_UNITY})
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "battle")
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
 

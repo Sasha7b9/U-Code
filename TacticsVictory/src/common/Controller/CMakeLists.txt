@@ -66,10 +66,10 @@ add_executable(${PROJECT_NAME} ${FILES_UNITY})
 set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "controller")
 
-include(../../RuntimeLibrary.cmake)
+runtime_library()
 
 if(MSVC)
-    copy_exe()
+
     include(../../SetWorkingDirectory.cmake)
 
     if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
@@ -88,4 +88,4 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-install_files_to_dir()
+copy_exe()
