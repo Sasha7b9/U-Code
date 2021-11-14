@@ -132,20 +132,10 @@ set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "battle")
 
 runtime_library()
 
+link_urho3d()
+
 if(MSVC)
-
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d) 
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D)
-    endif()
-
     target_link_libraries(${PROJECT_NAME} ws2_32)
-
-else()
-
-    target_link_libraries(${PROJECT_NAME} Urho3D)
-
 endif()
 
 target_link_libraries(${PROJECT_NAME} victory)

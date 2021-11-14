@@ -26,6 +26,19 @@ macro(copy_exe)
 endmacro()
 
 
+macro(link_urho3d)
+    if(MSVC)
+        if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
+            target_link_libraries(${PROJECT_NAME} Urho3D_d) 
+        else()
+            target_link_libraries(${PROJECT_NAME} Urho3D)
+        endif()
+    else()
+        target_link_libraries(${PROJECT_NAME} Urho3D)
+    endif()
+endmacro()
+
+
 macro(install_files_to_dir)
 #    if(MSVC)
 #        install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_BINARY_DIR}/../out/${_BUILD_TYPE_}")
