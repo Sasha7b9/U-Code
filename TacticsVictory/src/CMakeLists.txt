@@ -64,22 +64,21 @@ function(add_subdirectory_with_folder _folder_name _folder)
 endfunction()
 
 
-#if(WIN32)
+if(MSVC)
     add_subdirectory_with_folder("TacticsVictory/local" local/Battler)
     add_subdirectory_with_folder("TacticsVictory/local" local/Client)
     add_subdirectory_with_folder("TacticsVictory/local" local/Editor)
     add_subdirectory_with_folder("TacticsVictory/local" local/Hangar)
     add_subdirectory_with_folder("TacticsVictory/local" local/Updater)
+endif()
 
-    add_subdirectory_with_folder("TacticsVictory/common" common/Battle)
-    add_subdirectory_with_folder("TacticsVictory/common" common/Controller)
-    add_subdirectory_with_folder("TacticsVictory/common" common/Monitor)
-    add_subdirectory_with_folder("TacticsVictory/common" common/Uploader)
-
-    add_subdirectory_with_folder("TacticsVictory/remote" remote/DataBase)
-#endif()
-
+add_subdirectory_with_folder("TacticsVictory/common" common/Battle)
+add_subdirectory_with_folder("TacticsVictory/common" common/Controller)
+add_subdirectory_with_folder("TacticsVictory/common" common/Monitor)
+add_subdirectory_with_folder("TacticsVictory/common" common/Uploader)
 add_subdirectory_with_folder("TacticsVictory/common" common/LivingRoom)
+
+add_subdirectory_with_folder("TacticsVictory/remote" remote/DataBase)
 add_subdirectory_with_folder("TacticsVictory/remote" remote/Master)
 
 add_subdirectory_with_folder("TacticsVictory/libs" libs/victory)
