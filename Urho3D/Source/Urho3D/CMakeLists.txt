@@ -36,11 +36,17 @@ endif ()
 
 # For AngelScript big files
 if (MSVC)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj /Wall")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /Wall")
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
+endif()
+
+
+if (MSVC)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /Wall")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
     
     # W1
-    add_compile_options(/wd4312)
+    add_compile_options(/wd4312)    # 'reinterpret_cast': conversion from 'xxx' to 'yyy *' of greater size
     add_compile_options(/wd4805)
     add_compile_options(/wd5243)
     
