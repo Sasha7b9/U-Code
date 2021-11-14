@@ -3,7 +3,7 @@ macro(set_working_directory)
     if(MSVC)
         set_target_properties(
             ${PROJECT_NAME} PROPERTIES
-            VS_DEBUGGER_WORKING_DIRECTORY ${OUT_DIR})
+            VS_DEBUGGER_WORKING_DIRECTORY ${_OUT_DIR_})
     endif()
 
 endmacro()
@@ -14,7 +14,7 @@ macro(copy_exe)
 #    if(MSVC)
 #        add_custom_command(
 #            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${OUT_DIR} /Y
+#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
 #        )
 #    else()
 #    endif()
@@ -22,12 +22,12 @@ macro(copy_exe)
 #    if(MSVC)
 #        add_custom_command(
 #            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${OUT_DIR} /Y
+#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
 #        )
 #    else()
 #        add_custom_command(
 #            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND cp "$(OutputPath)${PROJECT_NAME}" ${OUT_DIR}
+#            COMMAND cp "$(OutputPath)${PROJECT_NAME}" ${_OUT_DIR_}
 #        )
 #    endif()
 

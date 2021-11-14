@@ -23,7 +23,12 @@ elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
     set(_BUILD_TYPE_ release)
 endif()
 
-set(OUT_DIR $ENV{PROJECT_DIR}\\out\\${_BUILD_TYPE_})
+set(_OUT_DIR_ ${_ROOT_DIR_}\\${TARGET_NAME}\\out\\${BUILD_TYPE})
+if(MSVC)
+	file(TO_NATIVE_PATH ${_OUT_DIR_} _OUT_DIR_)
+else()
+	get_filename_component(_OUT_DIR_ ${_OUT_DIR_} ABSOLUTE)
+endif()
 
 link_directories(../../generated/Urho3D/${_BUILD_TYPE_}/lib)
 
