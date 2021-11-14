@@ -48,7 +48,7 @@ void Battle::Setup()
 
     OpenLog();
 
-    TheConfig.Load("Battle.cfg");
+    TheConfig.Load("Battle.conf");
 
 //    TheMasterServer.Connect(TheConfig.GetString("address master"));
 
