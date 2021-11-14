@@ -13,10 +13,6 @@
 #include <rapidjson/rapidjson.h>
 #include <rapidjson/document.h>
 
-#include <Urho3D/Container/Str.h>
-
-using namespace Urho3D;
-
 #include <event2/bufferevent.h>
 #include <event2/buffer.h>
 #include <event2/listener.h>
@@ -31,4 +27,4 @@ using namespace Urho3D;
 
 #include "defines.h"
 #include "globals.h"
-#include "Utils/Log_v.h"
+#include "Log.h"

@@ -3,4 +3,4 @@
 #include "Network/Other/ConnectorTCP_v.h"
 
 
-ConnectorTCP TheMasterServer;
+//ConnectorTCP TheMasterServer;

@@ -7,8 +7,6 @@ int main(int argc, char * /*argv*/ [])
 {
     setlocale(LC_ALL, "Russian");
 
-    LogRAW::Create("Updater.log", false);
-
     LOGWRITE("Start Updater");
 
     if (argc != 2)
@@ -21,15 +19,9 @@ int main(int argc, char * /*argv*/ [])
 
 //    TheMasterServer.Connect(argv[1]);
 
-    TheMasterServer.Destroy();
+    //TheMasterServer.Destroy();
 
     LOGWRITE("Exit Updater");
 
     return 0;
-}
-
-
-std::string LogRAW::NameApplication()
-{
-    return "Updatr";
 }
