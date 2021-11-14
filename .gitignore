@@ -11,3 +11,5 @@ Tankist/generated/
 
 TacticsVictory/src/ThirdParty/libevent/build
 TacticsVictory/out/debug/*.exe
+TacticsVictory/out/debug/*.log
+TacticsVictory/out/release/
