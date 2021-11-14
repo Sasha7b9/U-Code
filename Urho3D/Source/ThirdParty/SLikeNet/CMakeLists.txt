@@ -13,6 +13,8 @@
 # Define target name
 set (TARGET_NAME SLikeNet)
 
+set(CMAKE_UNITY_BUILD ON)
+
 if(MSVC)
     add_compile_options(/wd4005)
     add_compile_options(/wd4267)
