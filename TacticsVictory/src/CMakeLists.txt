@@ -9,9 +9,9 @@ cmake_policy(SET CMP0091 NEW)
 # RPATH entries are properly escaped in the intermediary CMake install script.
 cmake_policy(SET CMP0095 NEW)
 
-project (VictoryU3D)
+project (TacticsVictory)
 
-set (TARGET_NAME VictoryU3D)
+set (TARGET_NAME TacticsVictory)
 
 find_package (Urho3D REQUIRED)
 include_directories (${URHO3D_INCLUDE_DIRS})
@@ -23,7 +23,7 @@ elseif(${CMAKE_BUILD_TYPE} STREQUAL Release)
     set(_BUILD_TYPE_ release)
 endif()
 
-set(_OUT_DIR_ ${_ROOT_DIR_}\\${TARGET_NAME}\\out\\${BUILD_TYPE})
+set(_OUT_DIR_ ${_ROOT_DIR_}\\${TARGET_NAME}\\out\\${_BUILD_TYPE_})
 if(MSVC)
 	file(TO_NATIVE_PATH ${_OUT_DIR_} _OUT_DIR_)
 else()

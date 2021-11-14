@@ -11,13 +11,13 @@ endmacro()
 
 macro(copy_exe)
 
-#    if(MSVC)
-#        add_custom_command(
-#            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
-#        )
-#    else()
-#    endif()
+    if(MSVC)
+        add_custom_command(
+            TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
+        )
+    else()
+    endif()
 
 #    if(MSVC)
 #        add_custom_command(

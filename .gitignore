@@ -10,3 +10,4 @@ Demo/out/release/
 Tankist/generated/
 
 TacticsVictory/src/ThirdParty/libevent/build
+TacticsVictory/out/debug/*.exe
