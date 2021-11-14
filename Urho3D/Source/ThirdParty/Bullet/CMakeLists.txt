@@ -23,6 +23,13 @@
 # Define target name
 set (TARGET_NAME Bullet)
 
+set(CMAKE_UNITY_BUILD ON)
+
+set_source_files_properties(src/BulletSoftBody/btSoftBodyHelpers.cpp    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(src/BulletSoftBody/btSoftRigidDynamicsWorld.cpp    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+
+
 if(MSVC)
     add_compile_options(/wd4056)
     add_compile_options(/wd4244)
