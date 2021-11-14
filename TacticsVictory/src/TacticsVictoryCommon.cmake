@@ -17,19 +17,11 @@ macro(copy_exe)
             COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
         )
     else()
+        add_custom_command(
+            TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND cp "$(OutputPath)${PROJECT_NAME}" ${_OUT_DIR_}
+        )
     endif()
-
-#    if(MSVC)
-#        add_custom_command(
-#            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND copy "$(OutputPath)${PROJECT_NAME}.exe" ${_OUT_DIR_} /Y
-#        )
-#    else()
-#        add_custom_command(
-#            TARGET ${PROJECT_NAME} POST_BUILD
-#            COMMAND cp "$(OutputPath)${PROJECT_NAME}" ${_OUT_DIR_}
-#        )
-#    endif()
 
 endmacro()
 
