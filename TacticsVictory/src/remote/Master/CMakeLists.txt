@@ -63,7 +63,7 @@ set_source_files_properties(${SRC} ${FILE_SYSTEM} ${NETWORK} ${UTILS} PROPERTIES
 
 if(MSVC)
     runtime_library()
-    include(../../SetWorkingDirectory.cmake)
+    set_working_directory()
 endif()
 
 link_urho3d()

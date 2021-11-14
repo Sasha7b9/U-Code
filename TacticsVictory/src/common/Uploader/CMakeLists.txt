@@ -70,7 +70,7 @@ runtime_library()
 link_urho3d()
 
 if(MSVC)
-    include(../../SetWorkingDirectory.cmake)
+    set_working_directory()
     target_link_libraries(${PROJECT_NAME} ws2_32)
 else()
     target_link_libraries(${PROJECT_NAME} Urho3D pthread)

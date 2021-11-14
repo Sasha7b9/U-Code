@@ -140,6 +140,6 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-include(../../SetWorkingDirectory.cmake)
+set_working_directory()
 
 copy_exe()

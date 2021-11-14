@@ -54,7 +54,7 @@ runtime_library()
 
 copy_exe()
 
-include(../../SetWorkingDirectory.cmake)
+set_working_directory()
 
 if(MSVC)
     target_link_libraries(${PROJECT_NAME} ws2_32)

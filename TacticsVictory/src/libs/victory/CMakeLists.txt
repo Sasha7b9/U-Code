@@ -75,15 +75,11 @@ set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
 
 if(MSVC)
-
     runtime_library()
-    include(../../SetWorkingDirectory.cmake)
+    set_working_directory()
     target_link_libraries(${PROJECT_NAME} ws2_32 iphlpapi bcrypt)
-
 else()
-
     target_link_libraries(${PROJECT_NAME} Urho3D pthread)
-
 endif()
 
 install_files_to_dir()

@@ -129,7 +129,7 @@ link_urho3d()
 
 target_link_libraries(${PROJECT_NAME} victory)
 
-include(../../SetWorkingDirectory.cmake)
+set_working_directory()
 
 install_files_to_dir()
 

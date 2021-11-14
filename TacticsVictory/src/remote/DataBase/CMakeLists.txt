@@ -69,17 +69,11 @@ set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
 set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "database")
 
 if(MSVC)
-
     runtime_library()
-
-    include(../../SetWorkingDirectory.cmake)
-
+    set_working_directory()
     target_link_libraries(${PROJECT_NAME} ws2_32 sqlite)
-
 else()
-
     target_link_libraries(${PROJECT_NAME} sqlite dl pthread)
-
 endif()
 
 link_urho3d()
