@@ -11,11 +11,11 @@ if %_BUILD_TYPE_%==release goto START_RELEASE
 
 :START_DEBUG
 @echo on
-start devenv.exe ../generated/%_BUILD_TYPE_%/U-Code.sln
+start devenv.exe ../generated/%_BUILD_TYPE_%/Urho3D.sln
 goto EXIT
 
 :START_RELEASE
 @echo on
-start devenv.exe ../generated/%_BUILD_TYPE_%/U-Code.sln /projectconfig Release
+start devenv.exe ../generated/%_BUILD_TYPE_%/Urho3D.sln /projectconfig Release
 
 :EXIT
