@@ -261,7 +261,7 @@ function(add_superdirectory_with_folder _folder_name _folder _binary_folder)
     set_property(DIRECTORY "${_folder}" PROPERTY FOLDER "${_folder_name}")
 endfunction()
 
-#add_superdirectory_with_folder("Projects" ../../Projects/Demo/src Projects_Demo_src)
+add_superdirectory_with_folder("Projects" ../../Projects/Demo/src Projects_Demo_src)
 
 add_subdirectory(../../Tankist/src/       Tankist_src)
 add_subdirectory(../../TacticsVictory/src TacticsVictory_src)

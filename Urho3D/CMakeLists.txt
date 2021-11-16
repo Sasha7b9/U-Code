@@ -39,8 +39,13 @@ set(URHO3D_LIB_TYPE SHARED)
 set(URHO3D_STATIC_RUNTIME 0)
 set(URHO3D_IK 0)
 set(URHO3D_WEBP 0)
-set(URHO3D_SAMPLES 0)
 set(URHO3D_DATABASE_SQLITE 1)
+
+if(CMAKE_BUILD_TYPE STREQUAL Debug)
+    set(URHO3D_SAMPLES 1)
+else()
+    set(URHO3D_SAMPLES 1)
+endif()
 
 
 ############ For eventlib #################
