@@ -32,7 +32,7 @@ add_executable(${PROJECT_NAME} ${FILES_UNITY})
 add_dependencies(${PROJECT_NAME} Urho3D)
 
 if(MSVC AND CMAKE_BUILD_TYPE STREQUAL Debug)
-    target_link_libraries(${PROJECT_NAME} Urho3D_d)
+    target_link_libraries(${PROJECT_NAME} Urho3D_d user32 gdi32 winmm imm32 ole32 oleaut32 setupapi version uuid)
 else()
      target_link_libraries(${PROJECT_NAME} Urho3D)
 endif()
