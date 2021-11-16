@@ -80,7 +80,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evuti
                              ../../../../Urho3D/Source/ThirdParty/libevent/event_iocp.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/signal.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/strlcpy.c
-                             #../../../../Urho3D/Source/ThirdParty/libevent/epoll.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/epoll.c
                              )
 
 file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
