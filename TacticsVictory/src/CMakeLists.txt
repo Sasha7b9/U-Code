@@ -25,7 +25,7 @@ endif()
 
 get_filename_component(_ROOT_DIR_ ${CMAKE_BINARY_DIR}\\..\\.. ABSOLUTE)
 file(TO_NATIVE_PATH ${_ROOT_DIR_} _ROOT_DIR_)
-set(_OUT_DIR_ ${_ROOT_DIR_}\\${TARGET_NAME}\\out\\${BUILD_TYPE})
+set(_OUT_DIR_ ${_ROOT_DIR_}\\${TARGET_NAME}\\out\\${_BUILD_TYPE_})
 if(WIN32)
 	file(TO_NATIVE_PATH ${_OUT_DIR_} _OUT_DIR_)
 else()
