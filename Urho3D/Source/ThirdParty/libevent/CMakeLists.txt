@@ -42,6 +42,14 @@ set(EVENT__LIBRARY_TYPE DEFAULT CACHE STRING
 
 project(libevent C)
 
+if(MSVC)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -MP -W0")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -W0")
+    add_compile_options(/wd4028)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4311)
+endif()
+
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 string(REGEX MATCH "SunOS" SOLARIS "${CMAKE_SYSTEM_NAME}")
 
@@ -138,7 +146,7 @@ option(EVENT__DISABLE_TESTS
     "If tests should be compiled or not" ON)
 
 option(EVENT__DISABLE_REGRESS
-    "Disable the regress tests" ON)
+    "Disable the regress tests" OFF)
 
 option(EVENT__DISABLE_SAMPLES
     "Disable sample files" ON)
@@ -240,7 +248,7 @@ if (APPLE)
 endif()
 
 if (${MSVC})
-    set(msvc_static_runtime ON)
+    set(msvc_static_runtime OFF)
     if ("${EVENT_LIBRARY_TYPE}" STREQUAL "STATIC")
         set(msvc_static_runtime ON)
     endif()
@@ -1152,6 +1160,7 @@ if (NOT EVENT__DISABLE_TESTS)
     #
     # Generate Regress tests.
     #
+    message(" ......................................................................... Generate Regress tests.")
     if (NOT EVENT__DISABLE_REGRESS)
         # (We require python to generate the regress tests)
         find_package(PythonInterp 3)
