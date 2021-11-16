@@ -2,4 +2,5 @@ rem                                     Создаём символьные сс
 call proc/create_links.bat
 cd %_START_DIR_%
 
-call assembly.bat full all
+rem call assembly.bat full all
+rem cd %_START_DIR_%
