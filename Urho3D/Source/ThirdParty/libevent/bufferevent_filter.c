@@ -618,7 +618,7 @@ be_filter_ctrl(struct bufferevent *bev, enum bufferevent_ctrl_op op,
 	case BEV_CTRL_CANCEL_ALL:
 		EVUTIL_FALLTHROUGH;
 	default:
-		return -1;
+		break;
 	}
 
 	return -1;

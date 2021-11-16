@@ -1,6 +1,6 @@
 project (victory)
 
-set(CMAKE_UNITY_BUILD ON)
+set(CMAKE_UNITY_BUILD OFF)
 
 include_directories(.
                     ../../common_files/
@@ -67,7 +67,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evuti
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
-                             #../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/event.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/log.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/evutil_time.c
