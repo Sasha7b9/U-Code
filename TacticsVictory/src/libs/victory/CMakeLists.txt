@@ -5,6 +5,7 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files/
                     ../../../../Urho3D/Source/ThirdParty/libevent/include/
+                    ../../../../generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
                     )
 
 add_definitions(-DURHO3D_STATIC_DEFINE -DEVENT__HAVE_SA_FAMILY_T -DHAVE_CONFIG_H -DTINYTEST_LOCAL -DU3D -DGRAPHICS)
