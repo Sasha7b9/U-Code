@@ -5,6 +5,7 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files/
                     ../../../../Urho3D/Source/ThirdParty/libevent/include/
+                    ../../../../Urho3D/Source/ThirdParty/sockpp/include/
                     ../../../../generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
                     )
 
@@ -45,7 +46,7 @@ file(GLOB NETWORK                              Network/Other/*.*)
 file(GLOB UTILS                                Utils/*.*)
 
 file(GLOB LIBEVENT           ../../ThirdParty/libevent/libevent_bucket*.c)
-file(GLOB SOCKPP                   ThirdParty/sockpp.cpp)
+file(GLOB SOCKPP             ../../../../Urho3D/Source/ThirdParty/sockpp/src/sockpp.cpp)
 file(GLOB SOCKPP_SOURCES     ../../ThirdParty/sockpp/src/*.cpp)
 file(GLOB SOCKPP_INCLUDE     ../../ThirdParty/sockpp/include/sockpp/*.h)
 
