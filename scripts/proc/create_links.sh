@@ -30,19 +30,6 @@ dir=$PWD
 
 cd ../..
 
-#             *** Pi-Code ***
-MakeDir "Pi-Code/out/release"
-MakeDir "Pi-Code/out/debug/Plugins"
-MakeDir "Pi-Code/out/debug/Plugins/Tools/Editor"
-MakeDir "Pi-Code/out/debug/Plugins/Tools/Fonts"
-MakeDir "Pi-Code/out/release/Plugins"
-MakeDir "Pi-Code/out/release/Plugins/Tools/Editor"
-MakeDir "Pi-Code/out/release/Plugins/Tools/Fonts"
-
-LinkDir "Pi-Code/out/release/Data"       "Pi-Code/out/debug/Data"
-LinkDir "Pi-Code/out/release/Import"     "Pi-Code/out/debug/Import"
-
-
 #             *** TacticsVictory ***
 MakeDir "TacticsVictory/out/release"
 MakeDir "TacticsVictory/out/release/Data"
