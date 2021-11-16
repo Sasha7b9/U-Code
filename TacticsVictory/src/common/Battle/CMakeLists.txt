@@ -5,9 +5,9 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files
                     ../../libs/victory
-                    ../../../../Urho3D/Source/ThirdParty/libevent/include/
-                    ../../../../generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
-                    ../../../../Urho3D/Source/ThirdParty/sockpp/include/
+                    ${_ROOT_DIR_}/Urho3D/Source/ThirdParty/libevent/include/
+                    ${_ROOT_DIR_}/generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
+                    ${_ROOT_DIR_}/Urho3D/Source/ThirdParty/sockpp/include/
                     )
 
 add_definitions(-DURHO3D_LOGGING -DU3D)
