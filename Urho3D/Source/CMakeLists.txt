@@ -267,4 +267,4 @@ add_subdirectory(../../Tankist/src/       Tankist_src)
 add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
 
 
-add_subdirectory_with_folder("ThirdParty" ThirdParty/libevent)
+add_subdirectory_with_folder("ThirdParty/libevent" ThirdParty/libevent)
