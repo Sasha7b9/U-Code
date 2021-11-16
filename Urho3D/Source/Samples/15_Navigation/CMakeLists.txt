@@ -24,6 +24,10 @@ if (NOT URHO3D_NAVIGATION)
     return ()
 endif ()
 
+if(MSVC)
+    add_compile_options(/wd5220)
+endif()
+
 # Define target name
 set (TARGET_NAME 15_Navigation)
 

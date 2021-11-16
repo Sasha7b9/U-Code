@@ -1,4 +1,8 @@
 Версии используемых библиотек.
-Urho3D   - от 08.11.2021
-libevent - от 12.11.2021
+Urho3D   - от 08.11.2021 https://github.com/urho3d/Urho3D
+libevent - от 12.11.2021 https://github.com/libevent/libevent
 sockpp   - от 20.02.2020 https://github.com/fpagliughi/sockpp
+
+*** Планируется использовать ****
+opus       https://github.com/xiph/opus - для компресси звука
+libtorrent https://github.com/arvidn/libtorrent - для раздачи

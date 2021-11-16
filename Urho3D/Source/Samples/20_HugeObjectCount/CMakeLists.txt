@@ -23,6 +23,10 @@
 # Define target name
 set (TARGET_NAME 20_HugeObjectCount)
 
+if(MSVC)
+    add_compile_options(/wd5220)
+endif()
+
 # Define source files
 define_source_files (EXTRA_H_FILES ${COMMON_SAMPLE_H_FILES})
 

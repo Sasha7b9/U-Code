@@ -62,18 +62,13 @@ add_executable(${PROJECT_NAME} ${SRC} ${GUI} ${INPUT} ${NETWORK} ${NETWORK_GAMES
 
 add_dependencies(${PROJECT_NAME} Urho3D)
 
-target_link_libraries(${PROJECT_NAME} opus)
+#target_link_libraries(${PROJECT_NAME} opus)
 
 runtime_library()
 
-if(WIN32)
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d)
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D) 
-    endif()
-else()
-    target_link_libraries(${PROJECT_NAME} Urho3D)
+link_urho3d()
+
+if(UNIX)
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 
