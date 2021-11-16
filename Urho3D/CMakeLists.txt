@@ -27,6 +27,8 @@ cmake_minimum_required (VERSION 3.13.0)
 project (Urho3D)
 
 set(CMAKE_GENERATOR_PLATFORM x64)
+
+############# For Urho3D ################
 set(URHO3D_64BIT 1)
 set(URHO3D_THREADING 1)
 set(URHO3D_LUA 0)
@@ -39,6 +41,14 @@ set(URHO3D_IK 0)
 set(URHO3D_WEBP 0)
 set(URHO3D_SAMPLES 0)
 set(URHO3D_DATABASE_SQLITE 1)
+
+
+############ For eventlib #################
+#set(EVENT__DISABLE_OPENSSL ON)
+#set(EVENT__DISABLE_MBEDTLS ON)
+#set(EVENT__MSVC_STATIC_RUNTIME ON)
+set(EVENT__LIBRARY_TYPE STATIC)
+
 
 if(${CMAKE_VERSION} VERSION_LESS "3.22.0")
 else()

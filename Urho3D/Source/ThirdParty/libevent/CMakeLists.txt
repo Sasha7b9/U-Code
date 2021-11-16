@@ -126,10 +126,10 @@ option(EVENT__DISABLE_THREAD_SUPPORT
     "Define if libevent should not be compiled with thread support" OFF)
 
 option(EVENT__DISABLE_OPENSSL
-    "Define if libevent should build without support for OpenSSL encryption" OFF)
+    "Define if libevent should build without support for OpenSSL encryption" ON)
 
 option(EVENT__DISABLE_MBEDTLS
-    "Define if libevent should build without support for mbed TLS encryption" OFF)
+    "Define if libevent should build without support for mbed TLS encryption" ON)
 
 option(EVENT__DISABLE_BENCHMARK
     "Defines if libevent should build without the benchmark executables" OFF)
@@ -240,7 +240,7 @@ if (APPLE)
 endif()
 
 if (${MSVC})
-    set(msvc_static_runtime OFF)
+    set(msvc_static_runtime ON)
     if ("${EVENT_LIBRARY_TYPE}" STREQUAL "STATIC")
         set(msvc_static_runtime ON)
     endif()
