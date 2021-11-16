@@ -5,10 +5,9 @@ set(CMAKE_UNITY_BUILD ON)
 include_directories(.
                     ../../common_files
                     ../../libs/victory
-                    ../../ThirdParty/libevent/compat
-                    ../../ThirdParty/libevent/include
-                    ../../ThirdParty/libevent/build/include
-                    ../../ThirdParty/sockpp/include
+                    ${_ROOT_DIR_}/Urho3D/Source/ThirdParty/libevent/include/
+                    ${_ROOT_DIR_}/generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
+                    ${_ROOT_DIR_}/Urho3D/Source/ThirdParty/sockpp/include/
                     )
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
