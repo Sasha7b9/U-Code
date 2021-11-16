@@ -46,6 +46,10 @@ project(sockpp VERSION "0.7.0")
 set(SOCKPP sockpp)
 set(SOCKPP_STATIC ${SOCKPP}-static)
 
+if(MSVC)
+    add_compile_options(/wd4996)
+endif()
+
 # --- Build Options ---
 
 if(WIN32)
