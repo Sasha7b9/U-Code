@@ -4,7 +4,7 @@ if "%~1"=="" goto HINT
 if "%~2" NEQ "" goto HINT
 
 @echo .
-@echo %TIME%   Making Pi-Code %1 ...
+@echo %TIME%   Making U-Code %1 ...
 
 set _START_DIR_=%CD%
 
@@ -16,7 +16,7 @@ set CMAKE_BUILD=Debug
 if %1==release set BUILDING=release
 if %1==release set CMAKE_BUILD=Release
 
-rem Путь к каталогу с Pi-Code.sln
+rem Путь к каталогу с U-Code.sln
 set CMAKE_PROJECT_DIR="generated/%BUILDING%"
 
 rmdir %CMAKE_PROJECT_DIR% /S /Q

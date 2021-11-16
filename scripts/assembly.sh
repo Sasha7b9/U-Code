@@ -74,7 +74,6 @@ then
 fi
 
 dir=$PWD
-PROJECT_NAME=Pi-Code
 
 cd ..
 

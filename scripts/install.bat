@@ -1,6 +1,6 @@
 rem                                     Создаём символьные ссылки
-call proc/create_links.bat
-cd %_START_DIR_%
-
-rem call assembly.bat full all
+rem call proc/create_links.bat
 rem cd %_START_DIR_%
+
+call assembly.bat full all
+cd %_START_DIR_%
