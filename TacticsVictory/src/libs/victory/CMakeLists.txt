@@ -1,10 +1,11 @@
 project (victory)
 
-set(CMAKE_UNITY_BUILD OFF)
+set(CMAKE_UNITY_BUILD ON)
 
 include_directories(.
                     ../../common_files/
                     ../../../../Urho3D/Source/ThirdParty/libevent/include/
+                    ../../../../Urho3D/Source/ThirdParty/libevent/compat/
                     ../../../../Urho3D/Source/ThirdParty/sockpp/include/
                     ../../../../generated/${_BUILD_TYPE_}/Source/ThirdParty/libevent/include/
                     )
@@ -17,14 +18,29 @@ if(MSVC)
 
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /FORCE:MULTIPLE")
 
+    add_compile_options(/wd4100)
+    add_compile_options(/wd4101)
+    add_compile_options(/wd4115)
+    add_compile_options(/wd4127)
+    add_compile_options(/wd4131)
+    add_compile_options(/wd4152)
+    add_compile_options(/wd4242)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4255)
+    add_compile_options(/wd4295)
+    add_compile_options(/wd4365)
+    add_compile_options(/wd4456)
     add_compile_options(/wd4514)    # 'function' : unreferenced inline function has been removed
     add_compile_options(/wd4625)    # 'derived class' : copy constructor was implicitly defined as deleted because a
                                     # base class copy constructor is inaccessible or deleted
     add_compile_options(/wd4626)    # 'derived class' : assignment operator was implicitly defined as deleted because a
                                     # base class assignment operator is inaccessible or deleted
+    add_compile_options(/wd4668)
+    add_compile_options(/wd4706)
     add_compile_options(/wd4710)    # 'function' : function not inlined
     add_compile_options(/wd4711)    # function 'function' selected for inline expansion
     add_compile_options(/wd4820)    # bytes' bytes padding added after construct 'member_name'
+    add_compile_options(/wd4996)
     add_compile_options(/wd5026)    # 'xxx': move constructor was implicitly defined as deleted
     add_compile_options(/wd5027)    # 'class': move assignment operator was implicitly defined as deleted
     add_compile_options(/wd5045)    # Compiler will insert Spectre mitigation for memory load if /Qspectre switch
@@ -32,6 +48,7 @@ if(MSVC)
     add_compile_options(/wd5220)    # 'xxx:yyy': a non-static data member with a volatile qualified type no longer
                                     # implies that compiler generated copy/move constructors and copy/move assignment
                                     # operators are not trivial
+    add_compile_options(/wd5246)
 
 else()
 
@@ -45,7 +62,26 @@ file(GLOB INPUT                                Input/*.*)
 file(GLOB NETWORK                              Network/Other/*.*)
 file(GLOB UTILS                                Utils/*.*)
 
-file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/libevent_bucket*.c)
+file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evutil.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/event.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/log.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/evutil_time.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/evutil_rand.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/buffer.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/evmap.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_async.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/evthread.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/buffer_iocp.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/event_iocp.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/signal.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/strlcpy.c
+                             #../../../../Urho3D/Source/ThirdParty/libevent/epoll.c
+                             )
+
 file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
 file(GLOB SOCKPP_INCLUDE     ../../../../Urho3D/Source/ThirdParty/sockpp/include/sockpp/*.h)
 
