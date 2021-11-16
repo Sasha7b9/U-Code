@@ -44,9 +44,6 @@ set(URHO3D_DATABASE_SQLITE 1)
 
 
 ############ For eventlib #################
-#set(EVENT__DISABLE_OPENSSL ON)
-#set(EVENT__DISABLE_MBEDTLS ON)
-#set(EVENT__MSVC_STATIC_RUNTIME ON)
 set(EVENT__LIBRARY_TYPE STATIC)
 
 
