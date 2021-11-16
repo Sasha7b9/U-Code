@@ -27,6 +27,10 @@ endif ()
 # Define target name
 set (TARGET_NAME 43_HttpRequestDemo)
 
+if(MSVC)
+    add_compile_options(/wd5220)
+endif()
+
 if (URHO3D_SSL)
     add_definitions (-DURHO3D_SSL)
 endif ()

@@ -24,6 +24,11 @@ if (NOT URHO3D_URHO2D)
     return ()
 endif ()
 
+if(MSVC)
+    add_compile_options(/wd5220)
+endif()
+
+
 # Define target name
 set (TARGET_NAME 49_Urho2DIsometricDemo)
 
