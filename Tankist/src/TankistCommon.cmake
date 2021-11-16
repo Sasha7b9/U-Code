@@ -49,13 +49,10 @@ endmacro()
 
 macro(link_third_party)
     if(USE_SOCKPP)
-    
-        target_link_libraries(${PROJECT_NAME} sockpp)
-        
+        target_link_libraries(${PROJECT_NAME} sockpp-static)
         if(MSVC)
             target_link_libraries(${PROJECT_NAME} ws2_32)
         endif()
-    
     endif()
     
     
