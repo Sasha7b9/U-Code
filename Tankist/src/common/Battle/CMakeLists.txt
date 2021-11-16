@@ -72,14 +72,9 @@ add_dependencies(${PROJECT_NAME} Urho3D)
 
 runtime_library()
 
-if(MSVC)
-    if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
-        target_link_libraries(${PROJECT_NAME} Urho3D_d)
-    else()
-        target_link_libraries(${PROJECT_NAME} Urho3D) 
-    endif()
-else()
-    target_link_libraries(${PROJECT_NAME} Urho3D)
+link_urho3d()
+
+if(UNIX)
     target_link_libraries(${PROJECT_NAME} Bullet)
 endif()
 

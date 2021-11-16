@@ -3,7 +3,7 @@ project (TTClient)
 include_directories(.
                     ../../common_files
                     ../../../../Source/PiEngine
-                    ../../ThirdParty/sockpp_/sockpp/include
+                    ${_ROOT_DIR_}/Urho3D/Source/ThirdParty/sockpp/include/
                     ../../ThirdParty/rapidjson_/rapidjson/include)
 
 set(USE_SOCKPP 1)
