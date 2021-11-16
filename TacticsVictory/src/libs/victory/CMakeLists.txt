@@ -23,6 +23,7 @@ if(MSVC)
     add_compile_options(/wd4115)
     add_compile_options(/wd4127)
     add_compile_options(/wd4131)
+    add_compile_options(/wd4133)
     add_compile_options(/wd4152)
     add_compile_options(/wd4242)
     add_compile_options(/wd4244)
@@ -65,8 +66,8 @@ file(GLOB UTILS                                Utils/*.*)
 file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evutil.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
-                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
-                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
+                             #../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
+                             #../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/event.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/log.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/evutil_time.c
