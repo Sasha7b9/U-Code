@@ -114,7 +114,7 @@ set(EVENT_VERSION
 	"${EVENT_VERSION_MAJOR}.${EVENT_VERSION_MINOR}.${EVENT_VERSION_PATCH}-${EVENT_STAGE_NAME}")
 
 option(EVENT__DISABLE_DEBUG_MODE
-    "Define if libevent should build without support for a debug mode" OFF)
+    "Define if libevent should build without support for a debug mode" ON)
 
 option(EVENT__ENABLE_VERBOSE_DEBUG
     "Enables verbose debugging" OFF)
@@ -132,16 +132,16 @@ option(EVENT__DISABLE_MBEDTLS
     "Define if libevent should build without support for mbed TLS encryption" ON)
 
 option(EVENT__DISABLE_BENCHMARK
-    "Defines if libevent should build without the benchmark executables" OFF)
+    "Defines if libevent should build without the benchmark executables" ON)
 
 option(EVENT__DISABLE_TESTS
-    "If tests should be compiled or not" OFF)
+    "If tests should be compiled or not" ON)
 
 option(EVENT__DISABLE_REGRESS
-    "Disable the regress tests" OFF)
+    "Disable the regress tests" ON)
 
 option(EVENT__DISABLE_SAMPLES
-    "Disable sample files" OFF)
+    "Disable sample files" ON)
 
 option(EVENT__DISABLE_CLOCK_GETTIME
     "Do not use clock_gettime even if it is available" OFF)
