@@ -1,7 +1,5 @@
-generated/Urho3D/
-generated/ThirdParty/
-generated/TacticsVictory/
-generated/Tankist/
+generated/debug/
+generated/release/
 
 Demo/out/debug/*.dll
 Demo/out/debug/*.exe 
