@@ -45,10 +45,10 @@ file(GLOB INPUT                                Input/*.*)
 file(GLOB NETWORK                              Network/Other/*.*)
 file(GLOB UTILS                                Utils/*.*)
 
-file(GLOB LIBEVENT           ../../ThirdParty/libevent/libevent_bucket*.c)
+file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/libevent_bucket*.c)
 file(GLOB SOCKPP             ../../../../Urho3D/Source/ThirdParty/sockpp/src/sockpp.cpp)
-file(GLOB SOCKPP_SOURCES     ../../ThirdParty/sockpp/src/*.cpp)
-file(GLOB SOCKPP_INCLUDE     ../../ThirdParty/sockpp/include/sockpp/*.h)
+file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
+file(GLOB SOCKPP_INCLUDE     ../../../../Urho3D/Source/ThirdParty/sockpp/include/sockpp/*.h)
 
 source_group(src                         FILES ${SRC})
 source_group(Core                        FILES ${CORE})
