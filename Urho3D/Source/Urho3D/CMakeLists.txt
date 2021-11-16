@@ -718,5 +718,3 @@ endif ()
 if (URHO3D_FORCE_AS_MAX_PORTABILITY)
     add_definitions (-DAS_MAX_PORTABILITY)
 endif ()
-
-add_dependencies(${TARGET_NAME} SDL)
