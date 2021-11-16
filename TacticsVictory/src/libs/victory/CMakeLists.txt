@@ -1,6 +1,6 @@
 project (victory)
 
-set(CMAKE_UNITY_BUILD ON)
+set(CMAKE_UNITY_BUILD OFF)
 
 include_directories(.
                     ../../common_files/
@@ -46,7 +46,6 @@ file(GLOB NETWORK                              Network/Other/*.*)
 file(GLOB UTILS                                Utils/*.*)
 
 file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/libevent_bucket*.c)
-file(GLOB SOCKPP             ../../../../Urho3D/Source/ThirdParty/sockpp/src/sockpp.cpp)
 file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
 file(GLOB SOCKPP_INCLUDE     ../../../../Urho3D/Source/ThirdParty/sockpp/include/sockpp/*.h)
 
@@ -58,20 +57,19 @@ source_group(Network                     FILES ${NETWORK})
 source_group(Utils                       FILES ${UTILS})
 
 source_group(ThirdParty\\libevent        FILES ${LIBEVENT})
-source_group(ThirdParty\\sockpp          FILES ${SOCKPP})
 source_group(ThirdParty\\sockpp\\sources FILES ${SOCKPP_SOURCES})
 source_group(ThirdParty\\sockpp\\include FILES ${SOCKPP_INCLUDE})
 
-set_source_files_properties(${SOCKPP_SOURCES} PROPERTIES HEADER_FILE_ONLY TRUE)
+#set_source_files_properties(${SOCKPP_SOURCES} PROPERTIES HEADER_FILE_ONLY TRUE)
 
-file(GLOB FILES_UNITY ${SRC} ${CORE} ${FILESYSTEM} ${INPUT} ${NETWORK} ${UTILS} ${SOCKPP})
+file(GLOB FILES_UNITY ${SRC} ${CORE} ${FILESYSTEM} ${INPUT} ${NETWORK} ${UTILS})
 
-add_library(${PROJECT_NAME} ${FILES_UNITY} ${LIBEVENT})
+add_library(${PROJECT_NAME} ${FILES_UNITY} ${LIBEVENT} ${SOCKPP_SOURCES} ${SOCKPP_INCLUDE})
 
 add_dependencies(${PROJECT_NAME} Urho3D)
 
-set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
-set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
+#set_target_properties(${PROJECT_NAME}       PROPERTIES UNITY_BUILD_MODE GROUP)
+#set_source_files_properties(${FILES_UNITY}  PROPERTIES UNITY_GROUP "victory")
 
 if(MSVC)
     runtime_library()

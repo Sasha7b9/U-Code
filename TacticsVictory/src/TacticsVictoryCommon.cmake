@@ -45,9 +45,9 @@ endmacro()
 
 
 macro(link_urho3d)
-    set(_LINK_DIR_ ${CMAKE_BINARY_DIR}/lib/)
-    link_directories("${_LINK_DIR_}")
-    message("                      ${_LINK_DIR_}")
+#    set(_LINK_DIR_ ${CMAKE_BINARY_DIR}/lib/)
+#    link_directories("${_LINK_DIR_}")
+#    message("                      ${_LINK_DIR_}")
     if(MSVC)
         if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
             target_link_libraries(${PROJECT_NAME} ../../../../generated/debug/lib/Urho3D_d) 
