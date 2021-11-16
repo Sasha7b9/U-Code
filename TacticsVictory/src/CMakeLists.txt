@@ -82,5 +82,3 @@ add_subdirectory_with_folder("TacticsVictory/remote" remote/DataBase)
 add_subdirectory_with_folder("TacticsVictory/remote" remote/Master)
 
 add_subdirectory_with_folder("TacticsVictory/libs" libs/victory)
-
-# add_subdirectory_with_folder("experimental" experimental/test_libevent)
