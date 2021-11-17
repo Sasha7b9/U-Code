@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Recast)
 
+set(CMAKE_UNITY_BUILD OFF)
+
 if(MSVC)
     add_compile_options(/wd4244)
     add_compile_options(/wd4291)

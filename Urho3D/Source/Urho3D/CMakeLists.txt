@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Urho3D)
 
+set(CMAKE_UNITY_BUILD ON)
+
 # Prevent ICE from old MinGW versions, workaround from the GCC bugzilla https://gcc.gnu.org/bugzilla/show_bug.cgi?id=61189
 if (MINGW AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9.1 AND NOT URHO3D_64BIT)
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mpreferred-stack-boundary=2")
@@ -718,3 +720,6 @@ endif ()
 if (URHO3D_FORCE_AS_MAX_PORTABILITY)
     add_definitions (-DAS_MAX_PORTABILITY)
 endif ()
+
+
+set(CMAKE_UNITY_BUILD ON)

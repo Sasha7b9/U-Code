@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME sqlite)
 
+set(CMAKE_UNITY_BUILD OFF)
+
 # Define preprocessor macros
 add_definitions (-DSQLITE_USE_URI=1 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_SOUNDEX)   # https://www.sqlite.org/compile.html
 if (WEB)

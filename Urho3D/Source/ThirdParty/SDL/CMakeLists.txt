@@ -49,7 +49,7 @@
 #          instead, just enable the required language support and set the extra variables associated with project() command
 enable_language (C CXX)
 
-#set(CMAKE_UNITY_BUILD ON)
+set(CMAKE_UNITY_BUILD OFF)
 
 #set_source_files_properties(src/haptic/windows/SDL_dinputhaptic.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 #set_source_files_properties(src/libm/s_scalbn.c                      PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)

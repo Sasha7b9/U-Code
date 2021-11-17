@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME FreeType)
 
+set(CMAKE_UNITY_BUILD OFF)
+
 if(MSVC)
     add_compile_options(/wd4018)
     add_compile_options(/wd4244)

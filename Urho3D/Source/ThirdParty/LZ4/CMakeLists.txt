@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME LZ4)
 
+set(CMAKE_UNITY_BUILD OFF)
+
 # Define source files
 define_source_files (GLOB_CPP_PATTERNS *.c)
 
