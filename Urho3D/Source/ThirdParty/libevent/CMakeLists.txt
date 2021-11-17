@@ -21,12 +21,6 @@
 
 cmake_minimum_required(VERSION 3.1.2 FATAL_ERROR)
 
-set(CMAKE_UNITY_BUILD OFF)
-
-set_source_files_properties(wepoll.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
-set_source_files_properties(bufferevent_pair.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
-set_source_files_properties(evrpc.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
-
 if (POLICY CMP0054)
     cmake_policy(SET CMP0054 NEW)
 endif()
@@ -47,14 +41,6 @@ set(EVENT__LIBRARY_TYPE DEFAULT CACHE STRING
     "Set library type to SHARED/STATIC/BOTH (default SHARED for MSVC, otherwise BOTH)")
 
 project(libevent C)
-
-if(MSVC)
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -MP -W0")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -W0")
-    add_compile_options(/wd4028)
-    add_compile_options(/wd4244)
-    add_compile_options(/wd4311)
-endif()
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 string(REGEX MATCH "SunOS" SOLARIS "${CMAKE_SYSTEM_NAME}")
@@ -128,7 +114,7 @@ set(EVENT_VERSION
 	"${EVENT_VERSION_MAJOR}.${EVENT_VERSION_MINOR}.${EVENT_VERSION_PATCH}-${EVENT_STAGE_NAME}")
 
 option(EVENT__DISABLE_DEBUG_MODE
-    "Define if libevent should build without support for a debug mode" ON)
+    "Define if libevent should build without support for a debug mode" OFF)
 
 option(EVENT__ENABLE_VERBOSE_DEBUG
     "Enables verbose debugging" OFF)
@@ -140,22 +126,22 @@ option(EVENT__DISABLE_THREAD_SUPPORT
     "Define if libevent should not be compiled with thread support" OFF)
 
 option(EVENT__DISABLE_OPENSSL
-    "Define if libevent should build without support for OpenSSL encryption" ON)
+    "Define if libevent should build without support for OpenSSL encryption" OFF)
 
 option(EVENT__DISABLE_MBEDTLS
-    "Define if libevent should build without support for mbed TLS encryption" ON)
+    "Define if libevent should build without support for mbed TLS encryption" OFF)
 
 option(EVENT__DISABLE_BENCHMARK
-    "Defines if libevent should build without the benchmark executables" ON)
+    "Defines if libevent should build without the benchmark executables" OFF)
 
 option(EVENT__DISABLE_TESTS
-    "If tests should be compiled or not" ON)
+    "If tests should be compiled or not" OFF)
 
 option(EVENT__DISABLE_REGRESS
     "Disable the regress tests" OFF)
 
 option(EVENT__DISABLE_SAMPLES
-    "Disable sample files" ON)
+    "Disable sample files" OFF)
 
 option(EVENT__DISABLE_CLOCK_GETTIME
     "Do not use clock_gettime even if it is available" OFF)
@@ -1166,7 +1152,6 @@ if (NOT EVENT__DISABLE_TESTS)
     #
     # Generate Regress tests.
     #
-    message(" ......................................................................... Generate Regress tests.")
     if (NOT EVENT__DISABLE_REGRESS)
         # (We require python to generate the regress tests)
         find_package(PythonInterp 3)
@@ -1649,29 +1634,29 @@ if (NOT TARGET uninstall)
 					  COMMAND ${CMAKE_COMMAND} -P ${PROJECT_BINARY_DIR}/Uninstall.cmake)
 endif()
 
-#message(STATUS "")
-#message(STATUS "        ---( Libevent " ${EVENT_VERSION} " )---")
-#message(STATUS "")
-#message(STATUS "Available event backends: ${BACKENDS}")
-#message(STATUS "CMAKE_BINARY_DIR:         ${CMAKE_BINARY_DIR}")
-#message(STATUS "CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
-#message(STATUS "CMAKE_SOURCE_DIR:         ${CMAKE_SOURCE_DIR}")
-#message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
-#message(STATUS "PROJECT_BINARY_DIR:       ${PROJECT_BINARY_DIR}")
-#message(STATUS "PROJECT_SOURCE_DIR:       ${PROJECT_SOURCE_DIR}")
-#message(STATUS "CMAKE_MODULE_PATH:        ${CMAKE_MODULE_PATH}")
-#message(STATUS "CMAKE_COMMAND:            ${CMAKE_COMMAND}")
-#message(STATUS "CMAKE_ROOT:               ${CMAKE_ROOT}")
-#message(STATUS "CMAKE_SYSTEM:             ${CMAKE_SYSTEM}")
-#message(STATUS "CMAKE_SYSTEM_NAME:        ${CMAKE_SYSTEM_NAME}")
-#message(STATUS "CMAKE_SYSTEM_VERSION:     ${CMAKE_SYSTEM_VERSION}")
-#message(STATUS "CMAKE_SYSTEM_PROCESSOR:   ${CMAKE_SYSTEM_PROCESSOR}")
-#message(STATUS "CMAKE_SKIP_RPATH:         ${CMAKE_SKIP_RPATH}")
-#message(STATUS "CMAKE_VERBOSE_MAKEFILE:   ${CMAKE_VERBOSE_MAKEFILE}")
-#message(STATUS "CMAKE_C_FLAGS:            ${CMAKE_C_FLAGS}")
-#message(STATUS "CMAKE_BUILD_TYPE:         ${CMAKE_BUILD_TYPE}")
-#message(STATUS "CMAKE_C_COMPILER:         ${CMAKE_C_COMPILER} (id ${CMAKE_C_COMPILER_ID}, clang ${CLANG}, GNUC ${GNUC})")
-#message(STATUS "CMAKE_AR:                 ${CMAKE_AR}")
-#message(STATUS "CMAKE_RANLIB:             ${CMAKE_RANLIB}")
-#message(STATUS "")
+message(STATUS "")
+message(STATUS "        ---( Libevent " ${EVENT_VERSION} " )---")
+message(STATUS "")
+message(STATUS "Available event backends: ${BACKENDS}")
+message(STATUS "CMAKE_BINARY_DIR:         ${CMAKE_BINARY_DIR}")
+message(STATUS "CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
+message(STATUS "CMAKE_SOURCE_DIR:         ${CMAKE_SOURCE_DIR}")
+message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+message(STATUS "PROJECT_BINARY_DIR:       ${PROJECT_BINARY_DIR}")
+message(STATUS "PROJECT_SOURCE_DIR:       ${PROJECT_SOURCE_DIR}")
+message(STATUS "CMAKE_MODULE_PATH:        ${CMAKE_MODULE_PATH}")
+message(STATUS "CMAKE_COMMAND:            ${CMAKE_COMMAND}")
+message(STATUS "CMAKE_ROOT:               ${CMAKE_ROOT}")
+message(STATUS "CMAKE_SYSTEM:             ${CMAKE_SYSTEM}")
+message(STATUS "CMAKE_SYSTEM_NAME:        ${CMAKE_SYSTEM_NAME}")
+message(STATUS "CMAKE_SYSTEM_VERSION:     ${CMAKE_SYSTEM_VERSION}")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR:   ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "CMAKE_SKIP_RPATH:         ${CMAKE_SKIP_RPATH}")
+message(STATUS "CMAKE_VERBOSE_MAKEFILE:   ${CMAKE_VERBOSE_MAKEFILE}")
+message(STATUS "CMAKE_C_FLAGS:            ${CMAKE_C_FLAGS}")
+message(STATUS "CMAKE_BUILD_TYPE:         ${CMAKE_BUILD_TYPE}")
+message(STATUS "CMAKE_C_COMPILER:         ${CMAKE_C_COMPILER} (id ${CMAKE_C_COMPILER_ID}, clang ${CLANG}, GNUC ${GNUC})")
+message(STATUS "CMAKE_AR:                 ${CMAKE_AR}")
+message(STATUS "CMAKE_RANLIB:             ${CMAKE_RANLIB}")
+message(STATUS "")
 

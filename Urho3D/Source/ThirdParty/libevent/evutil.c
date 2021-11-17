@@ -592,9 +592,8 @@ evutil_make_listen_socket_ipv6only(evutil_socket_t sock)
 	int one = 1;
 	return setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, (void*) &one,
 	    (ev_socklen_t)sizeof(one));
-#else
-	return 0;
 #endif
+	return 0;
 }
 
 int
