@@ -21,7 +21,7 @@
 
 cmake_minimum_required(VERSION 3.1.2 FATAL_ERROR)
 
-set(CMAKE_UNITY_BUILD ON)
+set(CMAKE_UNITY_BUILD OFF)
 
 set_source_files_properties(wepoll.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 set_source_files_properties(bufferevent_pair.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
