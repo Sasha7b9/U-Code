@@ -50,6 +50,7 @@ if(MSVC)
     add_compile_options(/wd4028)
     add_compile_options(/wd4244)
     add_compile_options(/wd4311)
+    add_compile_options(/wd4702)
 endif()
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")

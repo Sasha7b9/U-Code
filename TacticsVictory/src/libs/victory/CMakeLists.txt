@@ -37,6 +37,7 @@ if(MSVC)
     add_compile_options(/wd4626)    # 'derived class' : assignment operator was implicitly defined as deleted because a
                                     # base class assignment operator is inaccessible or deleted
     add_compile_options(/wd4668)
+    add_compile_options(/wd4702)
     add_compile_options(/wd4706)
     add_compile_options(/wd4710)    # 'function' : function not inlined
     add_compile_options(/wd4711)    # function 'function' selected for inline expansion
