@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME AngelScript)
 
+set(CMAKE_UNITY_BUILD ON)
+
 if(UNIX)
     add_definitions(-Wno-invalid-pch)
 endif()
