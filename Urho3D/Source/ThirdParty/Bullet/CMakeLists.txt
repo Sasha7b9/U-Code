@@ -35,6 +35,7 @@ if(MSVC)
     add_compile_options(/wd4244)
     add_compile_options(/wd4267)
     add_compile_options(/wd4305)
+    add_compile_options(/wd4756)
 endif()
 
 if(UNIX)

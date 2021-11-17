@@ -22,6 +22,7 @@ if(WIN32)
     add_compile_options(/wd4514)    # 'xxx': unreferenced inline function has been removed
     add_compile_options(/wd4625)    # 'xxx': copy constructor was implicitly defined as deleted
     add_compile_options(/wd4626)    # 'xxx': assignment operator was implicitly defined as deleted
+    add_compile_options(/wd4701)
     add_compile_options(/wd4710)
     add_compile_options(/wd4711)
     add_compile_options(/wd4820)    # 'xxx': 'n' bytes padding added after base class 'yyy'
