@@ -31,23 +31,35 @@ dir=$PWD
 cd ../..
 
 #             *** TacticsVictory ***
-MakeDir "TacticsVictory/out/release"
-MakeDir "TacticsVictory/out/release/Data"
+MakeDir "TacticsVictory/out/debug/log/"
+MakeDir "TacticsVictory/out/release/"
+MakeDir "TacticsVictory/out/release/log/"
 
-LinkDir "TacticsVictory/out/debug/Data/C4"                "Pi-Code/out/debug/Data/C4"
-LinkDir "TacticsVictory/out/debug/Plugins"                "Pi-Code/out/debug/Plugins"
-LinkDir "TacticsVictory/out/release/Data/C4"              "Pi-Code/out/debug/Data/C4"
-LinkDir "TacticsVictory/out/release/Plugins"              "Pi-Code/out/release/Plugins"
-LinkDir "TacticsVictory/out/release/Data/TacticsVictory"  "TacticsVictory/out/debug/Data/TacticsVictory"
+LinkDir "TacticsVictory/out/debug/Autoload/"   "Urho3D/bin/Autoload/"
+LinkDir "TacticsVictory/out/debug/CoreData/"   "Urho3D/bin/CoreData/"
+LinkDir "TacticsVictory/out/debug/Data/"       "Urho3D/bin/Data/"
+
+LinkDir "TacticsVictory/out/release/Autoload/" "Urho3D/bin/Autoload/"
+LinkDir "TacticsVictory/out/release/CoreData/" "Urho3D/bin/CoreData/"
+LinkDir "TacticsVictory/out/release/Data/"     "Urho3D/bin/Data/"
+
+LinkDir "TacticsVictory/out/release/TVData/"   "TacticsVictory/out/debug/TVData/"
+LinkDir "TacticsVictory/out/release/conf/"     "TacticsVictory/out/debug/conf/"
 
 #             *** Tankist ***
-MakeDir "Tankist/out/release"
-MakeDir "Tankist/out/release/Data"
+MakeDir "Tankist/out/debug/log/"
+MakeDir "Tankist/out/release/"
+MakeDir "Tankist/out/release/log/"
 
-LinkDir "Tankist/out/debug/Data/C4"           "Pi-Code/out/debug/Data/C4"
-LinkDir "Tankist/out/debug/Plugins"           "Pi-Code/out/debug/Plugins"
-LinkDir "Tankist/out/release/Data/C4"         "Tankist/out/debug/Data/C4"
-LinkDir "Tankist/out/release/Plugins"         "Tankist/out/debug/Plugins"
-LinkDir "Tankist/out/release/Data/Tankist"    "Tankist/out/debug/Data/Tankist"
+LinkDir "Tankist/out/debug/Autoload/"      "Urho3D/bin/Autoload/"
+LinkDir "Tankist/out/debug/CoreData/"      "Urho3D/bin/CoreData/"
+LinkDir "Tankist/out/debug/Data/"          "Urho3D/bin/Data/"
+
+LinkDir "Tankist/out/release/Autoload/"    "Urho3D/bin/Autoload/"
+LinkDir "Tankist/out/release/CoreData/"    "Urho3D/bin/CoreData/"
+LinkDir "Tankist/out/release/Data/"        "Urho3D/bin/Data/"
+
+LinkDir "Tankist/out/release/TankistData/" "Tankist/out/debug/TankistData/"
+LinkDir "Tankist/out/release/conf/"        "Tankist/out/debug/Tankist/conf/"
 
 cd $dir
