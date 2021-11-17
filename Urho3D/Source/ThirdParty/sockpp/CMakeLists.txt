@@ -39,6 +39,8 @@
 ## CMake required version
 cmake_minimum_required(VERSION 3.5)
 
+set(CMAKE_UNITY_BUILD ON)
+
 ## project
 project(sockpp VERSION "0.7.0")
 
