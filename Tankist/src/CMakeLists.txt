@@ -15,6 +15,8 @@ set (TARGET_NAME TankistU3D)
 find_package (Urho3D REQUIRED)
 include_directories (${URHO3D_INCLUDE_DIRS})
 
+set(CMAKE_UNITY_BUILD ON)
+
 if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
     set(SUB_DIR debug)
     set(_BUILD_TYPE_ debug)

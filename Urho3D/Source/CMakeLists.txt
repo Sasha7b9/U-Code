@@ -43,6 +43,8 @@ endif ()
 get_filename_component(_ROOT_DIR_ ${CMAKE_BINARY_DIR}\\..\\..\\.. ABSOLUTE)
 file(TO_NATIVE_PATH ${_ROOT_DIR_} _ROOT_DIR_)
 
+set(CMAKE_UNITY_BUILD ON)
+
 if (MSVC)
 #    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall")
 #    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /Wall")

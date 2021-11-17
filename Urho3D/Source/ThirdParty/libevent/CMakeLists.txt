@@ -42,6 +42,16 @@ set(EVENT__LIBRARY_TYPE DEFAULT CACHE STRING
 
 project(libevent C)
 
+set(CMAKE_UNITY_BUILD OFF)
+
+if(MSVC)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -MP -W0")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -W0")
+    add_compile_options(/wd4028)
+    add_compile_options(/wd4244)
+    add_compile_options(/wd4311)
+endif()
+
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 string(REGEX MATCH "SunOS" SOLARIS "${CMAKE_SYSTEM_NAME}")
 
