@@ -50,6 +50,7 @@
 enable_language (C CXX)
 
 if(MSVC)
+    add_compile_options(/wd4723)
     add_compile_options(/wd4996)
 endif()
 

@@ -240,13 +240,6 @@ if (URHO3D_EXTRAS)
     add_subdirectory (Extras)
 endif ()
 
-
-
-
-
-
-
-
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 define_property(
     TARGET
@@ -263,9 +256,8 @@ endfunction()
 
 add_superdirectory_with_folder("Projects" ../../Projects/Demo/src Projects_Demo_src)
 
-#add_subdirectory(../../Tankist/src/       Tankist_src)
-#add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
-#
-#
-#add_subdirectory_with_folder("ThirdParty/libevent" ThirdParty/libevent)
-#add_subdirectory_with_folder("ThirdParty/sockpp"   ThirdParty/sockpp)
+add_subdirectory(../../Tankist/src/       Tankist_src)
+add_subdirectory(../../TacticsVictory/src TacticsVictory_src)
+
+add_subdirectory_with_folder("ThirdParty/libevent" ThirdParty/libevent)
+add_subdirectory_with_folder("ThirdParty/sockpp"   ThirdParty/sockpp)

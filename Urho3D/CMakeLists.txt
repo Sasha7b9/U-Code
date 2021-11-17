@@ -44,7 +44,7 @@ set(URHO3D_DATABASE_SQLITE 1)
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(URHO3D_SAMPLES 1)
 else()
-    set(URHO3D_SAMPLES 1)
+    set(URHO3D_SAMPLES 0)
 endif()
 
 
