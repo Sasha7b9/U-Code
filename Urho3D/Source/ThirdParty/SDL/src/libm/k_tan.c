@@ -47,7 +47,7 @@
 #include "math_private.h"
 
 static const double
-one   =  1.00000000000000000000e+00, /* 0x3FF00000, 0x00000000 */
+one_tan   =  1.00000000000000000000e+00, /* 0x3FF00000, 0x00000000 */
 pio4  =  7.85398163397448278999e-01, /* 0x3FE921FB, 0x54442D18 */
 pio4lo=  3.06161699786838301793e-17, /* 0x3C81A626, 0x33145C07 */
 T[] =  {
@@ -76,8 +76,8 @@ double attribute_hidden __kernel_tan(double x, double y, int iy)
 	    {if((int)x==0) {			/* generate inexact */
 	        u_int32_t low;
 		GET_LOW_WORD(low,x);
-		if(((ix|low)|(iy+1))==0) return one/fabs(x);
-		else return (iy==1)? x: -one/x;
+		if(((ix|low)|(iy+1))==0) return one_tan /fabs(x);
+		else return (iy==1)? x: -one_tan /x;
 	    }
 	    }
 	if(ix>=0x3FE59428) { 			/* |x|>=0.6744 */
