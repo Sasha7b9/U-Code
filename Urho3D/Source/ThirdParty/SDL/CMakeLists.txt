@@ -1636,7 +1636,7 @@ file(GLOB BUCKET1 src/*.c
                   src/video/windows/SDL_windowsopengles.c
                   src/joystick/windows/SDL_mmjoystick.c
                   src/libm/e_log.c
-                  
+                  src/libm/e_log10.c
                   )
 file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/video/SDL_egl.c

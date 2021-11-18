@@ -41,7 +41,7 @@
 
 static const double
 tiny  = 1.0e-300,
-zero  = 0.0,
+zero_atan2  = 0.0,
 pi_o_4  = 7.8539816339744827900E-01, /* 0x3FE921FB, 0x54442D18 */
 pi_o_2  = 1.5707963267948965580E+00, /* 0x3FF921FB, 0x54442D18 */
 pi      = 3.1415926535897931160E+00, /* 0x400921FB, 0x54442D18 */
@@ -86,8 +86,8 @@ double attribute_hidden __ieee754_atan2(double y, double x)
 		}
 	    } else {
 		switch(m) {
-		    case 0: return  zero  ;	/* atan(+...,+INF) */
-		    case 1: return -zero  ;	/* atan(-...,+INF) */
+		    case 0: return  zero_atan2;	/* atan(+...,+INF) */
+		    case 1: return -zero_atan2;	/* atan(-...,+INF) */
 		    case 2: return  pi+tiny  ;	/* atan(+...,-INF) */
 		    case 3: return -pi-tiny  ;	/* atan(-...,-INF) */
 		}
