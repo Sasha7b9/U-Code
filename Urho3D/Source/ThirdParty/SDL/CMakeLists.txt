@@ -1661,6 +1661,7 @@ file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   )
 file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/video/SDL_egl.c
+                  src/libm/k_tan.c
                   )
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
