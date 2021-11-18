@@ -1668,6 +1668,7 @@ file(GLOB BUCKET3 src/hidapi/windows/hid.c
                   )
 file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
                   src/video/windows/SDL_windowsmouse.c
+                  src/video/windows/SDL_windowskeyboard.c
                   )
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   src/joystick/hidapi/SDL_hidapi_ps4.c
