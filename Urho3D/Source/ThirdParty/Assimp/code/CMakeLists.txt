@@ -956,6 +956,7 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ../contrib/Open3DGC/*.cpp
                   ../contrib/openddlparser/*.cpp
                   ../contrib/poly2tri/*.cpp
+                  
                   3DSConverter.cpp
                   3DSExporter.cpp
                   3DSLoader.cpp
@@ -971,21 +972,14 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   BaseImporter.cpp
                   BaseProcess.cpp
                   Bitmap.cpp
-#                  BlenderBMesh.cpp
                   BlenderDNA.cpp
-#                  BlenderLoader.cpp
                   BlenderModifier.cpp
-#                  BlenderScene.cpp
                   BlenderTessellator.cpp
                   BVHLoader.cpp
-#                  B3DImporter.cpp
                   C4DImporter.cpp
                   CalcTangentsProcess.cpp
                   CInterfaceIOWrapper.cpp
-#                  COBLoader.cpp
                   ColladaExporter.cpp
-#                  ColladaLoader.cpp
-#                  ColladaParser.cpp
                   ComputeUVMappingProcess.cpp
                   ConvertToLHProcess.cpp
                   CreateAnimMesh.cpp
@@ -999,7 +993,6 @@ file(GLOB BUCKET2 ACLoader.cpp
                   DeboneProcess.cpp
                   DefaultIOStream.cpp
                   DefaultIOSystem.cpp
-#                  DefaultLogger.cpp
                   DXFLoader.cpp
                   Exporter.cpp
                   FBXAnimation.cpp
@@ -1008,7 +1001,6 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXDeformer.cpp
                   FBXDocument.cpp
                   FBXDocumentUtil.cpp
-#                  FBXImporter.cpp
                   FBXMaterial.cpp
                   FBXMeshGeometry.cpp
                   FBXModel.cpp
@@ -1018,19 +1010,12 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXTokenizer.cpp
                   FBXUtil.cpp
                   FindDegenerates.cpp
-
                   FindInstancesProcess.cpp
                   FindInvalidDataProcess.cpp
                   FIReader.cpp
                   FixNormalsStep.cpp
                   GenFaceNormalsProcess.cpp
-
                   GenVertexNormalsProcess.cpp
-#                  glTF2Exporter.cpp
-#                  glTF2Importer.cpp
-#                  glTFExporter.cpp
-#                  glTFImporter.cpp
-
                   HMPLoader.cpp
                   IFCBoolean.cpp
                   IFCCurve.cpp
@@ -1157,6 +1142,21 @@ file(GLOB BUCKET3 ASELoader.cpp
 #                  XFileImporter.cpp
 #                  XFileParser.cpp
 #                  XGLLoader.cpp
+
+
+#                  ColladaLoader.cpp
+#                  ColladaParser.cpp
+#                  BlenderBMesh.cpp
+#                  BlenderLoader.cpp
+#                  COBLoader.cpp
+#                  B3DImporter.cpp
+#                  BlenderScene.cpp
+#                  glTF2Exporter.cpp
+#                  glTF2Importer.cpp
+#                  glTFExporter.cpp
+#                  glTFImporter.cpp
+#                  FBXImporter.cpp
+#                  DefaultLogger.cpp
 )
 
 file(GLOB BUCKET4 AssbinLoader.cpp)
