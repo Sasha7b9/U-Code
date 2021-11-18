@@ -6,6 +6,7 @@ set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/buffer
 set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_pair.c      PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/evutil.c                PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/evutil_rand.c           PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/wepoll.c                PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 
 include_directories(.
                     ../../common_files/
