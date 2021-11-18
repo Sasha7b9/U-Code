@@ -75,7 +75,7 @@ static const float units[] = {
     1.f/1609.344f
 };
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descCOB = {
     "TrueSpace Object Importer",
     "",
     "",
@@ -119,7 +119,7 @@ bool COBImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // Loader meta information
 const aiImporterDesc* COBImporter::GetInfo () const
 {
-    return &desc;
+    return &descCOB;
 }
 
 // ------------------------------------------------------------------------------------------------
