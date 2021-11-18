@@ -1671,6 +1671,7 @@ file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
                   src/video/windows/SDL_windowskeyboard.c
                   src/video/windows/SDL_windowsmessagebox.c
                   src/video/windows/SDL_windowsframebuffer.c
+                  src/video/windows/SDL_windowsclipboard.c
                   )
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   src/joystick/hidapi/SDL_hidapi_ps4.c
