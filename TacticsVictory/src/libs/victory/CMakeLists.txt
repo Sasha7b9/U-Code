@@ -97,6 +97,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event
                              ../../../../Urho3D/Source/ThirdParty/libevent/evutil.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/buffer.c
                              )
 endif()
