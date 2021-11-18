@@ -101,6 +101,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/buffer.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/strlcpy.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/poll.c
                              )
 endif()
 
