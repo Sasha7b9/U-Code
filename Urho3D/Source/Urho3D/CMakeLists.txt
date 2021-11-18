@@ -718,3 +718,7 @@ endif ()
 if (URHO3D_FORCE_AS_MAX_PORTABILITY)
     add_definitions (-DAS_MAX_PORTABILITY)
 endif ()
+
+if(UNIX)
+    add_dependencies(Urho3D sockpp)
+endif()
