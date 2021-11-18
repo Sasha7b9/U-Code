@@ -92,6 +92,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event
                              ../../../../Urho3D/Source/ThirdParty/libevent/select.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/signal.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/log.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/evthread.c
                              )
 endif()
 
