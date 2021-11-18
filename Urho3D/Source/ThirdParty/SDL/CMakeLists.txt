@@ -1626,15 +1626,21 @@ file(GLOB BUCKET1 src/*.c
                   src/events/*.c
                   src/file/SDL_rwops.c
                   src/haptic/windows/SDL_xinputhaptic.c
+                  src/haptic/windwos/SDL_windowshaptic.c
+                  
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
                   src/thread/windows/*.c
                   src/power/*.c
+                  
+                  )
+file(GLOB BUCKET2 src/hidapi/windows/hid.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
+set_source_files_properties(FILES ${BUCKET3} PROPERTIES UNITY_GROUP "buckt3")
 
 
 # Install headers for building and using the Urho3D library (install dependency for InputEvents.h)
