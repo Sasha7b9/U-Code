@@ -1066,7 +1066,7 @@ file(GLOB BUCKET10 MD5Parser.cpp
 )
 
 file(GLOB BUCKET11 ObjFileImporter.cpp
-#                   ObjFileMtlImporter.cpp
+                   ObjFileMtlImporter.cpp
 #                   ObjFileParser.cpp
 #                   OFFLoader.cpp
 #                   OgreBinarySerializer.cpp
