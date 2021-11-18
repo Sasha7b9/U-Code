@@ -1068,28 +1068,29 @@ file(GLOB BUCKET10 MD5Parser.cpp
 
 file(GLOB BUCKET11 ObjFileImporter.cpp
                    ObjFileMtlImporter.cpp
-#                   ObjFileParser.cpp
-#                   OFFLoader.cpp
-#                   OgreBinarySerializer.cpp
-#                   OgreImporter.cpp
+                   ObjFileParser.cpp
+                   OFFLoader.cpp
+                   OgreBinarySerializer.cpp
+                   OgreImporter.cpp
 #                   OgreMaterial.cpp
 #                   OgreStructs.cpp
 #                   OgreXmlSerializer.cpp
 #                   OpenGEXExporter.cpp
 #                   OpenGEXImporter.cpp
+#                   OptimizeGraph.cpp
+#                   OptimizeMeshes.cpp
+#                   PlyExporter.cpp
+#                   PlyLoader.cpp
+#                   PlyParser.cpp
+#                   PostStepRegistry.cpp
+#                   PretransformVertices.cpp
+#                   ProcessHelper.cpp
+#                   Q3BSPFileImporter.cpp
+#                   Q3BSPFileParser.cpp
+#                   Q3BSPZipArchive.cpp
                    )
 
-#                  OptimizeGraph.cpp
-#                  OptimizeMeshes.cpp
-#                  PlyExporter.cpp
-#                  PlyLoader.cpp
-#                  PlyParser.cpp
-#                  PostStepRegistry.cpp
-#                  PretransformVertices.cpp
-#                  ProcessHelper.cpp
-#                  Q3BSPFileImporter.cpp
-#                  Q3BSPFileParser.cpp
-#                  Q3BSPZipArchive.cpp
+
 
 #                  Q3DLoader.cpp
 #                  RawLoader.cpp

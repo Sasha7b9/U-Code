@@ -48,7 +48,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/importerdesc.h>
 #include <memory>
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descOGRE = {
     "Ogre3D Mesh Importer",
     "",
     "",
@@ -68,7 +68,7 @@ namespace Ogre
 
 const aiImporterDesc* OgreImporter::GetInfo() const
 {
-    return &desc;
+    return &descOGRE;
 }
 
 void OgreImporter::SetupProperties(const Importer* pImp)
