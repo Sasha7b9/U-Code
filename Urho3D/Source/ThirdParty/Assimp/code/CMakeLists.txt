@@ -1025,11 +1025,12 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FixNormalsStep.cpp
                   GenFaceNormalsProcess.cpp
 
-#                  GenVertexNormalsProcess.cpp
+                  GenVertexNormalsProcess.cpp
 #                  glTF2Exporter.cpp
 #                  glTF2Importer.cpp
 #                  glTFExporter.cpp
 #                  glTFImporter.cpp
+
 #                  HMPLoader.cpp
 #                  IFCBoolean.cpp
 #                  IFCCurve.cpp
