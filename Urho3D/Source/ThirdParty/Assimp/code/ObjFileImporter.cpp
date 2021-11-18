@@ -54,7 +54,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/DefaultLogger.hpp>
 #include <assimp/importerdesc.h>
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descOBJ = {
     "Wavefront Object Importer",
     "",
     "",
@@ -110,7 +110,7 @@ bool ObjFileImporter::CanRead( const std::string& pFile, IOSystem*  pIOHandler ,
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* ObjFileImporter::GetInfo () const
 {
-    return &desc;
+    return &descOBJ;
 }
 
 // ------------------------------------------------------------------------------------------------
