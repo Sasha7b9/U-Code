@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME boost)
 
+message("-------------------------------------------------------------------------------------------------------------- boost")
+
 # Setup target
 add_custom_target (${TARGET_NAME} ALL)   # Dummy target just so that its post-build step can install headers to the build tree
 set (STATIC_LIBRARY_TARGETS ${STATIC_LIBRARY_TARGETS} ${TARGET_NAME} PARENT_SCOPE)

@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME AngelScript)
 
+message("-------------------------------------------------------------------------------------------------------------- AngelScript")
+
 set(CMAKE_UNITY_BUILD ON)
 
 if(UNIX)

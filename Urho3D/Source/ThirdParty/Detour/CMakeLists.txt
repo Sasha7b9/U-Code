@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Detour)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD ON)
 
 # Define source files

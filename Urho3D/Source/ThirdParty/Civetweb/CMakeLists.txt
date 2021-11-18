@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Civetweb)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 if(MSVC)
     add_compile_options(/wd4005)
 endif()

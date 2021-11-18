@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Bullet)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD ON)
 
 set_source_files_properties(src/BulletSoftBody/btSoftBodyHelpers.cpp    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)

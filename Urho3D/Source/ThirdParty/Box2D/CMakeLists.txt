@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Box2D)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD ON)
 
 set(BOX2D_Collision_SRCS
