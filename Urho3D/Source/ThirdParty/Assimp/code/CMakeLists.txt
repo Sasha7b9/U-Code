@@ -956,8 +956,9 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ../contrib/Open3DGC/*.cpp
                   ../contrib/openddlparser/*.cpp
                   ../contrib/poly2tri/*.cpp
-                  
-                  3DSConverter.cpp
+                  )
+
+file(GLOB BUCKET2 3DSConverter.cpp
                   3DSExporter.cpp
                   3DSLoader.cpp
                   AMFImporter.cpp
@@ -967,7 +968,9 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ASEParser.cpp
                   AssbinExporter.cpp
                   Assimp.cpp
-                  AssimpCExport.cpp
+                  )
+
+file(GLOB BUCKET3 AssimpCExport.cpp
                   AssxmlExporter.cpp
                   BaseImporter.cpp
                   BaseProcess.cpp
@@ -977,7 +980,9 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   BlenderTessellator.cpp
                   BVHLoader.cpp
                   C4DImporter.cpp
-                  CalcTangentsProcess.cpp
+                  )
+
+file(GLOB BUCKET4 CalcTangentsProcess.cpp
                   CInterfaceIOWrapper.cpp
                   ColladaExporter.cpp
                   ComputeUVMappingProcess.cpp
@@ -986,10 +991,10 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   CSMLoader.cpp
                   D3MFExporter.cpp
                   D3MFImporter.cpp
+                  ACLoader.cpp
                   )
 
-file(GLOB BUCKET2 ACLoader.cpp
-                  D3MFOpcPackage.cpp
+file(GLOB BUCKET5 D3MFOpcPackage.cpp
                   DeboneProcess.cpp
                   DefaultIOStream.cpp
                   DefaultIOSystem.cpp
@@ -999,7 +1004,9 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXBinaryTokenizer.cpp
                   FBXConverter.cpp
                   FBXDeformer.cpp
-                  FBXDocument.cpp
+                 )
+
+file(GLOB BUCKET6 FBXDocument.cpp
                   FBXDocumentUtil.cpp
                   FBXMaterial.cpp
                   FBXMeshGeometry.cpp
@@ -1009,7 +1016,9 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXProperties.cpp
                   FBXTokenizer.cpp
                   FBXUtil.cpp
-                  FindDegenerates.cpp
+                  )
+
+file(GLOB BUCKET7 FindDegenerates.cpp
                   FindInstancesProcess.cpp
                   FindInvalidDataProcess.cpp
                   FIReader.cpp
@@ -1019,38 +1028,30 @@ file(GLOB BUCKET2 ACLoader.cpp
                   HMPLoader.cpp
                   IFCBoolean.cpp
                   IFCCurve.cpp
-                  IFCGeometry.cpp
-                  IFCLoader.cpp
-                  )
 
-file(GLOB BUCKET3 ASELoader.cpp
+file(GLOB BUCKET8 IFCGeometry.cpp
+                  IFCLoader.cpp
+                  ASELoader.cpp
                   IFCMaterial.cpp
                   IFCOpenings.cpp
                   IFCProfile.cpp
                   IFCReaderGen1.cpp
-
                   IFCReaderGen2.cpp
                   IFCUtil.cpp
                   Importer.cpp
-                  ImporterRegistry.cpp
-                  ImproveCacheLocality.cpp
+                  )
 
+file(GLOB BUCKET9 ImporterRegistry.cpp
+                  ImproveCacheLocality.cpp
                   IRRLoader.cpp
                   IRRMeshLoader.cpp
                   IRRShared.cpp
-#                  JoinVerticesProcess.cpp
                   LimitBoneWeightsProcess.cpp
-
-#                  LWOAnimation.cpp
-#                  LWOBLoader.cpp
-#                  LWOLoader.cpp
-#                  LWOMaterial.cpp
-#                  LWSLoader.cpp
-
                   MakeVerboseFormat.cpp
                   MaterialSystem.cpp
                   MD2Loader.cpp
                   MD3Loader.cpp
+                  )
 
 #                  MD5Loader.cpp
 #                  MD5Parser.cpp
@@ -1157,14 +1158,23 @@ file(GLOB BUCKET3 ASELoader.cpp
 #                  glTFImporter.cpp
 #                  FBXImporter.cpp
 #                  DefaultLogger.cpp
+#                  LWOAnimation.cpp
+#                  LWOBLoader.cpp
+#                  LWOLoader.cpp
+#                  LWOMaterial.cpp
+#                  LWSLoader.cpp
+#                  JoinVerticesProcess.cpp
 )
-
-file(GLOB BUCKET4 AssbinLoader.cpp)
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
 set_source_files_properties(FILES ${BUCKET3} PROPERTIES UNITY_GROUP "buckt3")
 set_source_files_properties(FILES ${BUCKET4} PROPERTIES UNITY_GROUP "buckt4")
+set_source_files_properties(FILES ${BUCKET5} PROPERTIES UNITY_GROUP "buckt5")
+set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
+set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
+set_source_files_properties(FILES ${BUCKET8} PROPERTIES UNITY_GROUP "buckt8")
+set_source_files_properties(FILES ${BUCKET9} PROPERTIES UNITY_GROUP "buckt9")
 
 IF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
   TARGET_LINK_LIBRARIES(Assimp optimized ${C4D_RELEASE_LIBRARIES})
