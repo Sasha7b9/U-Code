@@ -1684,6 +1684,7 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   )
 file(GLOB BUCKET8 src/audio/wasapi/SDL_wasapi_win32.c
                   src/audio/wasapi/SDL_wasapi.c
+                  src/timer/windows/SDL_systimer.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
