@@ -949,6 +949,10 @@ setup_library ()
 
 set_target_properties(${TARGET_NAME} PROPERTIES UNITY_BUILD_MODE GROUP)
 
+file(GLOB BUCKET1 ../contrib/zlib/*.c
+                  )
+set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
+
 IF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
   TARGET_LINK_LIBRARIES(Assimp optimized ${C4D_RELEASE_LIBRARIES})
   TARGET_LINK_LIBRARIES(Assimp debug ${C4D_DEBUG_LIBRARIES})
