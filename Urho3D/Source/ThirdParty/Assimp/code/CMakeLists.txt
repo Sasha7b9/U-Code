@@ -1072,25 +1072,25 @@ file(GLOB BUCKET11 ObjFileImporter.cpp
                    OFFLoader.cpp
                    OgreBinarySerializer.cpp
                    OgreImporter.cpp
-#                   OgreMaterial.cpp
-#                   OgreStructs.cpp
-#                   OgreXmlSerializer.cpp
-#                   OpenGEXExporter.cpp
-#                   OpenGEXImporter.cpp
-#                   OptimizeGraph.cpp
-#                   OptimizeMeshes.cpp
-#                   PlyExporter.cpp
-#                   PlyLoader.cpp
-#                   PlyParser.cpp
-#                   PostStepRegistry.cpp
-#                   PretransformVertices.cpp
-#                   ProcessHelper.cpp
-#                   Q3BSPFileImporter.cpp
-#                   Q3BSPFileParser.cpp
-#                   Q3BSPZipArchive.cpp
+                   OgreMaterial.cpp
+                   OgreStructs.cpp
+                   OgreXmlSerializer.cpp
+                   OpenGEXExporter.cpp
                    )
 
+file(GLOB BUCKET12 OptimizeGraph.cpp
+                   OptimizeMeshes.cpp
+                   PlyExporter.cpp
+                   PlyLoader.cpp
+                   PlyParser.cpp
+                   PostStepRegistry.cpp
+                   PretransformVertices.cpp
+                   ProcessHelper.cpp
+                   Q3BSPFileImporter.cpp
+                   Q3BSPFileParser.cpp
+                   )
 
+file(GLOB BUCKET13 Q3BSPZipArchive.cpp)
 
 #                  Q3DLoader.cpp
 #                  RawLoader.cpp
@@ -1165,6 +1165,7 @@ file(GLOB BUCKET11 ObjFileImporter.cpp
 #                  LWSLoader.cpp
 #                  JoinVerticesProcess.cpp
 #                   MD5Loader.cpp
+#                   OpenGEXImporter.cpp
 
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
@@ -1178,6 +1179,8 @@ set_source_files_properties(FILES ${BUCKET8} PROPERTIES UNITY_GROUP "buckt8")
 set_source_files_properties(FILES ${BUCKET9} PROPERTIES UNITY_GROUP "buckt9")
 set_source_files_properties(FILES ${BUCKET10} PROPERTIES UNITY_GROUP "buckt10")
 set_source_files_properties(FILES ${BUCKET11} PROPERTIES UNITY_GROUP "buckt11")
+set_source_files_properties(FILES ${BUCKET12} PROPERTIES UNITY_GROUP "buckt12")
+set_source_files_properties(FILES ${BUCKET13} PROPERTIES UNITY_GROUP "buckt13")
 
 IF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
   TARGET_LINK_LIBRARIES(Assimp optimized ${C4D_RELEASE_LIBRARIES})

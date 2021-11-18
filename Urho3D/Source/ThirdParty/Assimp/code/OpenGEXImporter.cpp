@@ -53,7 +53,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <vector>
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descOGEX = {
     "Open Game Engine Exchange",
     "",
     "",
@@ -329,7 +329,7 @@ void OpenGEXImporter::InternReadFile( const std::string &filename, aiScene *pSce
 
 //------------------------------------------------------------------------------------------------
 const aiImporterDesc *OpenGEXImporter::GetInfo() const {
-    return &desc;
+    return &descOGEX;
 }
 
 //------------------------------------------------------------------------------------------------

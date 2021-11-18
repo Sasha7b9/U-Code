@@ -62,7 +62,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sstream>
 #include "StringComparison.h"
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descQ3BSP = {
     "Quake III BSP Importer",
     "",
     "",
@@ -178,7 +178,7 @@ bool Q3BSPFileImporter::CanRead( const std::string& rFile, IOSystem* /*pIOHandle
 //  Adds extensions.
 const aiImporterDesc* Q3BSPFileImporter::GetInfo () const
 {
-    return &desc;
+    return &descQ3BSP;
 }
 
 // ------------------------------------------------------------------------------------------------
