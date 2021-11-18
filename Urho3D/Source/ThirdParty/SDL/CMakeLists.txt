@@ -51,7 +51,11 @@ enable_language (C CXX)
 
 message("------------------------------------------------------------------------------------------------------- SDL")
 
+if(MSVC)
 set(CMAKE_UNITY_BUILD ON)
+else()
+set(CMAKE_UNITY_BUILD OFF)
+endif()
 
 if(MSVC)
     add_compile_options(/wd4723)
@@ -1617,6 +1621,7 @@ list (APPEND SOURCE_FILES ${H_FILES})
 # Setup target as STATIC library (as the result we never use EXTRA_LDFLAGS linker flags)
 setup_library ()
 
+if(MSVC)
 set_target_properties(${TARGET_NAME} PROPERTIES UNITY_BUILD_MODE GROUP)
 
 file(GLOB BUCKET1 src/*.c
@@ -1655,6 +1660,7 @@ file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   
                   )
 file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
+                  src/video/SDL_egl.c
                   )
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
@@ -1663,7 +1669,7 @@ set_source_files_properties(FILES ${BUCKET4} PROPERTIES UNITY_GROUP "buckt4")
 set_source_files_properties(FILES ${BUCKET5} PROPERTIES UNITY_GROUP "buckt5")
 set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
 set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
-
+endif()
 
 # Install headers for building and using the Urho3D library (install dependency for InputEvents.h)
 install_header_files (DIRECTORY include/ DESTINATION ${DEST_INCLUDE_DIR}/ThirdParty/SDL FILES_MATCHING PATTERN *.h USE_FILE_SYMLINK)    # Note: the trailing slash is significant
