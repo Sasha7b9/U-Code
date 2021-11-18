@@ -58,7 +58,7 @@ if(WIN32)
 	option(SOCKPP_BUILD_STATIC "Build static library" ON)
 	option(SOCKPP_BUILD_SHARED "Build shared library (DLL)" OFF)
 else()
-	option(SOCKPP_BUILD_STATIC "Build static library" OF)
+	option(SOCKPP_BUILD_STATIC "Build static library" ON)
 	option(SOCKPP_BUILD_SHARED "Build shared library" OFF)
 endif()
 
