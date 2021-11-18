@@ -20,3 +20,10 @@ TacticsVictory/out/debug/Data/
 TacticsVictory/out/debug/log/*.log
 TacticsVictory/doc/*~*
 TacticsVictory/out/release/
+TacticsVictory/out/debug/TVBattle
+TacticsVictory/out/debug/TVController
+TacticsVictory/out/debug/TVDataBase
+TacticsVictory/out/debug/TVLivingRoom
+TacticsVictory/out/debug/TVMaster
+TacticsVictory/out/debug/TVMonitor
+TacticsVictory/out/debug/TVUploader
