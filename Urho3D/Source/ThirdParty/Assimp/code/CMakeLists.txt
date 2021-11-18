@@ -46,6 +46,8 @@
 
 # Modified by Lasse Oorni and Yao Wei Tjong for Urho3D
 
+message("------------------------------------------------------------------------------------------------------- Assimp")
+
 if(MSVC)
     add_compile_options(/wd4700)
     add_compile_options(/wd4996)
@@ -965,18 +967,20 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   AssbinExporter.cpp
                   Assimp.cpp
                   AssimpCExport.cpp
-#                  AssxmlExporter.cpp
-#                  B3DImporter.cpp
-#                  BaseImporter.cpp
-#                  BaseProcess.cpp
-#                  Bitmap.cpp
+
+                  AssxmlExporter.cpp
+                  BaseImporter.cpp
+                  BaseProcess.cpp
+                  Bitmap.cpp
 #                  BlenderBMesh.cpp
-#                  BlenderDNA.cpp
+                  BlenderDNA.cpp
 #                  BlenderLoader.cpp
-#                  BlenderModifier.cpp
+                  BlenderModifier.cpp
 #                  BlenderScene.cpp
-#                  BlenderTessellator.cpp
+                  BlenderTessellator.cpp
 #                  BVHLoader.cpp
+#                  B3DImporter.cpp
+
 #                  C4DImporter.cpp
 #                  CalcTangentsProcess.cpp
 #                  CInterfaceIOWrapper.cpp
@@ -1136,7 +1140,7 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
 )
 
 file(GLOB BUCKET2 ACLoader.cpp
-                                    
+
 )
 
 file(GLOB BUCKET3 ASELoader.cpp

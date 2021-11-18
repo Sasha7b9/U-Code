@@ -38,7 +38,7 @@
 
 PROJECT( Assimp )
 
-message("-------------------------------------------------------------------------------------------------------------- Assimp")
+message("------------------------------------------------------------------------------------------------------- Assimp")
 
 # Urho3D - only keep options that are relevant for building Assimp as static dependency lib for AssetImporter
 
