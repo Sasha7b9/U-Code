@@ -1636,6 +1636,7 @@ file(GLOB BUCKET1 src/*.c
                   src/video/windows/SDL_windowsopengles.c
                   src/joystick/windows/SDL_mmjoystick.c
                   src/libm/e_log.c
+                  
                   )
 file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/video/SDL_egl.c
@@ -1646,6 +1647,7 @@ file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/joystick/hidapi/SDL_hidapi_xboxone.c
                   src/joystick/SDL_gamecontroller.c
                   src/libm/e_exp.c
+                  
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
@@ -1660,6 +1662,7 @@ file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/video/SDL_blit.c
                   src/joystick/hidapi/SDL_hidapi_xbox360.c
                   src/joystick/hidapi/SDL_hidapi_switch.c
+                  
                   )
 file(GLOB BUCKET3 src/hidapi/windows/hid.c
                   src/video/windows/SDL_windowswindow.c
@@ -1672,13 +1675,15 @@ file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
                   src/video/windows/SDL_windowsmessagebox.c
                   src/video/windows/SDL_windowsframebuffer.c
                   src/video/windows/SDL_windowsclipboard.c
+                  
                   )
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   src/joystick/hidapi/SDL_hidapi_ps4.c
                   src/audio/winmm/SDL_winmm.c
                   
                   )
-
+file(GLOB BUCKET8 src/audio/wasapi/SDL_wasapi_win32.c
+                  )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
@@ -1687,6 +1692,8 @@ set_source_files_properties(FILES ${BUCKET4} PROPERTIES UNITY_GROUP "buckt4")
 set_source_files_properties(FILES ${BUCKET5} PROPERTIES UNITY_GROUP "buckt5")
 set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
 set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
+set_source_files_properties(FILES ${BUCKET8} PROPERTIES UNITY_GROUP "buckt8")
+
 endif()
 
 # Install headers for building and using the Urho3D library (install dependency for InputEvents.h)
