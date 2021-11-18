@@ -1036,10 +1036,13 @@ file(GLOB BUCKET2 ACLoader.cpp
                   IFCCurve.cpp
                   IFCGeometry.cpp
                   IFCLoader.cpp
-#                  IFCMaterial.cpp
-#                  IFCOpenings.cpp
-#                  IFCProfile.cpp
-#                  IFCReaderGen1.cpp
+                  )
+
+file(GLOB BUCKET3 ASELoader.cpp
+                  IFCMaterial.cpp
+                  IFCOpenings.cpp
+                  IFCProfile.cpp
+                  IFCReaderGen1.cpp
 #                  IFCReaderGen2.cpp
 #                  IFCUtil.cpp
 #                  Importer.cpp
@@ -1141,9 +1144,6 @@ file(GLOB BUCKET2 ACLoader.cpp
 #                  XFileImporter.cpp
 #                  XFileParser.cpp
 #                  XGLLoader.cpp
-)
-
-file(GLOB BUCKET3 ASELoader.cpp
 )
 
 file(GLOB BUCKET4 AssbinLoader.cpp)
