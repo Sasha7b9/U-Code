@@ -995,11 +995,12 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   )
 
 file(GLOB BUCKET2 ACLoader.cpp
-#                  D3MFOpcPackage.cpp
+                  D3MFOpcPackage.cpp
 #                  DeboneProcess.cpp
 #                  DefaultIOStream.cpp
 #                  DefaultIOSystem.cpp
 #                  DefaultLogger.cpp
+
 #                  DXFLoader.cpp
 #                  Exporter.cpp
 #                  FBXAnimation.cpp
