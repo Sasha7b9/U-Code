@@ -16,9 +16,9 @@ cd $_START_DIR_
 
 cd proc
 
-#./install_soft.sh           # Устанавливаем необходимое ПО
+./install_soft.sh           # Устанавливаем необходимое ПО
 
-#./tune_ports.sh             # Настраиваем порты
+./tune_ports.sh             # Настраиваем порты
 
 ./create_links.sh           # Создаём символьные ссылки
 
