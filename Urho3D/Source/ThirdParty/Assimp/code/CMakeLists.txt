@@ -1043,11 +1043,13 @@ file(GLOB BUCKET3 ASELoader.cpp
                   IFCOpenings.cpp
                   IFCProfile.cpp
                   IFCReaderGen1.cpp
-#                  IFCReaderGen2.cpp
-#                  IFCUtil.cpp
-#                  Importer.cpp
-#                  ImporterRegistry.cpp
-#                  ImproveCacheLocality.cpp
+
+                  IFCReaderGen2.cpp
+                  IFCUtil.cpp
+                  Importer.cpp
+                  ImporterRegistry.cpp
+                  ImproveCacheLocality.cpp
+
 #                  IRRLoader.cpp
 #                  IRRMeshLoader.cpp
 #                  IRRShared.cpp
