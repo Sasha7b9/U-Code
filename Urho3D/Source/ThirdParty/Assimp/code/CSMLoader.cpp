@@ -62,7 +62,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descCSM = {
     "CharacterStudio Motion Importer (MoCap)",
     "",
     "",
@@ -108,7 +108,7 @@ bool CSMImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // Build a string of all file extensions supported
 const aiImporterDesc* CSMImporter::GetInfo () const
 {
-    return &desc;
+    return &descCSM;
 }
 
 // ------------------------------------------------------------------------------------------------

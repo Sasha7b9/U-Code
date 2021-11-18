@@ -989,10 +989,11 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ComputeUVMappingProcess.cpp
                   ConvertToLHProcess.cpp
 
-#                  CreateAnimMesh.cpp
-#                  CSMLoader.cpp
-#                  D3MFExporter.cpp
-#                  D3MFImporter.cpp
+                  CreateAnimMesh.cpp
+                  CSMLoader.cpp
+                  D3MFExporter.cpp
+                  D3MFImporter.cpp
+
 #                  D3MFOpcPackage.cpp
 #                  DeboneProcess.cpp
 #                  DefaultIOStream.cpp
