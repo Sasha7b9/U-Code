@@ -950,7 +950,11 @@ setup_library ()
 set_target_properties(${TARGET_NAME} PROPERTIES UNITY_BUILD_MODE GROUP)
 
 file(GLOB BUCKET1 ../contrib/clipper/*.cpp
-                  ../contrib/irrXML/*.cpp)
+                  ../contrib/irrXML/*.cpp
+                  ../contrib/Open3DGC/*.cpp
+                  ../contrib/openddlparser/*.cpp
+                  ../contrib/poly2tri/*.cpp
+                  )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 
