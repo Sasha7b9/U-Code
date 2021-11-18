@@ -1669,7 +1669,7 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
 file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/joystick/SDL_joystick.c
                   src/video/SDL_blit.c
-                  
+                  src/joystick/hidapi/SDL_hidapi_xbox360.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
