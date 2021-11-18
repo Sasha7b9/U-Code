@@ -39,10 +39,11 @@
 ## CMake required version
 cmake_minimum_required(VERSION 3.5)
 
-cmake_policy(SET CMP0077 OLD)   # The ``OLD`` behavior for this policy is to proceed even when a normal
+cmake_policy(SET CMP0077 NEW)   # The ``OLD`` behavior for this policy is to proceed even when a normal
                                 # variable of the same name exists.  If the cache entry does not already
                                 # exist and have a type then it is created and/or given a type and the
                                 # normal variable is removed.
+cmake_policy(SET CMP0076 NEW)
 
 set(CMAKE_UNITY_BUILD ON)
 
