@@ -64,6 +64,7 @@ file(GLOB INPUT                                Input/*.*)
 file(GLOB NETWORK                              Network/Other/*.*)
 file(GLOB UTILS                                Utils/*.*)
 
+if(MSVC)
 file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evutil.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
@@ -83,11 +84,13 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evuti
                              ../../../../Urho3D/Source/ThirdParty/libevent/epoll.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/wepoll.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/win32select.c
-if(MSVC)
                              ../../../../Urho3D/Source/ThirdParty/libevent/buffer_iocp.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/event_iocp.c
-endif()
                              )
+else()
+file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event.c
+                             )
+endif()
 
 file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
 file(GLOB SOCKPP_INCLUDE     ../../../../Urho3D/Source/ThirdParty/sockpp/include/sockpp/*.h)
