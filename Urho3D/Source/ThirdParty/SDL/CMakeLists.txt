@@ -1658,9 +1658,14 @@ setup_library ()
 
 set_target_properties(${TARGET_NAME} PROPERTIES UNITY_BUILD_MODE GROUP)
 
-file(GLOB BUCKET1 src/*.c)
+file(GLOB BUCKET1 src/*.c
+                  src/atomic/*.c)
+file(GLOB BUCKET2 src/audio/*.c)
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
+set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
+
+#set_source_files_properties(src/haptic/windows/SDL_dinputhaptic.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 
 # Install headers for building and using the Urho3D library (install dependency for InputEvents.h)
 install_header_files (DIRECTORY include/ DESTINATION ${DEST_INCLUDE_DIR}/ThirdParty/SDL FILES_MATCHING PATTERN *.h USE_FILE_SYMLINK)    # Note: the trailing slash is significant
