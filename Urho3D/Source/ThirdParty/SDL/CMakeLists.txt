@@ -1670,7 +1670,7 @@ file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
                   
                   )
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
-                  
+                  src/joystick/hidapi/SDL_hidapi_ps4.c
                   )
 
 
