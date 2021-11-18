@@ -100,6 +100,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_pair.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_sock.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_ratelim.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/buffer.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/strlcpy.c
