@@ -49,6 +49,8 @@
 #          instead, just enable the required language support and set the extra variables associated with project() command
 enable_language (C CXX)
 
+message("-------------------------------------------------------------------------------------------------------------- SDL")
+
 set(CMAKE_UNITY_BUILD ON)
 
 if(MSVC)
