@@ -1,6 +1,10 @@
 project (victory)
 
-set(CMAKE_UNITY_BUILD OFF)
+set(CMAKE_UNITY_BUILD ON)
+
+set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_filter.c    PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_pair.c      PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(../../../../Urho3D/Source/ThirdParty/libevent/evutil.c                PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 
 include_directories(.
                     ../../common_files/
