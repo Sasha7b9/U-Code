@@ -979,17 +979,16 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   BlenderTessellator.cpp
 #                  BVHLoader.cpp
 #                  B3DImporter.cpp
-
                   C4DImporter.cpp
                   CalcTangentsProcess.cpp
                   CInterfaceIOWrapper.cpp
 #                  COBLoader.cpp
                   ColladaExporter.cpp
-
 #                  ColladaLoader.cpp
 #                  ColladaParser.cpp
-#                  ComputeUVMappingProcess.cpp
-#                  ConvertToLHProcess.cpp
+                  ComputeUVMappingProcess.cpp
+                  ConvertToLHProcess.cpp
+
 #                  CreateAnimMesh.cpp
 #                  CSMLoader.cpp
 #                  D3MFExporter.cpp
