@@ -1685,6 +1685,9 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
 file(GLOB BUCKET8 src/audio/wasapi/SDL_wasapi_win32.c
                   src/audio/wasapi/SDL_wasapi.c
                   src/timer/windows/SDL_systimer.c
+                  
+                  )
+file(GLOB BUCKET9 src/video/windows/SDL_windowsevents.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
@@ -1695,6 +1698,7 @@ set_source_files_properties(FILES ${BUCKET5} PROPERTIES UNITY_GROUP "buckt5")
 set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
 set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
 set_source_files_properties(FILES ${BUCKET8} PROPERTIES UNITY_GROUP "buckt8")
+set_source_files_properties(FILES ${BUCKET9} PROPERTIES UNITY_GROUP "buckt9")
 
 endif()
 
