@@ -1028,6 +1028,7 @@ file(GLOB BUCKET7 FindDegenerates.cpp
                   HMPLoader.cpp
                   IFCBoolean.cpp
                   IFCCurve.cpp
+                  )
 
 file(GLOB BUCKET8 IFCGeometry.cpp
                   IFCLoader.cpp
@@ -1063,7 +1064,7 @@ file(GLOB BUCKET10 MD5Parser.cpp
                    NDOLoader.cpp
                    NFFLoader.cpp
                    ObjExporter.cpp
-)
+                   )
 
 file(GLOB BUCKET11 ObjFileImporter.cpp
                    ObjFileMtlImporter.cpp
@@ -1076,8 +1077,7 @@ file(GLOB BUCKET11 ObjFileImporter.cpp
 #                   OgreXmlSerializer.cpp
 #                   OpenGEXExporter.cpp
 #                   OpenGEXImporter.cpp
-
-)
+                   )
 
 #                  OptimizeGraph.cpp
 #                  OptimizeMeshes.cpp
@@ -1164,7 +1164,7 @@ file(GLOB BUCKET11 ObjFileImporter.cpp
 #                  LWSLoader.cpp
 #                  JoinVerticesProcess.cpp
 #                   MD5Loader.cpp
-)
+
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
