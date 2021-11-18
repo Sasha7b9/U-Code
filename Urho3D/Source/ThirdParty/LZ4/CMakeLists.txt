@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME LZ4)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD OFF)
 
 # Define source files

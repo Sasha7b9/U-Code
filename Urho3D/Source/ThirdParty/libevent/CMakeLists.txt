@@ -21,6 +21,8 @@
 
 cmake_minimum_required(VERSION 3.1.2 FATAL_ERROR)
 
+message("------------------------------------------------------------------------------------------------------- libevent")
+
 if (POLICY CMP0054)
     cmake_policy(SET CMP0054 NEW)
 endif()

@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME StanHull)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 # Define source files
 define_source_files ()
 

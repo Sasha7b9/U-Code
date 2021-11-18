@@ -13,6 +13,8 @@
 # Define target name
 set (TARGET_NAME SLikeNet)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD ON)
 
 if(MSVC)

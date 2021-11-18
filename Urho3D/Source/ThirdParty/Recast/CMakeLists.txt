@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Recast)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD ON)
 
 set_source_files_properties(Source/RecastMesh.cpp       PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)

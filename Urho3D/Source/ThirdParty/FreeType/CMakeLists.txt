@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME FreeType)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 set(CMAKE_UNITY_BUILD OFF)
 
 if(MSVC)

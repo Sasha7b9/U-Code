@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME GLEW)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 # Define preprocessor macros
 add_definitions (-DGLEW_STATIC -DGLEW_NO_GLU)
 

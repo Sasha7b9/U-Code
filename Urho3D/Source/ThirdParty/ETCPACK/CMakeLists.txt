@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME ETCPACK)
 
+message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
+
 if(UNIX)
     add_definitions(-Wno-unused-result)
 endif()

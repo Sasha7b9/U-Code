@@ -36,6 +36,8 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # ---------------------------------------------------------------------------
 
+message("------------------------------------------------------------------------------------------------------- sockpp")
+
 add_library(sockpp-objs OBJECT
   acceptor.cpp
 	connector.cpp
