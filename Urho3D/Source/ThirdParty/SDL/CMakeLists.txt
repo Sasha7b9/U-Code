@@ -1655,7 +1655,7 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/power/*.c
                   src/audio/SDL_audio.c
                   src/joystick/hidapi/SDL_hidapijoystick.c
-                  
+                  src/libm/e_fmod.c
                   )
 file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/joystick/SDL_joystick.c
@@ -1697,6 +1697,7 @@ file(GLOB BUCKET9 src/video/windows/SDL_windowsevents.c
                   src/video/SDL_blit_auto.c
                   src/video/SDL_blit_copy.c
                   src/video/SDL_blit_slow.c
+                  
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
