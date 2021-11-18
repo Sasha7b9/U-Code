@@ -1627,7 +1627,7 @@ file(GLOB BUCKET1 src/*.c
                   src/file/SDL_rwops.c
                   src/haptic/windows/SDL_xinputhaptic.c
                   src/libm/e_atan2.c
-                  
+                  src/sensor/SDL_sensor.c
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
