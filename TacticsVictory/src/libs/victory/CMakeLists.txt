@@ -78,13 +78,15 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evuti
                              ../../../../Urho3D/Source/ThirdParty/libevent/evmap.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/bufferevent_async.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/evthread.c
-                             ../../../../Urho3D/Source/ThirdParty/libevent/buffer_iocp.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/event_iocp.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/signal.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/strlcpy.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/epoll.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/wepoll.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/win32select.c
+if(MSVC)
+                             ../../../../Urho3D/Source/ThirdParty/libevent/buffer_iocp.c
+endif()
                              )
 
 file(GLOB SOCKPP_SOURCES     ../../../../Urho3D/Source/ThirdParty/sockpp/src/*.cpp)
