@@ -1624,7 +1624,6 @@ file(GLOB BUCKET1 src/*.c
                   src/events/*.c
                   )
 file(GLOB BUCKET2 src/audio/*.c
-                  src/file/*.c
                   src/haptic/*.c
                   src/thread/windows/*.c
                   src/power/*.c
@@ -1634,6 +1633,7 @@ file(GLOB BUCKET2 src/audio/*.c
 #                  src/video/windows/*.c
 #                  src/libm/*.c
 #                  src/joystick/*.c
+#                  src/file/*.c
 #                  )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
