@@ -65,7 +65,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descMDL = {
     "Quake Mesh / 3D GameStudio Mesh Importer",
     "",
     "",
@@ -148,7 +148,7 @@ void MDLImporter::SetupProperties(const Importer* pImp)
 // Get a list of all supported extensions
 const aiImporterDesc* MDLImporter::GetInfo () const
 {
-    return &desc;
+    return &descMDL;
 }
 
 // ------------------------------------------------------------------------------------------------

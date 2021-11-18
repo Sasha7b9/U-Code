@@ -60,7 +60,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using namespace Assimp;
 using namespace Assimp::MDC;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descMDC = {
     "Return To Castle Wolfenstein Mesh Importer",
     "",
     "",
@@ -129,7 +129,7 @@ bool MDCImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* MDCImporter::GetInfo () const
 {
-    return &desc;
+    return &descMDC;
 }
 
 // ------------------------------------------------------------------------------------------------
