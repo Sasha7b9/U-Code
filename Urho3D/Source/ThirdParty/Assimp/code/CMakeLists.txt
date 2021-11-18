@@ -998,7 +998,7 @@ file(GLOB BUCKET2 ACLoader.cpp
                   D3MFOpcPackage.cpp
                   DeboneProcess.cpp
                   DefaultIOStream.cpp
-#                  DefaultIOSystem.cpp
+                  DefaultIOSystem.cpp
 #                  DefaultLogger.cpp
 
 #                  DXFLoader.cpp
