@@ -22,6 +22,9 @@
 
 # Check existence of various header files and their functions required by some of the third-party libraries and Urho3D library
 # Set the CMake variables in this scope but only add the compiler defines in the respective library's scope
+
+message("------------------------------------------------------------------------------------------------------- Source")
+
 include (CheckIncludeFile)
 foreach (HEADER stdint.h inttypes.h malloc.h)
     string (TOUPPER HAVE_${HEADER} HAVE_HEADER)

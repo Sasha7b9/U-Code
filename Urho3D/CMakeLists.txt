@@ -26,6 +26,8 @@ cmake_minimum_required (VERSION 3.13.0)
 # Set project name
 project (Urho3D)
 
+message("------------------------------------------------------------------------------------------------------- Main")
+
 if(MSVC)
     set(CMAKE_GENERATOR_PLATFORM x64)
 endif()
