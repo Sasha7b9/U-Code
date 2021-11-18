@@ -72,7 +72,7 @@ using namespace Assimp;
 using namespace irr;
 using namespace irr::io;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descIRRL = {
     "Irrlicht Scene Reader",
     "",
     "",
@@ -125,7 +125,7 @@ bool IRRImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* IRRImporter::GetInfo () const
 {
-    return &desc;
+    return &descIRRL;
 }
 
 // ------------------------------------------------------------------------------------------------

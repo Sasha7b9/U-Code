@@ -62,7 +62,7 @@ using namespace Assimp;
 using namespace irr;
 using namespace irr::io;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descIRR = {
     "Irrlicht Mesh Reader",
     "",
     "",
@@ -114,7 +114,7 @@ bool IRRMeshImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, b
 // Get a list of all file extensions which are handled by this class
 const aiImporterDesc* IRRMeshImporter::GetInfo () const
 {
-    return &desc;
+    return &descIRR;
 }
 
 static void releaseMaterial( aiMaterial **mat ) {

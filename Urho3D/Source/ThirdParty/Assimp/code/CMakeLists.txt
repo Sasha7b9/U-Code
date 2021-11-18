@@ -1050,11 +1050,12 @@ file(GLOB BUCKET3 ASELoader.cpp
                   ImporterRegistry.cpp
                   ImproveCacheLocality.cpp
 
-#                  IRRLoader.cpp
-#                  IRRMeshLoader.cpp
+                  IRRLoader.cpp
+                  IRRMeshLoader.cpp
 #                  IRRShared.cpp
 #                  JoinVerticesProcess.cpp
 #                  LimitBoneWeightsProcess.cpp
+
 #                  LWOAnimation.cpp
 #                  LWOBLoader.cpp
 #                  LWOLoader.cpp
