@@ -988,12 +988,13 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
 #                  ColladaParser.cpp
                   ComputeUVMappingProcess.cpp
                   ConvertToLHProcess.cpp
-
                   CreateAnimMesh.cpp
                   CSMLoader.cpp
                   D3MFExporter.cpp
                   D3MFImporter.cpp
+                  )
 
+file(GLOB BUCKET2 ACLoader.cpp
 #                  D3MFOpcPackage.cpp
 #                  DeboneProcess.cpp
 #                  DefaultIOStream.cpp
@@ -1137,10 +1138,6 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
 #                  XFileImporter.cpp
 #                  XFileParser.cpp
 #                  XGLLoader.cpp
-)
-
-file(GLOB BUCKET2 ACLoader.cpp
-
 )
 
 file(GLOB BUCKET3 ASELoader.cpp
