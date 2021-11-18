@@ -1649,7 +1649,7 @@ file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/joystick/hidapi/SDL_hidapi_xboxone.c
                   src/joystick/SDL_gamecontroller.c
                   src/libm/e_exp.c
-                  
+                  src/libm/s_scalbn.c
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
@@ -1666,6 +1666,7 @@ file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/joystick/hidapi/SDL_hidapi_xbox360.c
                   src/joystick/hidapi/SDL_hidapi_switch.c
                   src/libm/e_pow.c
+                  
                   )
 file(GLOB BUCKET3 src/hidapi/windows/hid.c
                   src/video/windows/SDL_windowswindow.c
