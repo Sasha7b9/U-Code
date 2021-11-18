@@ -1690,6 +1690,7 @@ file(GLOB BUCKET8 src/audio/wasapi/SDL_wasapi_win32.c
 file(GLOB BUCKET9 src/video/windows/SDL_windowsevents.c
                   src/filesystem/windows/SDL_sysfilesystem.c
                   src/power/windows/SDL_syspower.c
+                  src/video/SDL_blit_0.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
