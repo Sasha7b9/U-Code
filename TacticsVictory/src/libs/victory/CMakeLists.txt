@@ -90,6 +90,7 @@ file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/evuti
 else()
 file(GLOB LIBEVENT           ../../../../Urho3D/Source/ThirdParty/libevent/event.c
                              ../../../../Urho3D/Source/ThirdParty/libevent/select.c
+                             ../../../../Urho3D/Source/ThirdParty/libevent/signal.c
                              )
 endif()
 
