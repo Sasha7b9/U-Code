@@ -1691,6 +1691,12 @@ file(GLOB BUCKET9 src/video/windows/SDL_windowsevents.c
                   src/filesystem/windows/SDL_sysfilesystem.c
                   src/power/windows/SDL_syspower.c
                   src/video/SDL_blit_0.c
+                  src/video/SDL_blit_1.c
+                  src/video/SDL_blit_A.c
+                  src/video/SDL_blit_N.c
+                  src/video/SDL_blit_auto.c
+                  src/video/SDL_blit_copy.c
+                  src/video/SDL_blit_slow.c
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
