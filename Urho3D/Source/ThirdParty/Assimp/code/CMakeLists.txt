@@ -1058,14 +1058,14 @@ file(GLOB BUCKET10
                    MD5Parser.cpp
                    MDCLoader.cpp
                    MDLLoader.cpp
-)
 
-#                  MDLMaterialLoader.cpp
-#                  MMDImporter.cpp
+                  MDLMaterialLoader.cpp
+                  MMDImporter.cpp
 #                  MMDPmxParser.cpp
 #                  MS3DLoader.cpp
 #                  NDOLoader.cpp
 #                  NFFLoader.cpp
+)
 
 #                  ObjExporter.cpp
 #                  ObjFileImporter.cpp

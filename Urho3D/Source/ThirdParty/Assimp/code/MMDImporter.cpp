@@ -54,7 +54,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <iomanip>
 #include <memory>
 
-static const aiImporterDesc desc = {"MMD Importer",
+static const aiImporterDesc descMMD = {"MMD Importer",
                                     "",
                                     "",
                                     "surfaces supported?",
@@ -102,7 +102,7 @@ bool MMDImporter::CanRead(const std::string &pFile, IOSystem *pIOHandler,
 }
 
 // ------------------------------------------------------------------------------------------------
-const aiImporterDesc *MMDImporter::GetInfo() const { return &desc; }
+const aiImporterDesc *MMDImporter::GetInfo() const { return &descMMD; }
 
 // ------------------------------------------------------------------------------------------------
 //  MMD import implementation
