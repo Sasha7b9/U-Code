@@ -1633,7 +1633,7 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
                   src/thread/windows/*.c
                   src/power/*.c
-                  
+                  src/audio/SDL_audio.c
                   )
 file(GLOB BUCKET2 src/hidapi/windows/hid.c
                   )
