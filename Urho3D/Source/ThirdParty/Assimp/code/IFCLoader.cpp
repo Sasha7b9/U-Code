@@ -103,7 +103,7 @@ void ConvertUnit(const EXPRESS::DataType& dt,ConversionData& conv);
 
 } // anon
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descIFC = {
     "Industry Foundation Classes (IFC) Importer",
     "",
     "",
@@ -149,7 +149,7 @@ bool IFCImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // List all extensions handled by this loader
 const aiImporterDesc* IFCImporter::GetInfo () const
 {
-    return &desc;
+    return &descIFC;
 }
 
 

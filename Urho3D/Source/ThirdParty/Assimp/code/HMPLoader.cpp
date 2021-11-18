@@ -56,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descHMP = {
     "3D GameStudio Heightmap (HMP) Importer",
     "",
     "",
@@ -106,7 +106,7 @@ bool HMPImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // Get list of all file extensions that are handled by this loader
 const aiImporterDesc* HMPImporter::GetInfo () const
 {
-    return &desc;
+    return &descHMP;
 }
 
 // ------------------------------------------------------------------------------------------------

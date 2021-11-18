@@ -1031,11 +1031,11 @@ file(GLOB BUCKET2 ACLoader.cpp
 #                  glTFExporter.cpp
 #                  glTFImporter.cpp
 
-#                  HMPLoader.cpp
-#                  IFCBoolean.cpp
-#                  IFCCurve.cpp
-#                  IFCGeometry.cpp
-#                  IFCLoader.cpp
+                  HMPLoader.cpp
+                  IFCBoolean.cpp
+                  IFCCurve.cpp
+                  IFCGeometry.cpp
+                  IFCLoader.cpp
 #                  IFCMaterial.cpp
 #                  IFCOpenings.cpp
 #                  IFCProfile.cpp
