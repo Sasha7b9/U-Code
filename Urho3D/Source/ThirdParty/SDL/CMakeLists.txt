@@ -1630,6 +1630,7 @@ file(GLOB BUCKET1 src/*.c
                   src/sensor/SDL_sensor.c
                   src/video/windows/SDL_windowsopengles.c
                   src/joystick/windows/SDL_mmjoystick.c
+                  
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
@@ -1651,6 +1652,9 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   
                   )
 file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
+                  
+                  )
+file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   )
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
@@ -1658,6 +1662,7 @@ set_source_files_properties(FILES ${BUCKET3} PROPERTIES UNITY_GROUP "buckt3")
 set_source_files_properties(FILES ${BUCKET4} PROPERTIES UNITY_GROUP "buckt4")
 set_source_files_properties(FILES ${BUCKET5} PROPERTIES UNITY_GROUP "buckt5")
 set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
+set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
 
 
 # Install headers for building and using the Urho3D library (install dependency for InputEvents.h)
