@@ -1061,10 +1061,10 @@ file(GLOB BUCKET10
 
                   MDLMaterialLoader.cpp
                   MMDImporter.cpp
-#                  MMDPmxParser.cpp
-#                  MS3DLoader.cpp
-#                  NDOLoader.cpp
-#                  NFFLoader.cpp
+                  MMDPmxParser.cpp
+                  MS3DLoader.cpp
+                  NDOLoader.cpp
+                  NFFLoader.cpp
 )
 
 #                  ObjExporter.cpp

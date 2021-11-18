@@ -59,7 +59,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descMS3D = {
     "Milkshape 3D Importer",
     "",
     "",
@@ -112,7 +112,7 @@ bool MS3DImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* MS3DImporter::GetInfo () const
 {
-    return &desc;
+    return &descMS3D;
 }
 
 // ------------------------------------------------------------------------------------------------

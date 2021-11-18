@@ -56,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descNDO = {
     "Nendo Mesh Importer",
     "",
     "",
@@ -100,7 +100,7 @@ bool NDOImporter::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // Build a string of all file extensions supported
 const aiImporterDesc* NDOImporter::GetInfo () const
 {
-    return &desc;
+    return &descNDO;
 }
 
 // ------------------------------------------------------------------------------------------------
