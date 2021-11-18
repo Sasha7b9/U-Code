@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME sqlite)
 
+message("-------------------------------------------------------------------------------------------------------------- SQLite")
+
 set(CMAKE_UNITY_BUILD OFF)
 
 # Define preprocessor macros

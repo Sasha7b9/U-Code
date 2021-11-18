@@ -23,6 +23,8 @@
 # Define target name for Lua library
 set (TARGET_NAME Lua)
 
+message("-------------------------------------------------------------------------------------------------------------- Lua")
+
 # Define source files
 define_source_files (GLOB_CPP_PATTERNS src/*.c GLOB_H_PATTERNS src/*.h EXCLUDE_PATTERNS src/lua.c src/luac.c)
 
