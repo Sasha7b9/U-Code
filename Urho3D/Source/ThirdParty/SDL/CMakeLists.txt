@@ -1665,6 +1665,7 @@ file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/core/windows/SDL_xinput.c
                   src/video/yuv2rgb/yuv_rgb.c
                   src/video/SDL_rect.c
+                  src/joystick/hidapi/SDL_hidapi_xboxone.c
                   )
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
