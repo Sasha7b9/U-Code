@@ -1626,11 +1626,13 @@ file(GLOB BUCKET1 src/*.c
 file(GLOB BUCKET2 src/audio/*.c
                   src/file/*.c
                   src/haptic/*.c
+                  src/thread/windows/*.c
                   )
 
 #file(GLOB BUCKET3 src/haptic/windows/*.c
 #                  src/video/windows/*.c
 #                  src/libm/*.c
+#                  src/joystick/*.c
 #                  )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
