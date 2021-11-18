@@ -23,7 +23,10 @@
 # Define target name
 set (TARGET_NAME Recast)
 
-set(CMAKE_UNITY_BUILD OFF)
+set(CMAKE_UNITY_BUILD ON)
+
+set_source_files_properties(Source/RecastMesh.cpp       PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+set_source_files_properties(Source/RecastMeshDetail.cpp PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
 
 if(MSVC)
     add_compile_options(/wd4244)
