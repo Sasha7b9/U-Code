@@ -954,6 +954,22 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ../contrib/Open3DGC/*.cpp
                   ../contrib/openddlparser/*.cpp
                   ../contrib/poly2tri/*.cpp
+                  Assimp.cpp
+                  BaseImporter.cpp
+                  BaseProcess.cpp
+                  PostStepRegistry.cpp
+                  ImporterRegistry.cpp
+                  DefaultIOStream.cpp
+                  DefaultIOSystem.cpp
+                  CInterfaceIOWrapper.cpp
+                  Importer.cpp
+                  SGSpatialSort.cpp
+                  VertexTriangleAdjacency.cpp
+                  SpatialSort.cpp
+                  SceneCombiner.cpp
+                  ScenePreprocessor.cpp
+                  SkeletonMeshBuilder.cpp
+                  SplitByBoneCountProcess.cpp
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
