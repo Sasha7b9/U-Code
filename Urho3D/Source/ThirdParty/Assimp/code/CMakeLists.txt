@@ -954,25 +954,200 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   ../contrib/Open3DGC/*.cpp
                   ../contrib/openddlparser/*.cpp
                   ../contrib/poly2tri/*.cpp
+                  3DSConverter.cpp
+                  3DSExporter.cpp
+                  3DSLoader.cpp
+                  AMFImporter.cpp
+                  AMFImporter_Geometry.cpp
+                  AMFImporter_Material.cpp
+                  AMFImporter_Postprocess.cpp
+                  ASEParser.cpp
+                  AssbinExporter.cpp
                   Assimp.cpp
-                  BaseImporter.cpp
-                  BaseProcess.cpp
-                  PostStepRegistry.cpp
-                  ImporterRegistry.cpp
-                  DefaultIOStream.cpp
-                  DefaultIOSystem.cpp
-                  CInterfaceIOWrapper.cpp
-                  Importer.cpp
-                  SGSpatialSort.cpp
-                  VertexTriangleAdjacency.cpp
-                  SpatialSort.cpp
-                  SceneCombiner.cpp
-                  ScenePreprocessor.cpp
-                  SkeletonMeshBuilder.cpp
-                  SplitByBoneCountProcess.cpp
-                  )
+                  AssimpCExport.cpp
+#                  AssxmlExporter.cpp
+#                  B3DImporter.cpp
+#                  BaseImporter.cpp
+#                  BaseProcess.cpp
+#                  Bitmap.cpp
+#                  BlenderBMesh.cpp
+#                  BlenderDNA.cpp
+#                  BlenderLoader.cpp
+#                  BlenderModifier.cpp
+#                  BlenderScene.cpp
+#                  BlenderTessellator.cpp
+#                  BVHLoader.cpp
+#                  C4DImporter.cpp
+#                  CalcTangentsProcess.cpp
+#                  CInterfaceIOWrapper.cpp
+#                  COBLoader.cpp
+#                  ColladaExporter.cpp
+#                  ColladaLoader.cpp
+#                  ColladaParser.cpp
+#                  ComputeUVMappingProcess.cpp
+#                  ConvertToLHProcess.cpp
+#                  CreateAnimMesh.cpp
+#                  CSMLoader.cpp
+#                  D3MFExporter.cpp
+#                  D3MFImporter.cpp
+#                  D3MFOpcPackage.cpp
+#                  DeboneProcess.cpp
+#                  DefaultIOStream.cpp
+#                  DefaultIOSystem.cpp
+#                  DefaultLogger.cpp
+#                  DXFLoader.cpp
+#                  Exporter.cpp
+#                  FBXAnimation.cpp
+#                  FBXBinaryTokenizer.cpp
+#                  FBXConverter.cpp
+#                  FBXDeformer.cpp
+#                  FBXDocument.cpp
+#                  FBXDocumentUtil.cpp
+#                  FBXImporter.cpp
+#                  FBXMaterial.cpp
+#                  FBXMeshGeometry.cpp
+#                  FBXModel.cpp
+#                  FBXNodeAttribute.cpp
+#                  FBXParser.cpp
+#                  FBXProperties.cpp
+#                  FBXTokenizer.cpp
+#                  FBXUtil.cpp
+#                  FindDegenerates.cpp
+#                  FindInstancesProcess.cpp
+#                  FindInvalidDataProcess.cpp
+#                  FIReader.cpp
+#                  FixNormalsStep.cpp
+#                  GenFaceNormalsProcess.cpp
+#                  GenVertexNormalsProcess.cpp
+#                  glTF2Exporter.cpp
+#                  glTF2Importer.cpp
+#                  glTFExporter.cpp
+#                  glTFImporter.cpp
+#                  HMPLoader.cpp
+#                  IFCBoolean.cpp
+#                  IFCCurve.cpp
+#                  IFCGeometry.cpp
+#                  IFCLoader.cpp
+#                  IFCMaterial.cpp
+#                  IFCOpenings.cpp
+#                  IFCProfile.cpp
+#                  IFCReaderGen1.cpp
+#                  IFCReaderGen2.cpp
+#                  IFCUtil.cpp
+#                  Importer.cpp
+#                  ImporterRegistry.cpp
+#                  ImproveCacheLocality.cpp
+#                  IRRLoader.cpp
+#                  IRRMeshLoader.cpp
+#                  IRRShared.cpp
+#                  JoinVerticesProcess.cpp
+#                  LimitBoneWeightsProcess.cpp
+#                  LWOAnimation.cpp
+#                  LWOBLoader.cpp
+#                  LWOLoader.cpp
+#                  LWOMaterial.cpp
+#                  LWSLoader.cpp
+#                  MakeVerboseFormat.cpp
+#                  MaterialSystem.cpp
+#                  MD2Loader.cpp
+#                  MD3Loader.cpp
+#                  MD5Loader.cpp
+#                  MD5Parser.cpp
+#                  MDCLoader.cpp
+#                  MDLLoader.cpp
+#                  MDLMaterialLoader.cpp
+#                  MMDImporter.cpp
+#                  MMDPmxParser.cpp
+#                  MS3DLoader.cpp
+#                  NDOLoader.cpp
+#                  NFFLoader.cpp
+#                  ObjExporter.cpp
+#                  ObjFileImporter.cpp
+#                  ObjFileMtlImporter.cpp
+#                  ObjFileParser.cpp
+#                  OFFLoader.cpp
+#                  OgreBinarySerializer.cpp
+#                  OgreImporter.cpp
+#                  OgreMaterial.cpp
+#                  OgreStructs.cpp
+#                  OgreXmlSerializer.cpp
+#                  OpenGEXExporter.cpp
+#                  OpenGEXImporter.cpp
+#                  OptimizeGraph.cpp
+#                  OptimizeMeshes.cpp
+#                  PlyExporter.cpp
+#                  PlyLoader.cpp
+#                  PlyParser.cpp
+#                  PostStepRegistry.cpp
+#                  PretransformVertices.cpp
+#                  ProcessHelper.cpp
+#                  Q3BSPFileImporter.cpp
+#                  Q3BSPFileParser.cpp
+#                  Q3BSPZipArchive.cpp
+#                  Q3DLoader.cpp
+#                  RawLoader.cpp
+#                  RemoveComments.cpp
+#                  RemoveRedundantMaterials.cpp
+#                  RemoveVCProcess.cpp
+#                  ScaleProcess.cpp
+#                  scene.cpp
+#                  SceneCombiner.cpp
+#                  ScenePreprocessor.cpp
+#                  SGSpatialSort.cpp
+#                  SIBImporter.cpp
+#                  SkeletonMeshBuilder.cpp
+#                  SMDLoader.cpp
+#                  SortByPTypeProcess.cpp
+#                  SpatialSort.cpp
+#                  SplitByBoneCountProcess.cpp
+#                  SplitLargeMeshes.cpp
+#                  StandardShapes.cpp
+#                  StepExporter.cpp
+#                  STEPFileEncoding.cpp
+#                  STEPFileReader.cpp
+#                  STLExporter.cpp
+#                  STLLoader.cpp
+#                  Subdivision.cpp
+#                  TargetAnimation.cpp
+#                  TerragenLoader.cpp
+#                  TextureTransform.cpp
+#                  TriangulateProcess.cpp
+#                  UnrealLoader.cpp
+#                  ValidateDataStructure.cpp
+#                  Version.cpp
+#                  VertexTriangleAdjacency.cpp
+#                  X3DExporter.cpp
+#                  X3DImporter.cpp
+#                  X3DImporter_Geometry2D.cpp
+#                  X3DImporter_Geometry3D.cpp
+#                  X3DImporter_Group.cpp
+#                  X3DImporter_Light.cpp
+#                  X3DImporter_Metadata.cpp
+#                  X3DImporter_Networking.cpp
+#                  X3DImporter_Postprocess.cpp
+#                  X3DImporter_Rendering.cpp
+#                  X3DImporter_Shape.cpp
+#                  X3DImporter_Texturing.cpp
+#                  X3DVocabulary.cpp
+#                  XFileExporter.cpp
+#                  XFileImporter.cpp
+#                  XFileParser.cpp
+#                  XGLLoader.cpp
+)
+
+file(GLOB BUCKET2 ACLoader.cpp
+                                    
+)
+
+file(GLOB BUCKET3 ASELoader.cpp
+)
+
+file(GLOB BUCKET4 AssbinLoader.cpp)
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
+set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
+set_source_files_properties(FILES ${BUCKET3} PROPERTIES UNITY_GROUP "buckt3")
+set_source_files_properties(FILES ${BUCKET4} PROPERTIES UNITY_GROUP "buckt4")
 
 IF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
   TARGET_LINK_LIBRARIES(Assimp optimized ${C4D_RELEASE_LIBRARIES})
