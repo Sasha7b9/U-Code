@@ -1008,18 +1008,17 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXDeformer.cpp
                   FBXDocument.cpp
                   FBXDocumentUtil.cpp
-
 #                  FBXImporter.cpp
                   FBXMaterial.cpp
                   FBXMeshGeometry.cpp
                   FBXModel.cpp
                   FBXNodeAttribute.cpp
+                  FBXParser.cpp
+                  FBXProperties.cpp
+                  FBXTokenizer.cpp
+                  FBXUtil.cpp
+                  FindDegenerates.cpp
 
-#                  FBXParser.cpp
-#                  FBXProperties.cpp
-#                  FBXTokenizer.cpp
-#                  FBXUtil.cpp
-#                  FindDegenerates.cpp
 #                  FindInstancesProcess.cpp
 #                  FindInvalidDataProcess.cpp
 #                  FIReader.cpp
