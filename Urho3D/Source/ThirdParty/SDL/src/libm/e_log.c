@@ -80,7 +80,7 @@ Lg5 = 1.818357216161805012e-01,  /* 3FC74664 96CB03DE */
 Lg6 = 1.531383769920937332e-01,  /* 3FC39A09 D078C69F */
 Lg7 = 1.479819860511658591e-01;  /* 3FC2F112 DF3E5244 */
 
-static const double zero   =  0.0;
+static const double zero_log   =  0.0;
 
 double attribute_hidden __ieee754_log(double x)
 {
@@ -93,8 +93,8 @@ double attribute_hidden __ieee754_log(double x)
 	k=0;
 	if (hx < 0x00100000) {			/* x < 2**-1022  */
 	    if (((hx&0x7fffffff)|lx)==0)
-		return -two54/zero;		/* log(+-0)=-inf */
-	    if (hx<0) return (x-x)/zero;	/* log(-#) = NaN */
+		return -two54/zero_log;		/* log(+-0)=-inf */
+	    if (hx<0) return (x-x)/zero_log;	/* log(-#) = NaN */
 	    k -= 54; x *= two54; /* subnormal number, scale up x */
 	    GET_HIGH_WORD(hx,x);
 	}
@@ -106,7 +106,7 @@ double attribute_hidden __ieee754_log(double x)
 	k += (i>>20);
 	f = x-1.0;
 	if((0x000fffff&(2+hx))<3) {	/* |f| < 2**-20 */
-	    if(f==zero) {if(k==0) return zero;  else {dk=(double)k;
+	    if(f==zero_log) {if(k==0) return zero_log;  else {dk=(double)k;
 				 return dk*ln2_hi+dk*ln2_lo;}
 	    }
 	    R = f*f*(0.5-0.33333333333333333*f);

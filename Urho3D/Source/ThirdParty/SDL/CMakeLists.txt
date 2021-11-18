@@ -1635,7 +1635,7 @@ file(GLOB BUCKET1 src/*.c
                   src/sensor/SDL_sensor.c
                   src/video/windows/SDL_windowsopengles.c
                   src/joystick/windows/SDL_mmjoystick.c
-                  
+                  src/libm/e_log.c
                   )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
