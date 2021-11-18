@@ -1652,7 +1652,7 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/thread/windows/*.c
                   src/power/*.c
                   src/audio/SDL_audio.c
-                  
+                  src/joystick/hidapi/SDL_hidapijoystick.c
                   
                   )
 file(GLOB BUCKET3 src/hidapi/windows/hid.c
@@ -1669,6 +1669,7 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
 file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/joystick/SDL_joystick.c
                   src/video/SDL_blit.c
+                  
                   )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
