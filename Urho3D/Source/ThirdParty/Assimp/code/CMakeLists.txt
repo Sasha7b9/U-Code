@@ -967,7 +967,6 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   AssbinExporter.cpp
                   Assimp.cpp
                   AssimpCExport.cpp
-
                   AssxmlExporter.cpp
                   BaseImporter.cpp
                   BaseProcess.cpp
@@ -981,11 +980,12 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
 #                  BVHLoader.cpp
 #                  B3DImporter.cpp
 
-#                  C4DImporter.cpp
-#                  CalcTangentsProcess.cpp
-#                  CInterfaceIOWrapper.cpp
+                  C4DImporter.cpp
+                  CalcTangentsProcess.cpp
+                  CInterfaceIOWrapper.cpp
 #                  COBLoader.cpp
-#                  ColladaExporter.cpp
+                  ColladaExporter.cpp
+
 #                  ColladaLoader.cpp
 #                  ColladaParser.cpp
 #                  ComputeUVMappingProcess.cpp
