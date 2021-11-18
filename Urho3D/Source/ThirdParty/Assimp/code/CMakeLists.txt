@@ -1000,15 +1000,15 @@ file(GLOB BUCKET2 ACLoader.cpp
                   DefaultIOStream.cpp
                   DefaultIOSystem.cpp
 #                  DefaultLogger.cpp
-
                   DXFLoader.cpp
                   Exporter.cpp
                   FBXAnimation.cpp
                   FBXBinaryTokenizer.cpp
-#                  FBXConverter.cpp
-#                  FBXDeformer.cpp
-#                  FBXDocument.cpp
-#                  FBXDocumentUtil.cpp
+
+                  FBXConverter.cpp
+                  FBXDeformer.cpp
+                  FBXDocument.cpp
+                  FBXDocumentUtil.cpp
 #                  FBXImporter.cpp
 #                  FBXMaterial.cpp
 #                  FBXMeshGeometry.cpp
