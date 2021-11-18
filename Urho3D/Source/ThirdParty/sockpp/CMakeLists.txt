@@ -48,6 +48,9 @@ project(sockpp VERSION "0.7.0")
 set(SOCKPP sockpp)
 set(SOCKPP_STATIC ${SOCKPP}-static)
 
+set(SOCKPP_BUILD_STATIC ON)
+set(SOCKPP_BUILD_SHARED OFF)
+
 if(MSVC)
     add_compile_options(/wd4996)
 endif()
