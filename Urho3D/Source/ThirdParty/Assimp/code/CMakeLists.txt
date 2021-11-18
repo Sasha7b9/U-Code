@@ -1052,9 +1052,9 @@ file(GLOB BUCKET3 ASELoader.cpp
 
                   IRRLoader.cpp
                   IRRMeshLoader.cpp
-#                  IRRShared.cpp
+                  IRRShared.cpp
 #                  JoinVerticesProcess.cpp
-#                  LimitBoneWeightsProcess.cpp
+                  LimitBoneWeightsProcess.cpp
 
 #                  LWOAnimation.cpp
 #                  LWOBLoader.cpp
