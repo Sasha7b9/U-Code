@@ -1061,25 +1061,30 @@ file(GLOB BUCKET3 ASELoader.cpp
 #                  LWOLoader.cpp
 #                  LWOMaterial.cpp
 #                  LWSLoader.cpp
-#                  MakeVerboseFormat.cpp
-#                  MaterialSystem.cpp
-#                  MD2Loader.cpp
-#                  MD3Loader.cpp
+
+                  MakeVerboseFormat.cpp
+                  MaterialSystem.cpp
+                  MD2Loader.cpp
+                  MD3Loader.cpp
+
 #                  MD5Loader.cpp
 #                  MD5Parser.cpp
 #                  MDCLoader.cpp
 #                  MDLLoader.cpp
+
 #                  MDLMaterialLoader.cpp
 #                  MMDImporter.cpp
 #                  MMDPmxParser.cpp
 #                  MS3DLoader.cpp
 #                  NDOLoader.cpp
 #                  NFFLoader.cpp
+
 #                  ObjExporter.cpp
 #                  ObjFileImporter.cpp
 #                  ObjFileMtlImporter.cpp
 #                  ObjFileParser.cpp
 #                  OFFLoader.cpp
+
 #                  OgreBinarySerializer.cpp
 #                  OgreImporter.cpp
 #                  OgreMaterial.cpp
@@ -1087,28 +1092,33 @@ file(GLOB BUCKET3 ASELoader.cpp
 #                  OgreXmlSerializer.cpp
 #                  OpenGEXExporter.cpp
 #                  OpenGEXImporter.cpp
+
 #                  OptimizeGraph.cpp
 #                  OptimizeMeshes.cpp
 #                  PlyExporter.cpp
 #                  PlyLoader.cpp
 #                  PlyParser.cpp
+
 #                  PostStepRegistry.cpp
 #                  PretransformVertices.cpp
 #                  ProcessHelper.cpp
 #                  Q3BSPFileImporter.cpp
 #                  Q3BSPFileParser.cpp
 #                  Q3BSPZipArchive.cpp
+
 #                  Q3DLoader.cpp
 #                  RawLoader.cpp
 #                  RemoveComments.cpp
 #                  RemoveRedundantMaterials.cpp
 #                  RemoveVCProcess.cpp
 #                  ScaleProcess.cpp
+
 #                  scene.cpp
 #                  SceneCombiner.cpp
 #                  ScenePreprocessor.cpp
 #                  SGSpatialSort.cpp
 #                  SIBImporter.cpp
+
 #                  SkeletonMeshBuilder.cpp
 #                  SMDLoader.cpp
 #                  SortByPTypeProcess.cpp

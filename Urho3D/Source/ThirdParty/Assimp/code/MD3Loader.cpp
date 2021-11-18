@@ -68,7 +68,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descMD3 = {
     "Quake III Mesh Importer",
     "",
     "",
@@ -456,7 +456,7 @@ void MD3Importer::ValidateSurfaceHeaderOffsets(const MD3::Surface* pcSurf)
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* MD3Importer::GetInfo () const
 {
-    return &desc;
+    return &descMD3;
 }
 
 // ------------------------------------------------------------------------------------------------

@@ -63,7 +63,7 @@ using namespace Assimp::MD2;
 #   define ARRAYSIZE(_array) (int(sizeof(_array) / sizeof(_array[0])))
 #endif
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descMD2 = {
     "Quake II Mesh Importer",
     "",
     "",
@@ -124,7 +124,7 @@ bool MD2Importer::CanRead( const std::string& pFile, IOSystem* pIOHandler, bool 
 // Get a list of all extensions supported by this loader
 const aiImporterDesc* MD2Importer::GetInfo () const
 {
-    return &desc;
+    return &descMD2;
 }
 
 // ------------------------------------------------------------------------------------------------
