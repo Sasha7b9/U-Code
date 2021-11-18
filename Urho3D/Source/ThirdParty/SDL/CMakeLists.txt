@@ -1626,7 +1626,7 @@ file(GLOB BUCKET1 src/*.c
                   src/events/*.c
                   src/file/SDL_rwops.c
                   src/haptic/windows/SDL_xinputhaptic.c
-                  src/haptic/windwos/SDL_windowshaptic.c
+                  
                   
                   )
 file(GLOB BUCKET2 src/audio/*.c
@@ -1634,6 +1634,7 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/thread/windows/*.c
                   src/power/*.c
                   src/audio/SDL_audio.c
+                  src/haptic/windows/SDL_windowshaptic.c
                   )
 file(GLOB BUCKET2 src/hidapi/windows/hid.c
                   )
