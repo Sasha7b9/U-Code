@@ -45,8 +45,8 @@ endmacro()
 
 
 macro(link_urho3d)
-    target_link_libraries(${PROJECT_NAME} user32 gdi32 winmm imm32 ole32 oleaut32 setupapi version uuid opengl32 dbghelp)
     if(MSVC)
+        target_link_libraries(${PROJECT_NAME} user32 gdi32 winmm imm32 ole32 oleaut32 setupapi version uuid opengl32 dbghelp)
         if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
             target_link_libraries(${PROJECT_NAME} ../../../../generated/${_BUILD_TYPE_}/lib/Urho3D_d)
         else()
