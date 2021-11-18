@@ -1637,6 +1637,16 @@ file(GLOB BUCKET1 src/*.c
                   src/joystick/windows/SDL_mmjoystick.c
                   src/libm/e_log.c
                   )
+file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
+                  src/video/SDL_egl.c
+                  src/libm/k_tan.c
+                  src/core/windows/SDL_xinput.c
+                  src/video/yuv2rgb/yuv_rgb.c
+                  src/video/SDL_rect.c
+                  src/joystick/hidapi/SDL_hidapi_xboxone.c
+                  src/joystick/SDL_gamecontroller.c
+                  src/libm/e_exp.c
+                  )
 file(GLOB BUCKET2 src/audio/*.c
                   src/haptic/*.c
                   src/thread/windows/*.c
@@ -1659,16 +1669,7 @@ file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
 file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   src/joystick/SDL_joystick.c
                   )
-file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
-                  src/video/SDL_egl.c
-                  src/libm/k_tan.c
-                  src/core/windows/SDL_xinput.c
-                  src/video/yuv2rgb/yuv_rgb.c
-                  src/video/SDL_rect.c
-                  src/joystick/hidapi/SDL_hidapi_xboxone.c
-                  src/joystick/SDL_gamecontroller.c
-                  src/libm/e_exp.c
-                  )
+
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
 set_source_files_properties(FILES ${BUCKET3} PROPERTIES UNITY_GROUP "buckt3")
