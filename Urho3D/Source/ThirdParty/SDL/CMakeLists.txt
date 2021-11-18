@@ -1638,6 +1638,7 @@ file(GLOB BUCKET1 src/*.c
                   src/libm/e_log.c
                   src/libm/e_log10.c
                   src/libm/s_tan.c
+                  src/libm/s_sin.c
                   )
 file(GLOB BUCKET7 src/joystick/windows/SDL_dinputjoystick.c
                   src/video/SDL_egl.c
