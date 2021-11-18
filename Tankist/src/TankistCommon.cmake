@@ -53,7 +53,7 @@ macro(link_third_party)
         if(MSVC)
             target_link_libraries(${PROJECT_NAME} sockpp-static ws2_32)
         else()
-            target_link_libraries(${PROJECT_NAME} sockpp)
+            target_link_libraries(${PROJECT_NAME} sockpp-static)
         endif()
     endif()
     
