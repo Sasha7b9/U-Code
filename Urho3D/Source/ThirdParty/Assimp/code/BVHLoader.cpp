@@ -57,7 +57,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using namespace Assimp;
 using namespace Assimp::Formatter;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descBVH = {
     "BVH Importer (MoCap)",
     "",
     "",
@@ -111,7 +111,7 @@ void BVHLoader::SetupProperties(const Importer* pImp)
 // Loader meta information
 const aiImporterDesc* BVHLoader::GetInfo () const
 {
-    return &desc;
+    return &descBVH;
 }
 
 // ------------------------------------------------------------------------------------------------

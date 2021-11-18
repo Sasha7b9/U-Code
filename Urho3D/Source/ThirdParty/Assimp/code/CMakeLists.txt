@@ -977,7 +977,7 @@ file(GLOB BUCKET1 ../contrib/clipper/*.cpp
                   BlenderModifier.cpp
 #                  BlenderScene.cpp
                   BlenderTessellator.cpp
-#                  BVHLoader.cpp
+                  BVHLoader.cpp
 #                  B3DImporter.cpp
                   C4DImporter.cpp
                   CalcTangentsProcess.cpp
