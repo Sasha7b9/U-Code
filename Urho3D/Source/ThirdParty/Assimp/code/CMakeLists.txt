@@ -1001,10 +1001,10 @@ file(GLOB BUCKET2 ACLoader.cpp
                   DefaultIOSystem.cpp
 #                  DefaultLogger.cpp
 
-#                  DXFLoader.cpp
-#                  Exporter.cpp
-#                  FBXAnimation.cpp
-#                  FBXBinaryTokenizer.cpp
+                  DXFLoader.cpp
+                  Exporter.cpp
+                  FBXAnimation.cpp
+                  FBXBinaryTokenizer.cpp
 #                  FBXConverter.cpp
 #                  FBXDeformer.cpp
 #                  FBXDocument.cpp

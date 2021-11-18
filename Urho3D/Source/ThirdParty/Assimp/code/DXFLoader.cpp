@@ -93,7 +93,7 @@ static aiColor4D g_aclrDxfIndexColors[] =
 #define AI_DXF_ENTITIES_MAGIC_BLOCK "$ASSIMP_ENTITIES_MAGIC"
 
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descDXF = {
     "Drawing Interchange Format (DXF) Importer",
     "",
     "",
@@ -127,7 +127,7 @@ bool DXFImporter::CanRead( const std::string& pFile, IOSystem* /*pIOHandler*/, b
 // Get a list of all supported file extensions
 const aiImporterDesc* DXFImporter::GetInfo () const
 {
-    return &desc;
+    return &descDXF;
 }
 
 // ------------------------------------------------------------------------------------------------
