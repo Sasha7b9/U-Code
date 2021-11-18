@@ -1648,7 +1648,7 @@ file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   
                   )
-file(GLOB BUCKET5 src/joystick/windows/SDL_windowsjoystick.c
+file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
                   )
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
