@@ -1019,11 +1019,12 @@ file(GLOB BUCKET2 ACLoader.cpp
                   FBXUtil.cpp
                   FindDegenerates.cpp
 
-#                  FindInstancesProcess.cpp
-#                  FindInvalidDataProcess.cpp
-#                  FIReader.cpp
-#                  FixNormalsStep.cpp
-#                  GenFaceNormalsProcess.cpp
+                  FindInstancesProcess.cpp
+                  FindInvalidDataProcess.cpp
+                  FIReader.cpp
+                  FixNormalsStep.cpp
+                  GenFaceNormalsProcess.cpp
+
 #                  GenVertexNormalsProcess.cpp
 #                  glTF2Exporter.cpp
 #                  glTF2Importer.cpp
