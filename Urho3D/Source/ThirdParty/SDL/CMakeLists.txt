@@ -1626,7 +1626,7 @@ file(GLOB BUCKET1 src/*.c
                   src/events/*.c
                   src/file/SDL_rwops.c
                   src/haptic/windows/SDL_xinputhaptic.c
-                  
+                  src/libm/e_atan2.c
                   
                   )
 file(GLOB BUCKET2 src/audio/*.c
