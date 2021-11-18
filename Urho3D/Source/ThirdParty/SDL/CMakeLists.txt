@@ -1624,7 +1624,7 @@ file(GLOB BUCKET1 src/*.c
                   src/events/*.c
                   )
 file(GLOB BUCKET2 src/audio/*.c
-                  
+                  src/file/*.c
                   )
 
 #file(GLOB BUCKET3 src/haptic/windows/*.c
