@@ -1004,16 +1004,17 @@ file(GLOB BUCKET2 ACLoader.cpp
                   Exporter.cpp
                   FBXAnimation.cpp
                   FBXBinaryTokenizer.cpp
-
                   FBXConverter.cpp
                   FBXDeformer.cpp
                   FBXDocument.cpp
                   FBXDocumentUtil.cpp
+
 #                  FBXImporter.cpp
-#                  FBXMaterial.cpp
-#                  FBXMeshGeometry.cpp
-#                  FBXModel.cpp
-#                  FBXNodeAttribute.cpp
+                  FBXMaterial.cpp
+                  FBXMeshGeometry.cpp
+                  FBXModel.cpp
+                  FBXNodeAttribute.cpp
+
 #                  FBXParser.cpp
 #                  FBXProperties.cpp
 #                  FBXTokenizer.cpp
