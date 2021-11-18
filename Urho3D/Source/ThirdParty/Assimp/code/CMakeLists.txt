@@ -1053,26 +1053,22 @@ file(GLOB BUCKET9 ImporterRegistry.cpp
                   MD3Loader.cpp
                   )
 
-file(GLOB BUCKET10
-#                   MD5Loader.cpp
-                   MD5Parser.cpp
+file(GLOB BUCKET10 MD5Parser.cpp
                    MDCLoader.cpp
                    MDLLoader.cpp
-
-                  MDLMaterialLoader.cpp
-                  MMDImporter.cpp
-                  MMDPmxParser.cpp
-                  MS3DLoader.cpp
-                  NDOLoader.cpp
-                  NFFLoader.cpp
+                   MDLMaterialLoader.cpp
+                   MMDImporter.cpp
+                   MMDPmxParser.cpp
+                   MS3DLoader.cpp
+                   NDOLoader.cpp
+                   NFFLoader.cpp
+                   ObjExporter.cpp
 )
 
-#                  ObjExporter.cpp
 #                  ObjFileImporter.cpp
 #                  ObjFileMtlImporter.cpp
 #                  ObjFileParser.cpp
 #                  OFFLoader.cpp
-
 #                  OgreBinarySerializer.cpp
 #                  OgreImporter.cpp
 #                  OgreMaterial.cpp
@@ -1166,6 +1162,7 @@ file(GLOB BUCKET10
 #                  LWOMaterial.cpp
 #                  LWSLoader.cpp
 #                  JoinVerticesProcess.cpp
+#                   MD5Loader.cpp
 )
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
@@ -1177,7 +1174,7 @@ set_source_files_properties(FILES ${BUCKET6} PROPERTIES UNITY_GROUP "buckt6")
 set_source_files_properties(FILES ${BUCKET7} PROPERTIES UNITY_GROUP "buckt7")
 set_source_files_properties(FILES ${BUCKET8} PROPERTIES UNITY_GROUP "buckt8")
 set_source_files_properties(FILES ${BUCKET9} PROPERTIES UNITY_GROUP "buckt9")
-set_source_files_properties(FILES ${BUCKET19} PROPERTIES UNITY_GROUP "buckt10")
+set_source_files_properties(FILES ${BUCKET10} PROPERTIES UNITY_GROUP "buckt10")
 
 IF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
   TARGET_LINK_LIBRARIES(Assimp optimized ${C4D_RELEASE_LIBRARIES})
