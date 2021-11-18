@@ -10,7 +10,7 @@ function ShowHint {
 
 function MakeProject {
     rm -R -f ../generated/$1
-    cmake ../src/${PROJECT_NAME} -G "CodeBlocks - Unix Makefiles" -B../generated/$1 -DCMAKE_BUILD_TYPE=$2
+    cmake ../Urho3D -G "CodeBlocks - Unix Makefiles" -B../generated/$1 -DCMAKE_BUILD_TYPE=$2
 }
 
 
