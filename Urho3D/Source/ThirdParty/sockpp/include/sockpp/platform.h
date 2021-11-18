@@ -107,6 +107,7 @@
 	#include <netdb.h>
 	#include <signal.h>
 	#include <cerrno>
+	using socket_t = socket;
 #endif
 
 #endif
