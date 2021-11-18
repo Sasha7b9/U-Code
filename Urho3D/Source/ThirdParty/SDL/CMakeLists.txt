@@ -1635,6 +1635,7 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/power/*.c
                   src/audio/SDL_audio.c
                   src/haptic/windows/SDL_windowshaptic.c
+                  src/haptic/windows/SDL_dinputhaptic.c
                   )
 file(GLOB BUCKET2 src/hidapi/windows/hid.c
                   )
