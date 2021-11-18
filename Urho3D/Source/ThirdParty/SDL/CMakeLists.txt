@@ -1655,6 +1655,12 @@ file(GLOB BUCKET2 src/audio/*.c
                   src/joystick/hidapi/SDL_hidapijoystick.c
                   
                   )
+file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
+                  src/joystick/SDL_joystick.c
+                  src/video/SDL_blit.c
+                  src/joystick/hidapi/SDL_hidapi_xbox360.c
+                  src/joystick/hidapi/SDL_hidapi_switch.c
+                  )
 file(GLOB BUCKET3 src/hidapi/windows/hid.c
                   src/video/windows/SDL_windowswindow.c
                   src/joystick/windows/SDL_xinputjoystick.c
@@ -1666,11 +1672,7 @@ file(GLOB BUCKET4 src/haptic/windows/SDL_windowshaptic.c
 file(GLOB BUCKET5 src/haptic/windows/SDL_dinputhaptic.c
                   
                   )
-file(GLOB BUCKET6 src/joystick/windows/SDL_windowsjoystick.c
-                  src/joystick/SDL_joystick.c
-                  src/video/SDL_blit.c
-                  src/joystick/hidapi/SDL_hidapi_xbox360.c
-                  )
+
 
 set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
 set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
