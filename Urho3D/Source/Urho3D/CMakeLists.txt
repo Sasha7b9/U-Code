@@ -725,8 +725,6 @@ if(UNIX)
     add_dependencies(Urho3D sockpp-static)
 endif()
 
-set(CMAKE_UNITY_BUILD ON)
-
 set_target_properties(Urho3D PROPERTIES UNITY_BUILD_MODE GROUP)
 
 file(GLOB BUCKET1 AngelScript/*)

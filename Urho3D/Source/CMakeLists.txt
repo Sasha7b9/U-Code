@@ -25,6 +25,8 @@
 
 message("------------------------------------------------------------------------------------------------------- Source")
 
+set(CMAKE_UNITY_BUILD ON)
+
 include (CheckIncludeFile)
 foreach (HEADER stdint.h inttypes.h malloc.h)
     string (TOUPPER HAVE_${HEADER} HAVE_HEADER)

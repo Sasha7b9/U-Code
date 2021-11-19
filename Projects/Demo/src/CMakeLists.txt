@@ -1,7 +1,5 @@
 project (Demo)
 
-set(CMAKE_UNITY_BUILD ON)
-
 find_package (Urho3D REQUIRED)
 include_directories (${URHO3D_INCLUDE_DIRS})
 

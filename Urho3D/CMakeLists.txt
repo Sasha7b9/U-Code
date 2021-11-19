@@ -26,6 +26,8 @@ cmake_minimum_required (VERSION 3.13.0)
 # Set project name
 project (Urho3D)
 
+set(CMAKE_UNITY_BUILD ON)
+
 message("------------------------------------------------------------------------------------------------------- Main")
 
 if(MSVC)

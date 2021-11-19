@@ -53,8 +53,6 @@ if(MSVC)
     add_compile_options(/wd4996)
 endif()
 
-set(CMAKE_UNITY_BUILD ON)
-
 SET( HEADER_PATH ../include/assimp )
 
 SET( COMPILER_HEADERS

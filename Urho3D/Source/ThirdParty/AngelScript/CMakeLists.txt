@@ -25,8 +25,6 @@ set (TARGET_NAME AngelScript)
 
 message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
 
-set(CMAKE_UNITY_BUILD ON)
-
 if(UNIX)
     add_definitions(-Wno-invalid-pch)
 endif()

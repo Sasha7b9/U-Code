@@ -1,7 +1,5 @@
 project (TVBattler)
 
-set(CMAKE_UNITY_BUILD ON)
-
 include_directories(.
                     ../../common_files
                     ../../libs/victory

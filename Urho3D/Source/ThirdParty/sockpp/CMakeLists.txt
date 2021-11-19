@@ -45,8 +45,6 @@ cmake_policy(SET CMP0077 NEW)   # The ``OLD`` behavior for this policy is to pro
                                 # normal variable is removed.
 cmake_policy(SET CMP0076 NEW)
 
-set(CMAKE_UNITY_BUILD ON)
-
 ## project
 project(sockpp VERSION "0.7.0")
 
