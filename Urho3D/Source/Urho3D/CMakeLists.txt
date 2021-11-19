@@ -23,6 +23,8 @@
 # Define target name
 set (TARGET_NAME Urho3D)
 
+set(CMAKE_UNITY_BUILD OFF)
+
 message("------------------------------------------------------------------------------------------------------- ${TARGET_NAME}")
 
 # Prevent ICE from old MinGW versions, workaround from the GCC bugzilla https://gcc.gnu.org/bugzilla/show_bug.cgi?id=61189
