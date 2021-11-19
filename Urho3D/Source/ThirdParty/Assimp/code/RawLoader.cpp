@@ -59,7 +59,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace Assimp;
 
-static const aiImporterDesc desc = {
+static const aiImporterDesc descRAW = {
     "Raw Importer",
     "",
     "",
@@ -92,7 +92,7 @@ bool RAWImporter::CanRead( const std::string& pFile, IOSystem* /*pIOHandler*/, b
 // ------------------------------------------------------------------------------------------------
 const aiImporterDesc* RAWImporter::GetInfo () const
 {
-    return &desc;
+    return &descRAW;
 }
 
 // ------------------------------------------------------------------------------------------------

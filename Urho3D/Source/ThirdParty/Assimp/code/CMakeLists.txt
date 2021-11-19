@@ -1088,10 +1088,11 @@ file(GLOB BUCKET12 OptimizeGraph.cpp
                    Q3BSPFileParser.cpp
                    )
 
-file(GLOB BUCKET13 Q3BSPZipArchive.cpp)
-
-#                  Q3DLoader.cpp
-#                  RawLoader.cpp
+file(GLOB BUCKET13 Q3BSPZipArchive.cpp
+                   Q3DLoader.cpp
+                   RawLoader.cpp
+                   )
+#                  
 #                  RemoveComments.cpp
 #                  RemoveRedundantMaterials.cpp
 #                  RemoveVCProcess.cpp
