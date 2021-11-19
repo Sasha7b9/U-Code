@@ -725,10 +725,10 @@ if(UNIX)
     add_dependencies(Urho3D sockpp-static)
 endif()
 
-set_target_properties(Urho3D PROPERTIES UNITY_BUILD_MODE GROUP)
-
-file(GLOB BUCKET1 AngelScript/*)
-file(GLOB BUCKET2 Audio/*)
-
-set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
-set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
+#set_target_properties(Urho3D PROPERTIES UNITY_BUILD_MODE GROUP)
+#
+#file(GLOB BUCKET1 AngelScript/*)
+#file(GLOB BUCKET2 Audio/*)
+#
+#set_source_files_properties(FILES ${BUCKET1} PROPERTIES UNITY_GROUP "buckt1")
+#set_source_files_properties(FILES ${BUCKET2} PROPERTIES UNITY_GROUP "buckt2")
