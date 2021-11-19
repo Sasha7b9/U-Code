@@ -725,6 +725,8 @@ if(UNIX)
     add_dependencies(Urho3D sockpp-static)
 endif()
 
+set_source_files_properties(Urho2D/TileMapLayer2.cpp PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON)
+
 #set_target_properties(Urho3D PROPERTIES UNITY_BUILD_MODE GROUP)
 #
 #file(GLOB BUCKET1 AngelScript/*)
